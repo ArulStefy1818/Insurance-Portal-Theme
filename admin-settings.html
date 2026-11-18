@@ -1,0 +1,955 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly | Insurance Admin Dashboard</title>
+
+    <meta name="description"
+        content="Manage insurance policies, customers, claims, payments and business performance through the Stackly Insurance Admin Dashboard.">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="Stackly-logo-Blue.webp">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS ANIMATION -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- ADMIN CSS -->
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================
+         ADMIN DASHBOARD MAIN WRAPPER
+    =========================================== -->
+
+    <div class="stackly-insurance-admin">
+
+
+        <!-- ==========================================
+             MOBILE SIDEBAR OVERLAY
+        =========================================== -->
+
+        <div class="stackly-insurance-admin-overlay"
+            id="stacklyInsuranceAdminOverlay"></div>
+
+
+        <!-- ==========================================
+             SIDEBAR
+        =========================================== -->
+
+        <aside class="stackly-insurance-admin-sidebar"
+            id="stacklyInsuranceAdminSidebar">
+
+
+            <!-- SIDEBAR BRAND -->
+
+            <div class="stackly-insurance-admin-brand">
+
+                <a href="admin.html"
+                    class="stackly-insurance-admin-logo">
+
+                    <img src="Stackly-logo-Blue.webp"
+                        alt="Stackly Insurance Logo">
+
+                </a>
+
+                <button class="stackly-insurance-admin-close"
+                    id="stacklyInsuranceAdminClose"
+                    aria-label="Close sidebar">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- ADMIN PROFILE -->
+
+            <div class="stackly-insurance-admin-profile">
+
+                <div class="stackly-insurance-admin-avatar">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                    <span class="stackly-insurance-admin-online"></span>
+
+                </div>
+
+                <div class="stackly-insurance-admin-profile-info">
+
+                    <h3 id="stacklyInsuranceAdminName">Administrator</h3>
+
+                    <p>Super Admin</p>
+
+                </div>
+
+ 
+            </div>
+
+
+            <!-- SIDEBAR NAVIGATION -->
+
+            <nav class="stackly-insurance-admin-nav">
+
+                <p class="stackly-insurance-admin-nav-heading">
+                    MAIN MENU
+                </p>
+
+
+                <a href="admin.html"
+                    class="stackly-insurance-admin-nav-link active">
+
+                    <i class="fa-solid fa-table-columns"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a href="admin-policies.html"
+                    class="stackly-insurance-admin-nav-link">
+
+                    <i class="fa-solid fa-file-shield"></i>
+
+                    <span>Insurance Policies</span>
+
+                    <span class="stackly-insurance-admin-nav-count">
+                        12
+                    </span>
+
+                </a>
+
+
+                <a href="admin-claims.html"
+                    class="stackly-insurance-admin-nav-link">
+
+                    <i class="fa-solid fa-file-circle-check"></i>
+
+                    <span>Claims Management</span>
+
+                    <span class="stackly-insurance-admin-nav-count">
+                        08
+                    </span>
+
+                </a>
+
+
+                <a href="admin-customers.html"
+                    class="stackly-insurance-admin-nav-link">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <span>Customers</span>
+
+                </a>
+
+
+                <a href="admin-payments.html"
+                    class="stackly-insurance-admin-nav-link">
+
+                    <i class="fa-solid fa-wallet"></i>
+
+                    <span>Payments</span>
+
+                </a>
+
+
+                <a href="admin-agents.html"
+                    class="stackly-insurance-admin-nav-link">
+
+                    <i class="fa-solid fa-user-tie"></i>
+
+                    <span>Insurance Agents</span>
+
+                </a>
+
+
+                <p class="stackly-insurance-admin-nav-heading stackly-insurance-admin-nav-heading-space">
+                    MANAGEMENT
+                </p>
+
+ 
+
+                <a href="admin-settings.html"
+                    class="stackly-insurance-admin-nav-link">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    <span>Settings</span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="stackly-insurance-admin-sidebar-bottom">
+
+                <div class="stackly-insurance-admin-help-card">
+
+                    <div class="stackly-insurance-admin-help-icon">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                    </div>
+
+                    <h4>Need Assistance?</h4>
+
+                    <p>Our support team is here to help you.</p>
+
+                    <a href="404-admin.html">
+
+                        Contact Support
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <a href="index.html"
+                    class="stackly-insurance-admin-logout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ==========================================
+             MAIN CONTENT AREA
+        =========================================== -->
+
+        <main class="stackly-insurance-admin-main">
+
+
+            <!-- ==========================================
+                 TOP HEADER
+            =========================================== -->
+
+            <header class="stackly-insurance-admin-header">
+
+
+                <!-- HEADER LEFT -->
+
+                <div class="stackly-insurance-admin-header-left">
+
+                    <button class="stackly-insurance-admin-menu-toggle"
+                        id="stacklyInsuranceAdminMenuToggle"
+                        aria-label="Open sidebar"
+                        aria-expanded="false"
+                        aria-controls="stacklyInsuranceAdminSidebar">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+
+                    <div class="stackly-insurance-admin-header-title">
+
+                        <span>INSURANCE MANAGEMENT</span>
+
+                        <h1>Dashboard</h1>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HEADER RIGHT -->
+
+                <div class="stackly-insurance-admin-header-right">
+
+
+                     
+
+                    <!-- NOTIFICATION -->
+
+                    <a href="404-admin.html"
+                        class="stackly-insurance-admin-icon-btn stackly-insurance-admin-notification"
+                        aria-label="Notifications">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span></span>
+
+                    </a>
+
+
+                    <!-- EMAIL PROFILE -->
+
+                    <div class="stackly-insurance-admin-header-user">
+
+                        <div class="stackly-insurance-admin-header-user-info">
+
+                            <span>Administrator Account</span>
+
+                            <strong id="stacklyInsuranceAdminEmail">
+                                admin@stacklyinsurance.com
+                            </strong>
+
+                        </div>
+
+                        <div class="stackly-insurance-admin-header-user-avatar">
+
+                            <i class="fa-solid fa-user-shield"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+<!-- ==========================================
+     STACKLY INSURANCE ADMIN SETTINGS PAGE
+=========================================== -->
+
+<div class="stackly-insurance-admin-content">
+<!-- ==========================================
+     01. SETTINGS PAGE INTRODUCTION
+=========================================== -->
+
+<section class="stackly-insurance-settings-intro"
+    data-aos="fade-up"
+    data-aos-duration="900">
+
+    <div class="stackly-insurance-settings-intro-content">
+
+        <div class="stackly-insurance-settings-breadcrumb">
+            <a href="admin.html">Dashboard</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span>Settings</span>
+        </div>
+
+        <span class="stackly-insurance-settings-eyebrow">
+            <i class="fa-solid fa-sliders"></i>
+            ACCOUNT CONFIGURATION
+        </span>
+
+        <h2>Manage Your Settings</h2>
+
+        <p>
+            Customize your account, manage security preferences,
+            and configure your insurance dashboard experience.
+        </p>
+
+    </div>
+
+    <div class="stackly-insurance-settings-intro-icon">
+        <i class="fa-solid fa-gear"></i>
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     02. SETTINGS OVERVIEW CARDS
+=========================================== -->
+
+<section class="stackly-insurance-settings-overview">
+
+    <div class="stackly-insurance-settings-card"
+        data-aos="fade-up"
+        data-aos-delay="100">
+
+        <div class="stackly-insurance-settings-card-icon blue">
+            <i class="fa-solid fa-user-gear"></i>
+        </div>
+
+        <div>
+            <h3>Profile Settings</h3>
+            <p>Manage your personal information</p>
+        </div>
+
+        <a href="404-admin.html">
+            <i class="fa-solid fa-arrow-right settings-arrow"></i>
+        </a>
+
+    </div>
+
+
+    <div class="stackly-insurance-settings-card"
+        data-aos="fade-up"
+        data-aos-delay="200">
+
+        <div class="stackly-insurance-settings-card-icon green">
+            <i class="fa-solid fa-shield-halved"></i>
+        </div>
+
+        <div>
+            <h3>Security</h3>
+            <p>Protect your administrator account</p>
+        </div>
+
+        <a href="404-admin.html">
+            <i class="fa-solid fa-arrow-right settings-arrow"></i>
+        </a>
+
+    </div>
+
+
+    <div class="stackly-insurance-settings-card"
+        data-aos="fade-up"
+        data-aos-delay="300">
+
+        <div class="stackly-insurance-settings-card-icon orange">
+            <i class="fa-solid fa-bell"></i>
+        </div>
+
+        <div>
+            <h3>Notifications</h3>
+            <p>Control your notification preferences</p>
+        </div>
+
+        <a href="404-admin.html">
+            <i class="fa-solid fa-arrow-right settings-arrow"></i>
+        </a>
+
+    </div>
+
+
+    <div class="stackly-insurance-settings-card"
+        data-aos="fade-up"
+        data-aos-delay="400">
+
+        <div class="stackly-insurance-settings-card-icon purple">
+            <i class="fa-solid fa-sliders"></i>
+        </div>
+
+        <div>
+            <h3>Preferences</h3>
+            <p>Customize your dashboard experience</p>
+        </div>
+
+        <a href="404-admin.html">
+            <i class="fa-solid fa-arrow-right settings-arrow"></i>
+        </a>
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     03. PROFILE SETTINGS
+=========================================== -->
+
+<!-- =====================================================
+     STACKLY INSURANCE ADMIN PROFILE SETTINGS
+====================================================== -->
+
+<section class="stackly-insurance-settings-section"
+    id="insuranceProfileSettings"
+    data-aos="fade-up"
+    data-aos-duration="900">
+
+    <!-- SECTION HEADING -->
+    <div class="stackly-insurance-settings-section-heading">
+
+        <div>
+            <span class="stackly-insurance-settings-label">
+                PERSONAL ACCOUNT
+            </span>
+
+            <h2>Profile Information</h2>
+
+            <p>
+                Manage and update your administrator account details
+                and personal information.
+            </p>
+        </div>
+
+        <div class="stackly-insurance-settings-heading-icon">
+            <i class="fa-solid fa-user-pen"></i>
+        </div>
+
+    </div>
+
+
+    <!-- ADMIN PROFILE SUMMARY -->
+    <div class="stackly-insurance-settings-profile">
+
+        <!-- PROFILE AVATAR -->
+        <div class="stackly-insurance-settings-profile-avatar">
+
+            <i class="fa-solid fa-user-shield"></i>
+
+            <span></span>
+
+        </div>
+
+
+        <!-- PROFILE INFORMATION -->
+        <div class="stackly-insurance-settings-profile-info">
+
+            <h3 id="stacklyInsuranceSettingsProfileName">
+                Administrator
+            </h3>
+
+            <p id="stacklyInsuranceSettingsProfileEmail">
+                admin@stacklyinsurance.com
+            </p>
+
+            <span class="stackly-insurance-settings-account-status">
+                <i class="fa-solid fa-circle-check"></i>
+                Active Account
+            </span>
+
+        </div>
+
+
+        <!-- ADMIN ACCESS BADGE -->
+        <div class="stackly-insurance-settings-profile-badge">
+
+            <i class="fa-solid fa-crown"></i>
+
+            <span>Admin Access</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROFILE UPDATE FORM -->
+    <form class="stackly-insurance-settings-form"
+        id="insuranceProfileForm"
+        autocomplete="on">
+
+        <div class="stackly-insurance-settings-form-grid">
+
+
+            <!-- FULL NAME -->
+            <div class="stackly-insurance-settings-field">
+
+                <label for="insuranceAdminFullName">
+                    Full Name
+                    <span>*</span>
+                </label>
+
+                <div class="stackly-insurance-settings-input">
+
+                    <i class="fa-regular fa-user"></i>
+
+                    <input type="text"
+                        id="insuranceAdminFullName"
+                        name="adminFullName"
+                        placeholder="Enter your full name"
+                        value="Administrator"
+                        autocomplete="name"
+                        required
+                        minlength="2"
+                        maxlength="60">
+
+                </div>
+
+            </div>
+
+
+            <!-- EMAIL ADDRESS -->
+            <div class="stackly-insurance-settings-field">
+
+                <label for="insuranceAdminEmail">
+                    Email Address
+                    <span>*</span>
+                </label>
+
+                <div class="stackly-insurance-settings-input">
+
+                    <i class="fa-regular fa-envelope"></i>
+
+                    <input type="email"
+                        id="insuranceAdminEmail"
+                        name="adminEmail"
+                        placeholder="Enter email address"
+                        value="admin@stacklyinsurance.com"
+                        autocomplete="email"
+                        required
+                        maxlength="100">
+
+                </div>
+
+            </div>
+
+
+            <!-- PHONE NUMBER -->
+            <div class="stackly-insurance-settings-field">
+
+                <label for="insuranceAdminPhone">
+                    Phone Number
+                </label>
+
+                <div class="stackly-insurance-settings-input">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <input type="tel"
+                        id="insuranceAdminPhone"
+                        name="adminPhone"
+                        placeholder="Enter phone number"
+                        autocomplete="tel"
+                        maxlength="15"
+                        pattern="[0-9+\-\s()]{7,15}">
+
+                </div>
+
+            </div>
+
+
+            <!-- ACCOUNT ROLE -->
+            <div class="stackly-insurance-settings-field">
+
+                <label for="insuranceAdminRole">
+                    Account Role
+                </label>
+
+                <div class="stackly-insurance-settings-input">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                    <input type="text"
+                        id="insuranceAdminRole"
+                        name="adminRole"
+                        value="Super Admin"
+                        readonly
+                        aria-readonly="true">
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- FORM STATUS MESSAGE -->
+        <div class="stackly-insurance-settings-form-message"
+            id="stacklyInsuranceProfileMessage"
+            role="status"
+            aria-live="polite"
+            hidden>
+        </div>
+
+
+        <!-- FORM ACTION BUTTONS -->
+        <div class="stackly-insurance-settings-form-actions">
+
+            <button type="reset"
+                class="stackly-insurance-settings-cancel-btn">
+
+                <i class="fa-solid fa-rotate-left"></i>
+
+                Reset
+
+            </button>
+
+
+            <button type="submit"
+                class="stackly-insurance-settings-save-btn">
+
+                <i class="fa-solid fa-check"></i>
+
+                Save Changes
+
+            </button>
+
+        </div>
+
+    </form>
+
+</section>
+ 
+
+<!-- ==========================================
+     04. SECURITY SETTINGS
+=========================================== -->
+
+<section class="stackly-insurance-settings-section"
+    id="insuranceSecuritySettings"
+    data-aos="fade-up"
+    data-aos-duration="900">
+
+    <div class="stackly-insurance-settings-section-heading">
+
+        <div>
+            <span class="stackly-insurance-settings-label">
+                ACCOUNT PROTECTION
+            </span>
+
+            <h2>Security Settings</h2>
+
+            <p>Keep your administrator account safe and secure.</p>
+        </div>
+
+        <div class="stackly-insurance-settings-heading-icon green">
+            <i class="fa-solid fa-shield-halved"></i>
+        </div>
+
+    </div>
+
+
+    <div class="stackly-insurance-settings-security-list">
+
+
+        <div class="stackly-insurance-settings-security-item">
+
+            <div class="stackly-insurance-settings-security-icon">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+
+            <div class="stackly-insurance-settings-security-content">
+                <h3>Change Password</h3>
+                <p>Update your password regularly to protect your account.</p>
+            </div>
+
+            <a href="404-admin.html"
+                class="stackly-insurance-settings-action-link">
+                Update Password
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="stackly-insurance-settings-security-item">
+
+            <div class="stackly-insurance-settings-security-icon green">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+
+            <div class="stackly-insurance-settings-security-content">
+                <h3>Two-Factor Authentication</h3>
+                <p>Add an additional verification step when signing in.</p>
+            </div>
+
+            <span class="stackly-insurance-settings-status">
+                <i class="fa-solid fa-circle-check"></i>
+                Recommended
+            </span>
+
+        </div>
+
+
+        <div class="stackly-insurance-settings-security-item">
+
+            <div class="stackly-insurance-settings-security-icon orange">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+            </div>
+
+            <div class="stackly-insurance-settings-security-content">
+                <h3>Recent Login Activity</h3>
+                <p>Review your account access and login history.</p>
+            </div>
+
+            <a href="404-admin.html"
+                class="stackly-insurance-settings-action-link">
+                View Activity
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     05. NOTIFICATION PREFERENCES
+=========================================== -->
+
+<section class="stackly-insurance-settings-section"
+    id="insuranceNotificationSettings"
+    data-aos="fade-up"
+    data-aos-duration="900">
+
+    <div class="stackly-insurance-settings-section-heading">
+
+        <div>
+            <span class="stackly-insurance-settings-label">
+                STAY INFORMED
+            </span>
+
+            <h2>Notification Preferences</h2>
+
+            <p>Choose which updates you want to receive.</p>
+        </div>
+
+        <div class="stackly-insurance-settings-heading-icon orange">
+            <i class="fa-solid fa-bell"></i>
+        </div>
+
+    </div>
+
+
+    <div class="stackly-insurance-settings-notification-list">
+
+
+        <div class="stackly-insurance-settings-toggle-item">
+
+            <div class="stackly-insurance-settings-toggle-info">
+                <div class="stackly-insurance-settings-toggle-icon blue">
+                    <i class="fa-solid fa-file-circle-check"></i>
+                </div>
+
+                <div>
+                    <h3>New Insurance Claims</h3>
+                    <p>Receive updates when new claims are submitted.</p>
+                </div>
+            </div>
+
+            <label class="stackly-insurance-settings-switch">
+                <input type="checkbox" checked>
+                <span></span>
+            </label>
+
+        </div>
+
+
+        <div class="stackly-insurance-settings-toggle-item">
+
+            <div class="stackly-insurance-settings-toggle-info">
+                <div class="stackly-insurance-settings-toggle-icon green">
+                    <i class="fa-solid fa-wallet"></i>
+                </div>
+
+                <div>
+                    <h3>Payment Notifications</h3>
+                    <p>Get alerts about successful and pending payments.</p>
+                </div>
+            </div>
+
+            <label class="stackly-insurance-settings-switch">
+                <input type="checkbox" checked>
+                <span></span>
+            </label>
+
+        </div>
+
+
+        <div class="stackly-insurance-settings-toggle-item">
+
+            <div class="stackly-insurance-settings-toggle-info">
+                <div class="stackly-insurance-settings-toggle-icon orange">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <div>
+                    <h3>Customer Updates</h3>
+                    <p>Stay informed about new customer registrations.</p>
+                </div>
+            </div>
+
+            <label class="stackly-insurance-settings-switch">
+                <input type="checkbox" checked>
+                <span></span>
+            </label>
+
+        </div>
+
+
+        <div class="stackly-insurance-settings-toggle-item">
+
+            <div class="stackly-insurance-settings-toggle-info">
+                <div class="stackly-insurance-settings-toggle-icon purple">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div>
+                    <h3>Email Notifications</h3>
+                    <p>Receive important dashboard updates through email.</p>
+                </div>
+            </div>
+
+            <label class="stackly-insurance-settings-switch">
+                <input type="checkbox">
+                <span></span>
+            </label>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     06. SUPPORT INFORMATION
+=========================================== -->
+
+<section class="stackly-insurance-settings-support"
+    data-aos="zoom-in"
+    data-aos-duration="900">
+
+    <div class="stackly-insurance-settings-support-icon">
+        <i class="fa-solid fa-headset"></i>
+    </div>
+
+    <div class="stackly-insurance-settings-support-content">
+
+        <span>NEED HELP?</span>
+
+        <h2>We're Here to Support You</h2>
+
+        <p>
+            Have questions about your account or dashboard settings?
+            Our support team is ready to assist you.
+        </p>
+
+    </div>
+
+    <a href="404-admin.html"
+        class="stackly-insurance-settings-support-btn">
+
+        Contact Support
+        <i class="fa-solid fa-arrow-right"></i>
+
+    </a>
+
+</section>
+
+</div>
+
+</main>
+
+    </div>
+
+
+    <!-- AOS JS -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- ADMIN JS -->
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

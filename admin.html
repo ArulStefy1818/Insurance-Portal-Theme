@@ -1,0 +1,1399 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly | Insurance Admin Dashboard</title>
+
+    <meta name="description"
+        content="Manage insurance policies, customers, claims, payments and business performance through the Stackly Insurance Admin Dashboard.">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="Stackly-logo-Blue.webp">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS ANIMATION -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- ADMIN CSS -->
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================
+         ADMIN DASHBOARD MAIN WRAPPER
+    =========================================== -->
+
+    <div class="stackly-insurance-admin">
+
+
+        <!-- ==========================================
+             MOBILE SIDEBAR OVERLAY
+        =========================================== -->
+
+        <div class="stackly-insurance-admin-overlay"
+            id="stacklyInsuranceAdminOverlay"></div>
+
+
+        <!-- ==========================================
+             SIDEBAR
+        =========================================== -->
+
+        <aside class="stackly-insurance-admin-sidebar"
+            id="stacklyInsuranceAdminSidebar">
+
+
+            <!-- SIDEBAR BRAND -->
+
+            <div class="stackly-insurance-admin-brand">
+
+                <a href="admin.html"
+                    class="stackly-insurance-admin-logo">
+
+                    <img src="Stackly-logo-Blue.webp"
+                        alt="Stackly Insurance Logo">
+
+                </a>
+
+                <button class="stackly-insurance-admin-close"
+                    id="stacklyInsuranceAdminClose"
+                    aria-label="Close sidebar">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- ADMIN PROFILE -->
+
+            <div class="stackly-insurance-admin-profile">
+
+                <div class="stackly-insurance-admin-avatar">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                    <span class="stackly-insurance-admin-online"></span>
+
+                </div>
+
+                <div class="stackly-insurance-admin-profile-info">
+
+                    <h3 id="stacklyInsuranceAdminName">Administrator</h3>
+
+                    <p>Super Admin</p>
+
+                </div>
+
+ 
+            </div>
+
+
+            <!-- SIDEBAR NAVIGATION -->
+
+            <nav class="stackly-insurance-admin-nav">
+
+                <p class="stackly-insurance-admin-nav-heading">
+                    MAIN MENU
+                </p>
+
+
+                <a href="admin.html"
+                    class="stackly-insurance-admin-nav-link active">
+
+                    <i class="fa-solid fa-table-columns"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a href="admin-policies.html"
+                    class="stackly-insurance-admin-nav-link">
+
+                    <i class="fa-solid fa-file-shield"></i>
+
+                    <span>Insurance Policies</span>
+
+                    <span class="stackly-insurance-admin-nav-count">
+                        12
+                    </span>
+
+                </a>
+
+
+                <a href="admin-claims.html"
+                    class="stackly-insurance-admin-nav-link">
+
+                    <i class="fa-solid fa-file-circle-check"></i>
+
+                    <span>Claims Management</span>
+
+                    <span class="stackly-insurance-admin-nav-count">
+                        08
+                    </span>
+
+                </a>
+
+
+                <a href="admin-customers.html"
+                    class="stackly-insurance-admin-nav-link">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <span>Customers</span>
+
+                </a>
+
+
+                <a href="admin-payments.html"
+                    class="stackly-insurance-admin-nav-link">
+
+                    <i class="fa-solid fa-wallet"></i>
+
+                    <span>Payments</span>
+
+                </a>
+
+
+                <a href="admin-agents.html"
+                    class="stackly-insurance-admin-nav-link">
+
+                    <i class="fa-solid fa-user-tie"></i>
+
+                    <span>Insurance Agents</span>
+
+                </a>
+
+
+                <p class="stackly-insurance-admin-nav-heading stackly-insurance-admin-nav-heading-space">
+                    MANAGEMENT
+                </p>
+
+ 
+
+                <a href="admin-settings.html"
+                    class="stackly-insurance-admin-nav-link">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    <span>Settings</span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="stackly-insurance-admin-sidebar-bottom">
+
+                <div class="stackly-insurance-admin-help-card">
+
+                    <div class="stackly-insurance-admin-help-icon">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                    </div>
+
+                    <h4>Need Assistance?</h4>
+
+                    <p>Our support team is here to help you.</p>
+
+                    <a href="404-admin.html">
+
+                        Contact Support
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <a href="index.html"
+                    class="stackly-insurance-admin-logout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ==========================================
+             MAIN CONTENT AREA
+        =========================================== -->
+
+        <main class="stackly-insurance-admin-main">
+
+
+            <!-- ==========================================
+                 TOP HEADER
+            =========================================== -->
+
+            <header class="stackly-insurance-admin-header">
+
+
+                <!-- HEADER LEFT -->
+
+                <div class="stackly-insurance-admin-header-left">
+
+                    <button class="stackly-insurance-admin-menu-toggle"
+                        id="stacklyInsuranceAdminMenuToggle"
+                        aria-label="Open sidebar"
+                        aria-expanded="false"
+                        aria-controls="stacklyInsuranceAdminSidebar">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+
+                    <div class="stackly-insurance-admin-header-title">
+
+                        <span>INSURANCE MANAGEMENT</span>
+
+                        <h1>Dashboard</h1>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HEADER RIGHT -->
+
+                <div class="stackly-insurance-admin-header-right">
+
+
+                     
+
+                    <!-- NOTIFICATION -->
+
+                    <a href="404-admin.html"
+                        class="stackly-insurance-admin-icon-btn stackly-insurance-admin-notification"
+                        aria-label="Notifications">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span></span>
+
+                    </a>
+
+
+                    <!-- EMAIL PROFILE -->
+
+                    <div class="stackly-insurance-admin-header-user">
+
+                        <div class="stackly-insurance-admin-header-user-info">
+
+                            <span>Administrator Account</span>
+
+                            <strong id="stacklyInsuranceAdminEmail">
+                                admin@stacklyinsurance.com
+                            </strong>
+
+                        </div>
+
+                        <div class="stackly-insurance-admin-header-user-avatar">
+
+                            <i class="fa-solid fa-user-shield"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- ==========================================
+                 DASHBOARD CONTENT
+            =========================================== -->
+
+            <div class="stackly-insurance-admin-content">
+
+
+                <!-- WELCOME SECTION -->
+
+                <section class="stackly-insurance-admin-welcome"
+                    data-aos="fade-up"
+                    data-aos-duration="1000">
+
+                    <div class="stackly-insurance-admin-welcome-content">
+
+                        <span class="stackly-insurance-admin-eyebrow">
+
+                            <i class="fa-solid fa-chart-simple"></i>
+
+                            OVERVIEW
+
+                        </span>
+
+                        <h2>Welcome Back, Administrator!</h2>
+
+                        <p>
+                            Here's what's happening with your insurance
+                            business today. Manage policies, track claims
+                            and monitor your performance.
+                        </p>
+
+                        <div class="stackly-insurance-admin-welcome-date">
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            <span>November 17, 2026</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-insurance-admin-welcome-visual">
+
+                        <div class="stackly-insurance-admin-welcome-shape">
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                        </div>
+
+                        <div class="stackly-insurance-admin-welcome-badge">
+
+                            <i class="fa-solid fa-check-circle"></i>
+
+                            Your Business Is Protected
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==========================================
+                     STATISTICS CARDS
+                =========================================== -->
+
+                <section class="stackly-insurance-admin-stats">
+
+
+                    <!-- TOTAL POLICIES -->
+
+                    <div class="stackly-insurance-admin-stat-card"
+                        data-aos="fade-up"
+                        data-aos-delay="100">
+
+                        <div class="stackly-insurance-admin-stat-top">
+
+                            <div class="stackly-insurance-admin-stat-icon blue">
+
+                                <i class="fa-solid fa-file-shield"></i>
+
+                            </div>
+
+                            <span class="stackly-insurance-admin-stat-growth">
+
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+
+                                12.8%
+
+                            </span>
+
+                        </div>
+
+                        <p>Total Policies</p>
+
+                        <h3>2,846</h3>
+
+                        <span class="stackly-insurance-admin-stat-note">
+                            Compared to last month
+                        </span>
+
+                    </div>
+
+
+                    <!-- TOTAL CUSTOMERS -->
+
+                    <div class="stackly-insurance-admin-stat-card"
+                        data-aos="fade-up"
+                        data-aos-delay="200">
+
+                        <div class="stackly-insurance-admin-stat-top">
+
+                            <div class="stackly-insurance-admin-stat-icon teal">
+
+                                <i class="fa-solid fa-users"></i>
+
+                            </div>
+
+                            <span class="stackly-insurance-admin-stat-growth">
+
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+
+                                9.6%
+
+                            </span>
+
+                        </div>
+
+                        <p>Total Customers</p>
+
+                        <h3>5,284</h3>
+
+                        <span class="stackly-insurance-admin-stat-note">
+                            Compared to last month
+                        </span>
+
+                    </div>
+
+
+                    <!-- PENDING CLAIMS -->
+
+                    <div class="stackly-insurance-admin-stat-card"
+                        data-aos="fade-up"
+                        data-aos-delay="300">
+
+                        <div class="stackly-insurance-admin-stat-top">
+
+                            <div class="stackly-insurance-admin-stat-icon orange">
+
+                                <i class="fa-solid fa-file-circle-exclamation"></i>
+
+                            </div>
+
+                            <span class="stackly-insurance-admin-stat-warning">
+
+                                Needs Attention
+
+                            </span>
+
+                        </div>
+
+                        <p>Pending Claims</p>
+
+                        <h3>128</h3>
+
+                        <span class="stackly-insurance-admin-stat-note">
+                            Awaiting review and approval
+                        </span>
+
+                    </div>
+
+
+                    <!-- TOTAL REVENUE -->
+
+                    <div class="stackly-insurance-admin-stat-card"
+                        data-aos="fade-up"
+                        data-aos-delay="400">
+
+                        <div class="stackly-insurance-admin-stat-top">
+
+                            <div class="stackly-insurance-admin-stat-icon purple">
+
+                                <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                            </div>
+
+                            <span class="stackly-insurance-admin-stat-growth">
+
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+
+                                18.4%
+
+                            </span>
+
+                        </div>
+
+                        <p>Total Revenue</p>
+
+                        <h3>₹24.85L</h3>
+
+                        <span class="stackly-insurance-admin-stat-note">
+                            Compared to last month
+                        </span>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==========================================
+                     CHART AND QUICK SUMMARY
+                =========================================== -->
+
+                <section class="stackly-insurance-admin-overview-grid">
+
+
+                    <!-- REVENUE CHART -->
+
+                    <div class="stackly-insurance-admin-panel stackly-insurance-admin-revenue"
+                        data-aos="fade-right"
+                        data-aos-duration="1000">
+
+                        <div class="stackly-insurance-admin-panel-header">
+
+                            <div>
+
+                                <span class="stackly-insurance-admin-panel-subtitle">
+                                    FINANCIAL PERFORMANCE
+                                </span>
+
+                                <h3>Revenue Overview</h3>
+
+                            </div>
+
+                            <!-- REVENUE PERIOD CUSTOM DROPDOWN -->
+
+<div class="stackly-insurance-admin-dropdown"
+    id="revenuePeriodDropdown">
+
+    <button type="button"
+        class="stackly-insurance-admin-dropdown-btn"
+        aria-expanded="false">
+
+        <span class="stackly-insurance-admin-dropdown-value">
+            This Year
+        </span>
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </button>
+
+    <div class="stackly-insurance-admin-dropdown-menu">
+
+        <button type="button"
+            class="stackly-insurance-admin-dropdown-option active"
+            data-value="year">
+
+            This Year
+
+            <i class="fa-solid fa-check"></i>
+
+        </button>
+
+        <button type="button"
+            class="stackly-insurance-admin-dropdown-option"
+            data-value="month">
+
+            This Month
+
+            <i class="fa-solid fa-check"></i>
+
+        </button>
+
+        <button type="button"
+            class="stackly-insurance-admin-dropdown-option"
+            data-value="week">
+
+            This Week
+
+            <i class="fa-solid fa-check"></i>
+
+        </button>
+
+    </div>
+
+</div>
+                        </div>
+
+
+                        <div class="stackly-insurance-admin-revenue-summary">
+
+                            <h2>₹24,85,620</h2>
+
+                            <span>
+
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+
+                                18.4% increase
+
+                            </span>
+
+                        </div>
+
+
+                        <div class="stackly-insurance-admin-chart">
+
+                            <div class="stackly-insurance-admin-chart-y">
+
+                                <span>25L</span>
+                                <span>20L</span>
+                                <span>15L</span>
+                                <span>10L</span>
+                                <span>5L</span>
+                                <span>0</span>
+
+                            </div>
+
+
+                            <div class="stackly-insurance-admin-chart-area">
+
+                                <div class="stackly-insurance-admin-chart-grid">
+
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+
+                                </div>
+
+
+                                <div class="stackly-insurance-admin-chart-bars">
+
+                                    <div class="stackly-insurance-admin-bar-group">
+                                        <div class="stackly-insurance-admin-bar" style="--bar-height:38%"></div>
+                                        <span>Jan</span>
+                                    </div>
+
+                                    <div class="stackly-insurance-admin-bar-group">
+                                        <div class="stackly-insurance-admin-bar" style="--bar-height:52%"></div>
+                                        <span>Feb</span>
+                                    </div>
+
+                                    <div class="stackly-insurance-admin-bar-group">
+                                        <div class="stackly-insurance-admin-bar" style="--bar-height:45%"></div>
+                                        <span>Mar</span>
+                                    </div>
+
+                                    <div class="stackly-insurance-admin-bar-group">
+                                        <div class="stackly-insurance-admin-bar" style="--bar-height:65%"></div>
+                                        <span>Apr</span>
+                                    </div>
+
+                                    <div class="stackly-insurance-admin-bar-group">
+                                        <div class="stackly-insurance-admin-bar" style="--bar-height:58%"></div>
+                                        <span>May</span>
+                                    </div>
+
+                                    <div class="stackly-insurance-admin-bar-group">
+                                        <div class="stackly-insurance-admin-bar" style="--bar-height:76%"></div>
+                                        <span>Jun</span>
+                                    </div>
+
+                                    <div class="stackly-insurance-admin-bar-group">
+                                        <div class="stackly-insurance-admin-bar" style="--bar-height:69%"></div>
+                                        <span>Jul</span>
+                                    </div>
+
+                                    <div class="stackly-insurance-admin-bar-group">
+                                        <div class="stackly-insurance-admin-bar" style="--bar-height:88%"></div>
+                                        <span>Aug</span>
+                                    </div>
+
+                                    <div class="stackly-insurance-admin-bar-group">
+                                        <div class="stackly-insurance-admin-bar" style="--bar-height:80%"></div>
+                                        <span>Sep</span>
+                                    </div>
+
+                                    <div class="stackly-insurance-admin-bar-group">
+                                        <div class="stackly-insurance-admin-bar" style="--bar-height:94%"></div>
+                                        <span>Oct</span>
+                                    </div>
+
+                                    <div class="stackly-insurance-admin-bar-group">
+                                        <div class="stackly-insurance-admin-bar" style="--bar-height:85%"></div>
+                                        <span>Nov</span>
+                                    </div>
+
+                                    <div class="stackly-insurance-admin-bar-group">
+                                        <div class="stackly-insurance-admin-bar" style="--bar-height:100%"></div>
+                                        <span>Dec</span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- POLICY DISTRIBUTION -->
+
+                    <div class="stackly-insurance-admin-panel stackly-insurance-admin-policy-distribution"
+                        data-aos="fade-left"
+                        data-aos-duration="1000">
+
+                        <div class="stackly-insurance-admin-panel-header">
+
+                            <div>
+
+                                <span class="stackly-insurance-admin-panel-subtitle">
+                                    POLICY STATISTICS
+                                </span>
+
+                                <h3>Policy Distribution</h3>
+
+                            </div>
+
+                             
+
+                        </div>
+
+
+                        <div class="stackly-insurance-admin-donut">
+
+                            <div class="stackly-insurance-admin-donut-inner">
+
+                                <h3>2,846</h3>
+
+                                <span>Total Policies</span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="stackly-insurance-admin-legend">
+
+                            <div>
+
+                                <span class="stackly-insurance-admin-legend-dot life"></span>
+
+                                <p>Life Insurance</p>
+
+                                <strong>42%</strong>
+
+                            </div>
+
+                            <div>
+
+                                <span class="stackly-insurance-admin-legend-dot health"></span>
+
+                                <p>Health Insurance</p>
+
+                                <strong>28%</strong>
+
+                            </div>
+
+                            <div>
+
+                                <span class="stackly-insurance-admin-legend-dot vehicle"></span>
+
+                                <p>Vehicle Insurance</p>
+
+                                <strong>18%</strong>
+
+                            </div>
+
+                            <div>
+
+                                <span class="stackly-insurance-admin-legend-dot property"></span>
+
+                                <p>Property Insurance</p>
+
+                                <strong>12%</strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==========================================
+                     CLAIMS AND POLICY TABLES
+                =========================================== -->
+
+                <section class="stackly-insurance-admin-tables">
+
+
+                    <!-- RECENT CLAIMS -->
+
+                    <div class="stackly-insurance-admin-panel stackly-insurance-admin-table-panel"
+                        data-aos="fade-up"
+                        data-aos-duration="950">
+
+                        <div class="stackly-insurance-admin-panel-header">
+
+                            <div>
+
+                                <span class="stackly-insurance-admin-panel-subtitle">
+                                    CLAIM MANAGEMENT
+                                </span>
+
+                                <h3>Recent Claims</h3>
+
+                            </div>
+
+                            <a href="404-admin.html"
+                                class="stackly-insurance-admin-view-all">
+
+                                View All
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="stackly-insurance-admin-table-wrap">
+
+                            <table class="stackly-insurance-admin-table">
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>Claim ID</th>
+                                        <th>Customer</th>
+                                        <th>Claim Type</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+
+                                    </tr>
+
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+
+                                        <td>#CLM-1024</td>
+
+                                        <td>
+                                            <div class="stackly-insurance-admin-customer">
+
+                                                <div class="stackly-insurance-admin-customer-avatar">
+                                                    AK
+                                                </div>
+
+                                                <span>Arun Kumar</span>
+
+                                            </div>
+                                        </td>
+
+                                        <td>Health</td>
+
+                                        <td>₹45,000</td>
+
+                                        <td>
+                                            <span class="stackly-insurance-admin-status pending">
+                                                Pending
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>#CLM-1023</td>
+
+                                        <td>
+                                            <div class="stackly-insurance-admin-customer">
+
+                                                <div class="stackly-insurance-admin-customer-avatar teal-bg">
+                                                    SP
+                                                </div>
+
+                                                <span>Sarah Priya</span>
+
+                                            </div>
+                                        </td>
+
+                                        <td>Life</td>
+
+                                        <td>₹1,20,000</td>
+
+                                        <td>
+                                            <span class="stackly-insurance-admin-status approved">
+                                                Approved
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>#CLM-1022</td>
+
+                                        <td>
+                                            <div class="stackly-insurance-admin-customer">
+
+                                                <div class="stackly-insurance-admin-customer-avatar purple-bg">
+                                                    RK
+                                                </div>
+
+                                                <span>Rahul Kumar</span>
+
+                                            </div>
+                                        </td>
+
+                                        <td>Vehicle</td>
+
+                                        <td>₹28,500</td>
+
+                                        <td>
+                                            <span class="stackly-insurance-admin-status review">
+                                                In Review
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>#CLM-1021</td>
+
+                                        <td>
+                                            <div class="stackly-insurance-admin-customer">
+
+                                                <div class="stackly-insurance-admin-customer-avatar orange-bg">
+                                                    PM
+                                                </div>
+
+                                                <span>Priya Menon</span>
+
+                                            </div>
+                                        </td>
+
+                                        <td>Property</td>
+
+                                        <td>₹85,000</td>
+
+                                        <td>
+                                            <span class="stackly-insurance-admin-status approved">
+                                                Approved
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RECENT POLICIES -->
+
+                    <div class="stackly-insurance-admin-panel stackly-insurance-admin-table-panel"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                        data-aos-duration="950">
+
+                        <div class="stackly-insurance-admin-panel-header">
+
+                            <div>
+
+                                <span class="stackly-insurance-admin-panel-subtitle">
+                                    POLICY ACTIVITY
+                                </span>
+
+                                <h3>Recent Policies</h3>
+
+                            </div>
+
+                            <a href="404-admin.html"
+                                class="stackly-insurance-admin-view-all">
+
+                                View All
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="stackly-insurance-admin-table-wrap">
+
+                            <table class="stackly-insurance-admin-table">
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>Policy ID</th>
+                                        <th>Customer</th>
+                                        <th>Category</th>
+                                        <th>Premium</th>
+                                        <th>Status</th>
+
+                                    </tr>
+
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+
+                                        <td>#POL-2084</td>
+
+                                        <td>Vijay Raj</td>
+
+                                        <td>Life</td>
+
+                                        <td>₹12,500</td>
+
+                                        <td>
+                                            <span class="stackly-insurance-admin-status active">
+                                                Active
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>#POL-2083</td>
+
+                                        <td>Anitha S</td>
+
+                                        <td>Health</td>
+
+                                        <td>₹8,400</td>
+
+                                        <td>
+                                            <span class="stackly-insurance-admin-status active">
+                                                Active
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>#POL-2082</td>
+
+                                        <td>Karthik M</td>
+
+                                        <td>Vehicle</td>
+
+                                        <td>₹5,200</td>
+
+                                        <td>
+                                            <span class="stackly-insurance-admin-status pending">
+                                                Pending
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>#POL-2081</td>
+
+                                        <td>Divya R</td>
+
+                                        <td>Property</td>
+
+                                        <td>₹9,800</td>
+
+                                        <td>
+                                            <span class="stackly-insurance-admin-status active">
+                                                Active
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==========================================
+                     BOTTOM ACTIVITY SECTION
+                =========================================== -->
+
+                <section class="stackly-insurance-admin-bottom-grid">
+
+
+                    <!-- RECENT ACTIVITY -->
+
+                    <div class="stackly-insurance-admin-panel stackly-insurance-admin-activity-panel"
+                        data-aos="fade-right"
+                        data-aos-duration="1000">
+
+                        <div class="stackly-insurance-admin-panel-header">
+
+                            <div>
+
+                                <span class="stackly-insurance-admin-panel-subtitle">
+                                    LIVE UPDATES
+                                </span>
+
+                                <h3>Recent Activities</h3>
+
+                            </div>
+
+                            <a href="404-admin.html"
+                                class="stackly-insurance-admin-view-all">
+
+                                View All
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="stackly-insurance-admin-activity-list">
+
+
+                            <div class="stackly-insurance-admin-activity-item">
+
+                                <div class="stackly-insurance-admin-activity-icon blue">
+
+                                    <i class="fa-solid fa-file-circle-check"></i>
+
+                                </div>
+
+                                <div class="stackly-insurance-admin-activity-info">
+
+                                    <h4>New policy registered</h4>
+
+                                    <p>A new life insurance policy was created.</p>
+
+                                    <span>10 minutes ago</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="stackly-insurance-admin-activity-item">
+
+                                <div class="stackly-insurance-admin-activity-icon teal">
+
+                                    <i class="fa-solid fa-user-plus"></i>
+
+                                </div>
+
+                                <div class="stackly-insurance-admin-activity-info">
+
+                                    <h4>New customer registered</h4>
+
+                                    <p>A new customer joined Stackly Insurance.</p>
+
+                                    <span>35 minutes ago</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="stackly-insurance-admin-activity-item">
+
+                                <div class="stackly-insurance-admin-activity-icon orange">
+
+                                    <i class="fa-solid fa-clock"></i>
+
+                                </div>
+
+                                <div class="stackly-insurance-admin-activity-info">
+
+                                    <h4>Claim awaiting approval</h4>
+
+                                    <p>A health insurance claim needs review.</p>
+
+                                    <span>1 hour ago</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="stackly-insurance-admin-activity-item">
+
+                                <div class="stackly-insurance-admin-activity-icon purple">
+
+                                    <i class="fa-solid fa-wallet"></i>
+
+                                </div>
+
+                                <div class="stackly-insurance-admin-activity-info">
+
+                                    <h4>Premium payment received</h4>
+
+                                    <p>A customer completed a premium payment.</p>
+
+                                    <span>2 hours ago</span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUICK ACTIONS -->
+
+                    <div class="stackly-insurance-admin-panel stackly-insurance-admin-quick-panel"
+                        data-aos="fade-left"
+                        data-aos-duration="1000">
+
+                        <div class="stackly-insurance-admin-panel-header">
+
+                            <div>
+
+                                <span class="stackly-insurance-admin-panel-subtitle">
+                                    SHORTCUTS
+                                </span>
+
+                                <h3>Quick Actions</h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="stackly-insurance-admin-quick-actions">
+
+                            <a href="404-admin.html"
+                                class="stackly-insurance-admin-quick-action">
+
+                                <div class="stackly-insurance-admin-quick-icon blue">
+
+                                    <i class="fa-solid fa-plus"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h4>Add New Policy</h4>
+
+                                    <p>Create an insurance policy</p>
+
+                                </div>
+
+                                <i class="fa-solid fa-chevron-right"></i>
+
+                            </a>
+
+
+                            <a href="404-admin.html"
+                                class="stackly-insurance-admin-quick-action">
+
+                                <div class="stackly-insurance-admin-quick-icon teal">
+
+                                    <i class="fa-solid fa-user-plus"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h4>Add Customer</h4>
+
+                                    <p>Register a new customer</p>
+
+                                </div>
+
+                                <i class="fa-solid fa-chevron-right"></i>
+
+                            </a>
+
+
+                            <a href="404-admin.html"
+                                class="stackly-insurance-admin-quick-action">
+
+                                <div class="stackly-insurance-admin-quick-icon orange">
+
+                                    <i class="fa-solid fa-file-circle-check"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h4>Review Claims</h4>
+
+                                    <p>Manage pending claims</p>
+
+                                </div>
+
+                                <i class="fa-solid fa-chevron-right"></i>
+
+                            </a>
+
+
+                            <a href="404-admin.html"
+                                class="stackly-insurance-admin-quick-action">
+
+                                <div class="stackly-insurance-admin-quick-icon purple">
+
+                                    <i class="fa-solid fa-chart-pie"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h4>View Reports</h4>
+
+                                    <p>Explore business analytics</p>
+
+                                </div>
+
+                                <i class="fa-solid fa-chevron-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- AOS JS -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- ADMIN JS -->
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

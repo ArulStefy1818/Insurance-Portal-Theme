@@ -1,0 +1,3964 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly | Insurance Solutions</title>
+
+    <meta name="description"
+        content="Stackly Insurance provides reliable insurance solutions to protect your family, business, health and future.">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="Stackly-logo-Blue.webp">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+</head>
+
+<body>
+
+    <!-- =====================================================
+     STACKLY INSURANCE PREMIUM PAGE LOADER
+====================================================== -->
+
+<div class="stackly-insurance-loader" id="stacklyInsuranceLoader"
+    role="status"
+    aria-label="Loading Stackly Insurance website">
+
+    <div class="stackly-insurance-loader-content">
+
+        <!-- ANIMATED CIRCULAR WAVE -->
+
+        <div class="stackly-insurance-loader-circle">
+
+            <span class="stackly-insurance-loader-wave wave-one"></span>
+            <span class="stackly-insurance-loader-wave wave-two"></span>
+            <span class="stackly-insurance-loader-wave wave-three"></span>
+
+            <!-- LOGO -->
+
+            <div class="stackly-insurance-loader-logo">
+
+                <img src="Stackly-logo-Blue.webp"
+                    alt="Stackly Insurance Logo">
+
+            </div>
+
+        </div>
+
+        <!-- BRAND NAME -->
+
+        <div class="stackly-insurance-loader-brand">
+
+            <h2>STACKLY<span>.</span></h2>
+
+            <p>INSURANCE SOLUTIONS</p>
+
+        </div>
+
+        <!-- LOADING TEXT -->
+
+        <div class="stackly-insurance-loader-text">
+
+            <span class="stackly-insurance-loader-dot"></span>
+
+            <span id="stacklyInsuranceLoadingText">
+                Securing Your Future
+            </span>
+
+            <span class="stackly-insurance-loader-dot"></span>
+
+        </div>
+
+        <!-- LOADING BAR -->
+
+        <div class="stackly-insurance-loader-progress">
+
+            <div class="stackly-insurance-loader-progress-fill"
+                id="stacklyInsuranceLoaderProgress">
+            </div>
+
+        </div>
+
+        <!-- LOADING PERCENTAGE -->
+
+        <div class="stackly-insurance-loader-bottom">
+
+            <span>PLEASE WAIT</span>
+
+            <strong id="stacklyInsuranceLoaderPercentage">0%</strong>
+
+        </div>
+
+    </div>
+
+    <!-- BACKGROUND DECORATIONS -->
+
+    <div class="stackly-insurance-loader-decoration loader-decoration-one"></div>
+    <div class="stackly-insurance-loader-decoration loader-decoration-two"></div>
+
+</div>
+
+    <!-- =========================================
+         HEADER SECTION
+    ========================================== -->
+
+    <header class="stackly-insurance-header" id="insuranceHeader">
+
+        <div class="stackly-insurance-header-container">
+
+            <!-- LOGO -->
+
+            <a href="index.html"
+                class="stackly-insurance-logo"
+                aria-label="Stackly Home">
+
+                <img src="Stackly-logo-Blue.webp"
+                    alt="Stackly Logo">
+
+            </a>
+
+
+            <!-- DESKTOP NAVIGATION -->
+
+            <nav class="stackly-insurance-navigation"
+                id="insuranceNavigation">
+
+                <a href="index.html" class="stackly-insurance-nav-link active">
+                    Home
+                </a>
+
+                <a href="about.html" class="stackly-insurance-nav-link">
+                    About Us
+                </a>
+
+                <a href="insurance.html" class="stackly-insurance-nav-link">
+                    Insurance
+                </a>
+
+                <a href="services.html" class="stackly-insurance-nav-link">
+                    Services
+                </a>
+
+                <a href="claims.html" class="stackly-insurance-nav-link">
+                    Claims
+                </a>
+
+                <a href="blog.html" class="stackly-insurance-nav-link">
+                    Blog
+                </a>
+
+                <a href="contact.html" class="stackly-insurance-nav-link">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- HEADER ACTION -->
+
+            <div class="stackly-insurance-header-action">
+
+                <a href="login.html"
+                    class="stackly-insurance-quote-btn">
+
+                    Login
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </div>
+
+
+            <!-- MOBILE MENU BUTTON -->
+
+            <button class="stackly-insurance-menu-toggle"
+                id="insuranceMenuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="insuranceMobileMenu">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         MOBILE NAVIGATION
+    ========================================== -->
+
+    <div class="stackly-insurance-mobile-overlay"
+        id="insuranceMobileOverlay">
+    </div>
+
+
+    <nav class="stackly-insurance-mobile-menu"
+        id="insuranceMobileMenu"
+        aria-label="Mobile navigation">
+
+        <div class="stackly-insurance-mobile-top">
+
+            <a href="index.html"
+                class="stackly-insurance-mobile-logo">
+
+                <img src="Stackly-logo-Blue.webp"
+                    alt="Stackly Logo">
+
+            </a>
+
+            <!-- EXIT BUTTON -->
+
+            <button class="stackly-insurance-menu-close"
+                id="insuranceMenuClose"
+                aria-label="Close navigation menu">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <div class="stackly-insurance-mobile-links">
+
+            <a href="index.html" class="active">
+                <span>01</span>
+                Home
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="about.html">
+                <span>02</span>
+                About Us
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="insurance.html">
+                <span>03</span>
+                Insurance
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="services.html">
+                <span>04</span>
+                Services
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="claims.html">
+                <span>05</span>
+                Claims
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="blog.html">
+                <span>06</span>
+                Blog
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="contact.html">
+                <span>07</span>
+                Contact
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <a href="login.html"
+            class="stackly-insurance-mobile-quote">
+
+            Login
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+
+        <div class="stackly-insurance-mobile-footer">
+
+            <span>PROTECTION YOU CAN TRUST</span>
+
+            <p>Secure Today. Confident Tomorrow.</p>
+
+        </div>
+
+    </nav>
+
+
+
+
+    <!-- =========================================
+         HERO SECTION
+    ========================================== -->
+
+    <main>
+
+        
+<!-- =====================================================
+     STACKLY INSURANCE HERO SECTION
+     PREMIUM CORPORATE INSURANCE DESIGN
+====================================================== -->
+
+<section class="stackly-insurance-hero"
+    id="insuranceHero">
+
+
+    <!-- ================================================
+         01. BACKGROUND VIDEO SLIDER
+    ================================================= -->
+
+    <div class="stackly-insurance-video-wrapper">
+
+        <video class="stackly-insurance-video active"
+            autoplay muted playsinline preload="auto">
+
+            <source src="video-1.mp4" type="video/mp4">
+
+        </video>
+
+
+        <video class="stackly-insurance-video"
+            muted playsinline preload="none">
+
+            <source src="video-2.mp4" type="video/mp4">
+
+        </video>
+
+
+        <video class="stackly-insurance-video"
+            muted playsinline preload="none">
+
+            <source src="video-3.mp4" type="video/mp4">
+
+        </video>
+
+    </div>
+
+
+    <!-- ================================================
+         02. VIDEO OVERLAY
+    ================================================= -->
+
+    <div class="stackly-insurance-hero-overlay"></div>
+
+
+    <!-- ================================================
+         03. DECORATIVE BACKGROUND ELEMENTS
+    ================================================= -->
+
+    <div class="stackly-insurance-hero-decoration">
+
+        <div class="stackly-insurance-glow glow-one"></div>
+
+        <div class="stackly-insurance-glow glow-two"></div>
+
+        <div class="stackly-insurance-grid-pattern"></div>
+
+    </div>
+
+
+    <!-- ================================================
+         04. HERO MAIN CONTAINER
+    ================================================= -->
+
+    <div class="stackly-insurance-hero-container">
+
+
+        <!-- ============================================
+             LEFT SIDE HERO CONTENT
+        ============================================= -->
+
+        <div class="stackly-insurance-hero-content">
+
+
+            <!-- HERO LABEL -->
+
+            <div class="stackly-insurance-hero-label"
+                data-aos="fade-down"
+                data-aos-duration="900"
+                data-aos-delay="150">
+
+                <span class="stackly-insurance-label-line"></span>
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                PROTECTING WHAT MATTERS MOST
+
+            </div>
+
+
+            <!-- HERO HEADING -->
+
+            <h1 data-aos="fade-right"
+                data-aos-duration="1100"
+                data-aos-delay="250">
+
+                Your Future.
+
+                <span>Your Protection.</span>
+
+                <strong>Our Priority.</strong>
+
+            </h1>
+
+
+            <!-- HERO DESCRIPTION -->
+
+            <p class="stackly-insurance-hero-description"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="400">
+
+                Life is full of possibilities. Protect the people,
+                possessions, and dreams that matter most with
+                insurance solutions designed around you.
+                Experience confidence today and security for tomorrow.
+
+            </p>
+
+
+            <!-- ========================================
+                 HERO CTA BUTTONS
+            ========================================= -->
+
+            <div class="stackly-insurance-hero-buttons"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="550">
+
+
+                <!-- PRIMARY BUTTON -->
+
+                <a href="404.html"
+                    class="stackly-insurance-primary-btn">
+
+                    <span>Explore Our Insurance</span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <!-- SECONDARY BUTTON -->
+
+                <a href="404.html"
+                    class="stackly-insurance-secondary-btn">
+
+                    <span class="stackly-insurance-play-icon">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </span>
+
+                    <span>Discover More</span>
+
+                </a>
+
+
+            </div>
+
+
+            <!-- ========================================
+                 TRUST INDICATORS
+            ========================================= -->
+
+            <div class="stackly-insurance-trust-row">
+
+
+                <!-- TRUST ITEM 01 -->
+
+                <div class="stackly-insurance-trust-item"
+                    data-aos="zoom-in"
+                    data-aos-duration="900"
+                    data-aos-delay="650">
+
+                    <div class="stackly-insurance-trust-icon">
+
+                        <i class="fa-solid fa-shield-heart"></i>
+
+                    </div>
+
+                    <div class="stackly-insurance-trust-content">
+
+                        <h4>Complete Protection</h4>
+
+                        <span>Coverage that matters</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DIVIDER -->
+
+                <div class="stackly-insurance-trust-divider"
+                    data-aos="fade-up"
+                    data-aos-duration="800"
+                    data-aos-delay="750">
+                </div>
+
+
+                <!-- TRUST ITEM 02 -->
+
+                <div class="stackly-insurance-trust-item"
+                    data-aos="zoom-in"
+                    data-aos-duration="900"
+                    data-aos-delay="850">
+
+                    <div class="stackly-insurance-trust-icon">
+
+                        <i class="fa-solid fa-handshake"></i>
+
+                    </div>
+
+                    <div class="stackly-insurance-trust-content">
+
+                        <h4>Trusted Support</h4>
+
+                        <span>Here when you need us</span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ============================================
+             RIGHT SIDE HERO VISUAL
+        ============================================= -->
+
+        <div class="stackly-insurance-hero-visual"
+            data-aos="fade-left"
+            data-aos-duration="1200"
+            data-aos-delay="350">
+
+
+            <!-- ========================================
+                 PROTECTION CARD
+            ========================================= -->
+
+            <div class="stackly-insurance-protection-card"
+                data-aos="zoom-in"
+                data-aos-duration="1100"
+                data-aos-delay="550">
+
+
+                <!-- CARD HEADER -->
+
+                <div class="stackly-insurance-card-top">
+
+                    <div class="stackly-insurance-card-icon">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                    </div>
+
+                    <div class="stackly-insurance-card-heading">
+
+                        <span>YOUR SECURITY MATTERS</span>
+
+                        <small>Protection you can trust</small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CARD MAIN CONTENT -->
+
+                <div class="stackly-insurance-card-main">
+
+                    <span class="stackly-insurance-card-subtitle">
+
+                        YOUR PEACE OF MIND
+
+                    </span>
+
+                    <h3>
+
+                        Peace of Mind
+                        <span>Starts Here.</span>
+
+                    </h3>
+
+                    <p>
+
+                        Smart protection for every stage of life.
+                        We're here to help safeguard what matters
+                        most to you and your family.
+
+                    </p>
+
+                </div>
+
+
+                <!-- CARD FEATURES -->
+
+                <div class="stackly-insurance-card-features">
+
+                    <div>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Personalized Coverage
+
+                    </div>
+
+                    <div>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Dedicated Assistance
+
+                    </div>
+
+                </div>
+
+
+                <!-- CARD BOTTOM -->
+
+                <div class="stackly-insurance-card-bottom">
+
+                    <span>
+
+                        <i class="fa-solid fa-shield-heart"></i>
+
+                        Protection made personal
+
+                    </span>
+
+                    <a href="404.html">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ================================================
+         05. BOTTOM HERO CONTROLS
+    ================================================= -->
+
+    <div class="stackly-insurance-hero-bottom">
+
+
+        <!-- SCROLL INDICATOR -->
+
+        <a href="#insuranceHero"
+            class="stackly-insurance-scroll"
+            data-aos="fade-right"
+            data-aos-duration="900"
+            data-aos-delay="800">
+
+             
+             
+
+        </a>
+
+
+
+        <!-- ============================================
+             VIDEO SLIDER CONTROLS
+        ============================================= -->
+
+        <div class="stackly-insurance-video-controls"
+            data-aos="fade-left"
+            data-aos-duration="900"
+            data-aos-delay="800">
+
+
+            <span class="stackly-insurance-video-number"
+                id="insuranceVideoNumber">
+
+                01
+
+            </span>
+
+
+            <div class="stackly-insurance-video-progress">
+
+                <span id="insuranceVideoProgress"></span>
+
+            </div>
+
+
+            <span class="stackly-insurance-video-total">
+
+                03
+
+            </span>
+
+
+            <button id="insuranceVideoPause"
+                class="stackly-insurance-video-pause"
+                aria-label="Pause background videos">
+
+                <i class="fa-solid fa-pause"></i>
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     STACKLY INSURANCE ABOUT SECTION
+     PREMIUM THREE COLUMN DESIGN
+====================================================== -->
+
+<section class="stackly-insurance-about"
+    id="aboutUs">
+
+
+    <!-- ================================================
+         ABOUT CONTAINER
+    ================================================= -->
+
+    <div class="stackly-insurance-about-container">
+
+
+        <!-- ============================================
+             01. ABOUT INTRODUCTION
+        ============================================= -->
+
+        <div class="stackly-insurance-about-intro"
+            data-aos="fade-right"
+            data-aos-duration="1100">
+
+            
+            <!-- SECTION LABEL -->
+
+            <div class="stackly-insurance-about-label"
+                data-aos="fade-down"
+                data-aos-delay="100">
+
+                <span></span>
+
+                ABOUT STACKLY
+
+            </div>
+
+
+            <!-- SECTION HEADING -->
+
+            <h2 data-aos="fade-up"
+                data-aos-delay="200">
+
+                Protection That
+                <span>Builds Confidence.</span>
+
+            </h2>
+
+
+            <!-- HEADING LINE -->
+
+            <div class="stackly-insurance-about-line"
+                data-aos="zoom-in"
+                data-aos-delay="300">
+            </div>
+
+
+            <!-- DESCRIPTION -->
+
+            <p class="stackly-insurance-about-description"
+                data-aos="fade-up"
+                data-aos-delay="350">
+
+                At Stackly, we believe insurance is more than
+                a policy. It is a promise to protect your family,
+                secure your future, and provide confidence
+                through life's unexpected moments.
+
+            </p>
+
+
+            <p class="stackly-insurance-about-description second"
+                data-aos="fade-up"
+                data-aos-delay="450">
+
+                Our insurance solutions are designed around your needs, 
+                helping you make confident decisions at every stage of life.
+
+            </p>
+
+
+            <!-- ALL SERVICES BUTTON -->
+
+            <a href="services.html"
+                class="stackly-insurance-about-btn"
+                data-aos="fade-up"
+                data-aos-delay="550">
+
+                <span>Explore All Services</span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- ============================================
+             02. LIFE INSURANCE CARD
+        ============================================= -->
+
+        <div class="stackly-insurance-about-card"
+            data-aos="fade-up"
+            data-aos-duration="1100"
+            data-aos-delay="200">
+
+
+            <!-- IMAGE -->
+
+            <div class="stackly-insurance-about-image">
+
+                <img src="insurance-about-1.webp"
+                    alt="Insurance advisor reviewing financial planning documents">
+
+                <!-- IMAGE OVERLAY -->
+
+                <div class="stackly-insurance-about-image-overlay">
+
+                    <span>
+
+                        <i class="fa-solid fa-shield-heart"></i>
+
+                        Financial Security
+
+                    </span>
+
+                </div>
+
+
+                <!-- IMAGE NUMBER -->
+
+                <div class="stackly-insurance-about-image-number">
+
+                    01
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD CONTENT -->
+
+            <div class="stackly-insurance-about-card-content">
+
+
+                <a href="404.html"><div class="stackly-insurance-about-card-heading">
+
+                    <h3>Life Insurance Planning</h3>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </div></a>
+
+
+                <p>
+
+                    Secure your family's future with thoughtful
+                    life insurance solutions that provide
+                    financial stability and lasting peace of mind.
+
+                </p>
+
+
+                <!-- LEARN MORE -->
+
+                <a href="404.html"
+                    class="stackly-insurance-about-link">
+
+                    LEARN MORE
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ============================================
+             03. FAMILY PROTECTION CARD
+        ============================================= -->
+
+        <div class="stackly-insurance-about-card"
+            data-aos="fade-up"
+            data-aos-duration="1100"
+            data-aos-delay="400">
+
+
+            <!-- IMAGE -->
+
+            <div class="stackly-insurance-about-image">
+
+                <img src="insurance-about-2.webp"
+                    alt="Professional insurance consultant helping a client">
+
+                <!-- IMAGE OVERLAY -->
+
+                <div class="stackly-insurance-about-image-overlay">
+
+                    <span>
+
+                        <i class="fa-solid fa-handshake-angle"></i>
+
+                        Personal Support
+
+                    </span>
+
+                </div>
+
+
+                <!-- IMAGE NUMBER -->
+
+                <div class="stackly-insurance-about-image-number">
+
+                    02
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD CONTENT -->
+
+            <div class="stackly-insurance-about-card-content">
+
+
+                <a href="404.html"><div class="stackly-insurance-about-card-heading">
+
+                    <h3>Family Protection</h3>
+
+                    
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    
+
+                </div></a>
+
+
+                <p>
+
+                    Protect the people who matter most with
+                    personalized coverage and dependable
+                    guidance for life's important milestones.
+
+                </p>
+
+
+                <!-- LEARN MORE -->
+
+                <a href="404.html"
+                    class="stackly-insurance-about-link">
+
+                    LEARN MORE
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- ================================================
+         ABOUT BOTTOM DECORATION
+    ================================================= -->
+
+    <div class="stackly-insurance-about-decoration"
+        data-aos="fade-left"
+        data-aos-duration="1200">
+
+        <span></span>
+
+    </div>
+
+
+</section>
+
+<!-- =========================================
+     STACKLY INSURANCE SERVICES SECTION
+========================================== -->
+
+<section class="stackly-insurance-services-section"
+    id="insuranceServices">
+
+    <div class="stackly-insurance-services-container">
+
+        <!-- SECTION HEADER -->
+
+        <div class="stackly-insurance-services-header"
+            data-aos="fade-up"
+            data-aos-duration="900">
+
+            <div class="stackly-insurance-services-heading">
+
+                <span class="stackly-insurance-services-label"
+                    data-aos="fade-right"
+                    data-aos-delay="100">
+                    OUR SERVICES
+                </span>
+
+                <h2>
+                    Take away the risk &amp; you can
+                    <span>do anything.</span>
+                </h2>
+
+                <p>
+                    Explore insurance solutions designed to protect
+                    what matters most and give you confidence for
+                    every stage of life.
+                </p>
+
+            </div>
+
+            <a href="404.html"
+                class="stackly-insurance-services-view-all"
+                data-aos="fade-left"
+                data-aos-delay="200">
+
+                VIEW ALL SERVICES
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <!-- SERVICES SLIDER -->
+
+        <div class="stackly-insurance-services-slider"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200">
+
+            <div class="stackly-insurance-services-track"
+                id="stacklyInsuranceServicesTrack">
+
+
+                <!-- SERVICE CARD 01 -->
+
+                <article class="stackly-insurance-service-card active"
+                    data-service-slide="0">
+
+                    <div class="stackly-insurance-service-image"
+                        data-aos="zoom-in"
+                        data-aos-duration="900">
+
+                        <img src="services-1.webp"
+                            alt="Life Insurance Planning">
+
+                    </div>
+
+                    <div class="stackly-insurance-service-content"
+                        data-aos="fade-left"
+                        data-aos-duration="900"
+                        data-aos-delay="150">
+
+                        <span class="stackly-insurance-service-number">
+                            01.
+                        </span>
+
+                        <div class="stackly-insurance-service-details">
+
+                            <h3>Life Insurance</h3>
+
+                            <p>
+                                Protect your family's future with
+                                reliable life insurance coverage
+                                designed to provide financial
+                                security and lasting peace of mind.
+                            </p>
+
+                            <a href="404.html">
+                                READ MORE
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SERVICE CARD 02 -->
+
+                <article class="stackly-insurance-service-card"
+                    data-service-slide="1">
+
+                    <div class="stackly-insurance-service-image"
+                        data-aos="fade-right"
+                        data-aos-duration="900">
+
+                        <img src="services-2.webp"
+                            alt="Health Insurance Protection">
+
+                    </div>
+
+                    <div class="stackly-insurance-service-content"
+                        data-aos="fade-up"
+                        data-aos-duration="900"
+                        data-aos-delay="200">
+
+                        <span class="stackly-insurance-service-number">
+                            02.
+                        </span>
+
+                        <div class="stackly-insurance-service-details">
+
+                            <h3>Health Insurance</h3>
+
+                            <p>
+                                Stay prepared for unexpected medical
+                                expenses with comprehensive healthcare
+                                protection for you and your loved ones.
+                            </p>
+
+                            <a href="404.html">
+                                READ MORE
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SERVICE CARD 03 -->
+
+                <article class="stackly-insurance-service-card"
+                    data-service-slide="2">
+
+                    <div class="stackly-insurance-service-image"
+                        data-aos="zoom-in-up"
+                        data-aos-duration="900">
+
+                        <img src="services-3.webp"
+                            alt="Vehicle Insurance Coverage">
+
+                    </div>
+
+                    <div class="stackly-insurance-service-content"
+                        data-aos="fade-left"
+                        data-aos-duration="900"
+                        data-aos-delay="150">
+
+                        <span class="stackly-insurance-service-number">
+                            03.
+                        </span>
+
+                        <div class="stackly-insurance-service-details">
+
+                            <h3>Vehicle Insurance</h3>
+
+                            <p>
+                                Keep your vehicle protected against
+                                unexpected accidents, damage and
+                                unforeseen road-related expenses.
+                            </p>
+
+                            <a href="404.html">
+                                READ MORE
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SERVICE CARD 04 -->
+
+                <article class="stackly-insurance-service-card"
+                    data-service-slide="3">
+
+                    <div class="stackly-insurance-service-image"
+                        data-aos="fade-down"
+                        data-aos-duration="900">
+
+                        <img src="services-4.webp"
+                            alt="Home Insurance Protection">
+
+                    </div>
+
+                    <div class="stackly-insurance-service-content"
+                        data-aos="fade-up"
+                        data-aos-duration="900"
+                        data-aos-delay="200">
+
+                        <span class="stackly-insurance-service-number">
+                            04.
+                        </span>
+
+                        <div class="stackly-insurance-service-details">
+
+                            <h3>Home Insurance</h3>
+
+                            <p>
+                                Safeguard your home and valuable
+                                belongings with dependable coverage
+                                against unexpected property risks.
+                            </p>
+
+                            <a href="404.html">
+                                READ MORE
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- SLIDER CONTROLS -->
+
+            <div class="stackly-insurance-services-controls"
+                data-aos="fade-up"
+                data-aos-duration="800">
+
+                <div class="stackly-insurance-services-pagination"
+                    id="stacklyInsuranceServicesPagination">
+
+                    <button class="stackly-insurance-service-dot active"
+                        type="button"
+                        aria-label="Show service 1"
+                        aria-current="true"
+                        data-slide-to="0">
+                    </button>
+
+                    <button class="stackly-insurance-service-dot"
+                        type="button"
+                        aria-label="Show service 2"
+                        data-slide-to="1">
+                    </button>
+
+                    <button class="stackly-insurance-service-dot"
+                        type="button"
+                        aria-label="Show service 3"
+                        data-slide-to="2">
+                    </button>
+
+                    <button class="stackly-insurance-service-dot"
+                        type="button"
+                        aria-label="Show service 4"
+                        data-slide-to="3">
+                    </button>
+
+                </div>
+
+                <div class="stackly-insurance-services-arrows">
+
+                    <button type="button"
+                        class="stackly-insurance-service-prev"
+                        id="stacklyInsuranceServicePrev"
+                        aria-label="Previous service">
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                    </button>
+
+                    <button type="button"
+                        class="stackly-insurance-service-next"
+                        id="stacklyInsuranceServiceNext"
+                        aria-label="Next service">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STACKLY INSURANCE SOLUTIONS SECTION
+     PREMIUM INSURANCE COVERAGE DESIGN
+====================================================== -->
+
+<section class="stackly-insurance-solutions"
+    id="insuranceSolutions">
+
+    <div class="stackly-insurance-solutions-container">
+
+        <!-- =========================================
+             SECTION HEADER
+        ========================================== -->
+
+        <div class="stackly-insurance-solutions-header">
+
+            <div class="stackly-insurance-solutions-heading"
+                data-aos="fade-right"
+                data-aos-duration="1100">
+
+                <span class="stackly-insurance-solutions-label"
+                    data-aos="fade-down"
+                    data-aos-delay="100">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+                    COMPLETE INSURANCE SOLUTIONS
+
+                </span>
+
+                <h2>
+                    Protection for
+                    <span>Everything You Value.</span>
+                </h2>
+
+            </div>
+
+            <div class="stackly-insurance-solutions-intro"
+                data-aos="fade-left"
+                data-aos-duration="1100"
+                data-aos-delay="200">
+
+                <p>
+                    Every life has different priorities. Discover
+                    flexible insurance solutions that help protect
+                    your loved ones, your assets and your future
+                    with confidence.
+                </p>
+
+                <a href="404.html"
+                    class="stackly-insurance-solutions-explore">
+
+                    EXPLORE ALL COVERAGE
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================================
+             INSURANCE SOLUTIONS GRID
+        ========================================== -->
+
+        <div class="stackly-insurance-solutions-grid">
+
+
+            <!-- =====================================
+                 CARD 01 - LIFE INSURANCE
+            ====================================== -->
+
+            <article class="stackly-insurance-solution-card"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="100">
+
+                <div class="stackly-insurance-solution-image">
+
+                    <img src="solutions-1.webp"
+                        alt="Family protected with life insurance">
+
+                    <div class="stackly-insurance-solution-overlay"></div>
+
+                    <span class="stackly-insurance-solution-number">
+                        01
+                    </span>
+
+                    <div class="stackly-insurance-solution-icon">
+
+                        <i class="fa-solid fa-heart"></i>
+
+                    </div>
+
+                    <span class="stackly-insurance-solution-tag">
+                        FAMILY SECURITY
+                    </span>
+
+                </div>
+
+                <div class="stackly-insurance-solution-content">
+
+                    <div class="stackly-insurance-solution-title">
+
+                        <h3>Life Insurance</h3>
+
+                         
+                    </div>
+
+                    <p>
+                        Give your family lasting financial protection
+                        and help secure their dreams, even when
+                        life takes an unexpected turn.
+                    </p>
+
+                    <div class="stackly-insurance-solution-bottom">
+
+                        <span>
+                            <i class="fa-solid fa-shield-heart"></i>
+                            Protect Their Tomorrow
+                        </span>
+
+                        <a href="404.html"
+                            aria-label="Explore life insurance">
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================================
+                 CARD 02 - HEALTH INSURANCE
+            ====================================== -->
+
+            <article class="stackly-insurance-solution-card"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="250">
+
+                <div class="stackly-insurance-solution-image">
+
+                    <img src="solutions-2.webp"
+                        alt="Healthcare and medical insurance protection">
+
+                    <div class="stackly-insurance-solution-overlay"></div>
+
+                    <span class="stackly-insurance-solution-number">
+                        02
+                    </span>
+
+                    <div class="stackly-insurance-solution-icon">
+
+                        <i class="fa-solid fa-heart-pulse"></i>
+
+                    </div>
+
+                    <span class="stackly-insurance-solution-tag">
+                        HEALTH & WELLNESS
+                    </span>
+
+                </div>
+
+                <div class="stackly-insurance-solution-content">
+
+                    <div class="stackly-insurance-solution-title">
+
+                        <h3>Health Insurance</h3>
+
+                         
+
+                    </div>
+
+                    <p>
+                        Focus on living healthier with coverage
+                        designed to help manage unexpected
+                        medical expenses and healthcare needs.
+                    </p>
+
+                    <div class="stackly-insurance-solution-bottom">
+
+                        <span>
+                            <i class="fa-solid fa-shield-heart"></i>
+                            Your Health Matters
+                        </span>
+
+                        <a href="404.html"
+                            aria-label="Explore health insurance">
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================================
+                 CARD 03 - VEHICLE INSURANCE
+            ====================================== -->
+
+            <article class="stackly-insurance-solution-card"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="400">
+
+                <div class="stackly-insurance-solution-image">
+
+                    <img src="solutions-3.webp"
+                        alt="Car protected with vehicle insurance">
+
+                    <div class="stackly-insurance-solution-overlay"></div>
+
+                    <span class="stackly-insurance-solution-number">
+                        03
+                    </span>
+
+                    <div class="stackly-insurance-solution-icon">
+
+                        <i class="fa-solid fa-car-side"></i>
+
+                    </div>
+
+                    <span class="stackly-insurance-solution-tag">
+                        ROAD PROTECTION
+                    </span>
+
+                </div>
+
+                <div class="stackly-insurance-solution-content">
+
+                    <div class="stackly-insurance-solution-title">
+
+                        <h3>Vehicle Insurance</h3>
+
+                         
+
+                    </div>
+
+                    <p>
+                        Enjoy every journey with confidence through
+                        vehicle protection that helps you prepare
+                        for unexpected road incidents.
+                    </p>
+
+                    <div class="stackly-insurance-solution-bottom">
+
+                        <span>
+                            <i class="fa-solid fa-shield-heart"></i>
+                            Travel With Confidence
+                        </span>
+
+                        <a href="404.html"
+                            aria-label="Explore vehicle insurance">
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================================
+                 CARD 04 - HOME INSURANCE
+            ====================================== -->
+
+            <article class="stackly-insurance-solution-card"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="550">
+
+                <div class="stackly-insurance-solution-image">
+
+                    <img src="solutions-4.webp"
+                        alt="Modern home protected by home insurance">
+
+                    <div class="stackly-insurance-solution-overlay"></div>
+
+                    <span class="stackly-insurance-solution-number">
+                        04
+                    </span>
+
+                    <div class="stackly-insurance-solution-icon">
+
+                        <i class="fa-solid fa-house-chimney"></i>
+
+                    </div>
+
+                    <span class="stackly-insurance-solution-tag">
+                        PROPERTY SECURITY
+                    </span>
+
+                </div>
+
+                <div class="stackly-insurance-solution-content">
+
+                    <div class="stackly-insurance-solution-title">
+
+                        <h3>Home Insurance</h3>
+
+                         
+
+                    </div>
+
+                    <p>
+                        Protect your home and valuable belongings
+                        with dependable property coverage for
+                        greater everyday peace of mind.
+                    </p>
+
+                    <div class="stackly-insurance-solution-bottom">
+
+                        <span>
+                            <i class="fa-solid fa-shield-heart"></i>
+                            Secure What You Own
+                        </span>
+
+                        <a href="404.html"
+                            aria-label="Explore home insurance">
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <!-- =========================================
+             BOTTOM TRUST BANNER
+        ========================================== -->
+
+        <div class="stackly-insurance-solutions-bottom"
+            data-aos="zoom-in-up"
+            data-aos-duration="1000">
+
+            <div class="stackly-insurance-solutions-bottom-icon">
+
+                <i class="fa-solid fa-handshake-angle"></i>
+
+            </div>
+
+            <div class="stackly-insurance-solutions-bottom-text">
+
+                <span>YOUR PEACE OF MIND COMES FIRST</span>
+
+                <h3>
+                    Not sure which coverage is right for you?
+                </h3>
+
+                <p>
+                    Let our team help you find protection that
+                    matches your needs and priorities.
+                </p>
+
+            </div>
+
+            <a href="404.html"
+                class="stackly-insurance-solutions-contact">
+
+                TALK TO OUR TEAM
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STACKLY INSURANCE CLAIMS SECTION
+     ADVANCED CIRCULAR PROCESS DESIGN
+====================================================== -->
+
+<section class="stackly-insurance-claims"
+    id="insuranceClaims">
+
+    <div class="stackly-insurance-claims-container">
+
+
+        <!-- =========================================
+             SECTION HEADER
+        ========================================== -->
+
+        <div class="stackly-insurance-claims-header">
+
+            <div class="stackly-insurance-claims-heading"
+                data-aos="fade-right"
+                data-aos-duration="1100">
+
+                <span class="stackly-insurance-claims-label"
+                    data-aos="zoom-in"
+                    data-aos-delay="100">
+
+                    <i class="fa-solid fa-file-circle-check"></i>
+                    CLAIMS MADE SIMPLE
+
+                </span>
+
+                <h2>
+                    Your Claim Journey,
+                    <span>Made Easier.</span>
+                </h2>
+
+            </div>
+
+            <div class="stackly-insurance-claims-intro"
+                data-aos="fade-left"
+                data-aos-duration="1100"
+                data-aos-delay="200">
+
+                <p>
+                    We understand that unexpected situations can
+                    be stressful. Our simple claims process helps
+                    you take the next steps with clarity,
+                    confidence and dedicated support.
+                </p>
+
+                <a href="404.html"
+                    class="stackly-insurance-claims-help">
+
+                    GET CLAIM ASSISTANCE
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================================
+             CLAIM PROCESS CIRCULAR TIMELINE
+        ========================================== -->
+
+        <div class="stackly-insurance-claims-process"
+            data-aos="fade-up"
+            data-aos-duration="1000">
+
+
+            <!-- ANIMATED CIRCULAR TRACK -->
+
+            <div class="stackly-insurance-claims-track">
+
+                <div class="stackly-insurance-claims-track-line"></div>
+
+                <div class="stackly-insurance-claims-track-progress"></div>
+
+
+                <!-- =================================
+                     STEP 01 - REPORT CLAIM
+                ================================== -->
+
+                <article class="stackly-insurance-claim-step"
+                    data-aos="zoom-in"
+                    data-aos-duration="900"
+                    data-aos-delay="100">
+
+                    <div class="stackly-insurance-claim-circle-wrap">
+
+                        <div class="stackly-insurance-claim-circle">
+
+                            <div class="stackly-insurance-claim-circle-inner">
+
+                                <i class="fa-solid fa-phone-volume"></i>
+
+                            </div>
+
+                            <span class="stackly-insurance-claim-step-number">
+                                01
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="stackly-insurance-claim-content">
+
+                        <span class="stackly-insurance-claim-step-label">
+                            STEP ONE
+                        </span>
+
+                        <h3>Report Your Claim</h3>
+
+                        <p>
+                            Inform our claims team about the incident
+                            and share the basic details to get started
+                            with your claim request.
+                        </p>
+
+                        <div class="stackly-insurance-claim-feature">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <span>Quick Claim Notification</span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================
+                     STEP 02 - SUBMIT DOCUMENTS
+                ================================== -->
+
+                <article class="stackly-insurance-claim-step"
+                    data-aos="flip-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="250">
+
+                    <div class="stackly-insurance-claim-circle-wrap">
+
+                        <div class="stackly-insurance-claim-circle">
+
+                            <div class="stackly-insurance-claim-circle-inner">
+
+                                <i class="fa-solid fa-file-arrow-up"></i>
+
+                            </div>
+
+                            <span class="stackly-insurance-claim-step-number">
+                                02
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="stackly-insurance-claim-content">
+
+                        <span class="stackly-insurance-claim-step-label">
+                            STEP TWO
+                        </span>
+
+                        <h3>Submit Documents</h3>
+
+                        <p>
+                            Provide the required forms, supporting
+                            documents and relevant information
+                            for your claim verification.
+                        </p>
+
+                        <div class="stackly-insurance-claim-feature">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <span>Simple Document Submission</span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================
+                     STEP 03 - CLAIM ASSESSMENT
+                ================================== -->
+
+                <article class="stackly-insurance-claim-step"
+                    data-aos="zoom-in-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="400">
+
+                    <div class="stackly-insurance-claim-circle-wrap">
+
+                        <div class="stackly-insurance-claim-circle">
+
+                            <div class="stackly-insurance-claim-circle-inner">
+
+                                <i class="fa-solid fa-magnifying-glass-chart"></i>
+
+                            </div>
+
+                            <span class="stackly-insurance-claim-step-number">
+                                03
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="stackly-insurance-claim-content">
+
+                        <span class="stackly-insurance-claim-step-label">
+                            STEP THREE
+                        </span>
+
+                        <h3>Claim Assessment</h3>
+
+                        <p>
+                            Our claims team reviews the submitted
+                            information and evaluates your claim
+                            according to your policy terms.
+                        </p>
+
+                        <div class="stackly-insurance-claim-feature">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <span>Careful Claim Evaluation</span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================
+                     STEP 04 - CLAIM SETTLEMENT
+                ================================== -->
+
+                <article class="stackly-insurance-claim-step"
+                    data-aos="flip-down"
+                    data-aos-duration="1000"
+                    data-aos-delay="550">
+
+                    <div class="stackly-insurance-claim-circle-wrap">
+
+                        <div class="stackly-insurance-claim-circle">
+
+                            <div class="stackly-insurance-claim-circle-inner">
+
+                                <i class="fa-solid fa-hand-holding-dollar"></i>
+
+                            </div>
+
+                            <span class="stackly-insurance-claim-step-number">
+                                04
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="stackly-insurance-claim-content">
+
+                        <span class="stackly-insurance-claim-step-label">
+                            STEP FOUR
+                        </span>
+
+                        <h3>Claim Settlement</h3>
+
+                        <p>
+                            Once approved, the claim is processed
+                            according to the applicable policy
+                            conditions and settlement terms.
+                        </p>
+
+                        <div class="stackly-insurance-claim-feature">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            <span>Settlement Updates</span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================================
+             CLAIM SUPPORT BANNER
+        ========================================== -->
+
+        <div class="stackly-insurance-claims-support"
+            data-aos="zoom-in-up"
+            data-aos-duration="1100">
+
+            <div class="stackly-insurance-claims-support-left">
+
+                <div class="stackly-insurance-claims-support-icon">
+
+                    <i class="fa-solid fa-headset"></i>
+
+                </div>
+
+                <div class="stackly-insurance-claims-support-text">
+
+                    <span>WE ARE HERE TO HELP</span>
+
+                    <h3>
+                        Need Help With Your Insurance Claim?
+                    </h3>
+
+                    <p>
+                        Our support team is ready to guide you
+                        through the claims process and answer
+                        your questions.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <a href="404.html"
+                class="stackly-insurance-claims-support-btn">
+
+                CONTACT OUR TEAM
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STACKLY INSURANCE WHY CHOOSE US SECTION
+     PREMIUM IMAGE COLLAGE DESIGN
+====================================================== -->
+
+<section class="stackly-insurance-why"
+    id="insuranceWhyChooseUs">
+
+    <div class="stackly-insurance-why-container">
+
+
+        <!-- =========================================
+             LEFT SIDE - CREATIVE IMAGE COLLAGE
+        ========================================== -->
+
+        <div class="stackly-insurance-why-visual"
+            data-aos="fade-right"
+            data-aos-duration="1100">
+
+            <!-- MAIN IMAGE -->
+
+            <div class="stackly-insurance-why-main-image"
+                data-aos="zoom-in"
+                data-aos-duration="1200">
+
+                <img src="insurance-why-main.webp"
+                    alt="Insurance advisor helping a customer">
+
+            </div>
+
+
+            <!-- TOP FLOATING IMAGE -->
+
+            <div class="stackly-insurance-why-top-image"
+                data-aos="flip-left"
+                data-aos-duration="1100"
+                data-aos-delay="250">
+
+                <img src="insurance-why-family.webp"
+                    alt="Family enjoying a secure and happy life">
+
+            </div>
+
+
+            <!-- BOTTOM FLOATING IMAGE -->
+
+            <div class="stackly-insurance-why-bottom-image"
+                data-aos="zoom-in-up"
+                data-aos-duration="1100"
+                data-aos-delay="400">
+
+                <img src="insurance-why-support.webp"
+                    alt="Professional insurance customer support">
+
+            </div>
+
+
+            <!-- DECORATIVE CIRCLE -->
+
+            <div class="stackly-insurance-why-decoration-circle"
+                data-aos="zoom-in"
+                data-aos-delay="500">
+            </div>
+
+
+            <!-- EXPERIENCE BADGE -->
+
+            <div class="stackly-insurance-why-experience"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="600">
+
+                <div class="stackly-insurance-why-experience-icon">
+
+                    <i class="fa-solid fa-shield-heart"></i>
+
+                </div>
+
+                <div class="stackly-insurance-why-experience-text">
+
+                    <strong>Trusted Protection</strong>
+
+                    <span>Putting customers first</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- FLOATING TRUST BADGE -->
+
+            <div class="stackly-insurance-why-trust-badge"
+                data-aos="zoom-in"
+                data-aos-delay="750">
+
+                <i class="fa-solid fa-check"></i>
+
+                <span>YOUR TRUST, OUR PRIORITY</span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================================
+             RIGHT SIDE - CONTENT
+        ========================================== -->
+
+        <div class="stackly-insurance-why-content"
+            data-aos="fade-left"
+            data-aos-duration="1100">
+
+            <!-- SECTION LABEL -->
+
+            <span class="stackly-insurance-why-label"
+                data-aos="fade-down"
+                data-aos-delay="100">
+
+                <i class="fa-solid fa-award"></i>
+
+                WHY CHOOSE STACKLY
+
+            </span>
+
+
+            <!-- MAIN HEADING -->
+
+            <h2 data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="150">
+
+                Protection You Can Trust,
+                <span>Confidence You Deserve.</span>
+
+            </h2>
+
+
+            <!-- =====================================
+                 BENEFIT 01
+            ====================================== -->
+
+            <div class="stackly-insurance-why-feature"
+                data-aos="fade-right"
+                data-aos-duration="900"
+                data-aos-delay="300">
+
+                <div class="stackly-insurance-why-feature-icon">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                </div>
+
+                <div class="stackly-insurance-why-feature-text">
+
+                    <h3>Personalized Protection</h3>
+
+                    <p>
+                        Insurance options designed around
+                        your individual needs, family and
+                        financial priorities.
+                    </p>
+
+                </div>
+
+                <span class="stackly-insurance-why-feature-number">
+                    01
+                </span>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 BENEFIT 02
+            ====================================== -->
+
+            <div class="stackly-insurance-why-feature"
+                data-aos="fade-left"
+                data-aos-duration="900"
+                data-aos-delay="400">
+
+                <div class="stackly-insurance-why-feature-icon">
+
+                    <i class="fa-solid fa-handshake-angle"></i>
+
+                </div>
+
+                <div class="stackly-insurance-why-feature-text">
+
+                    <h3>Dedicated Customer Support</h3>
+
+                    <p>
+                        Get guidance and assistance from
+                        a helpful team throughout your
+                        insurance journey.
+                    </p>
+
+                </div>
+
+                <span class="stackly-insurance-why-feature-number">
+                    02
+                </span>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 BENEFIT 03
+            ====================================== -->
+
+            <div class="stackly-insurance-why-feature"
+                data-aos="fade-right"
+                data-aos-duration="900"
+                data-aos-delay="500">
+
+                <div class="stackly-insurance-why-feature-icon">
+
+                    <i class="fa-solid fa-file-circle-check"></i>
+
+                </div>
+
+                <div class="stackly-insurance-why-feature-text">
+
+                    <h3>Clear Policy Information</h3>
+
+                    <p>
+                        Understand your coverage, policy
+                        conditions and important details
+                        with greater clarity.
+                    </p>
+
+                </div>
+
+                <span class="stackly-insurance-why-feature-number">
+                    03
+                </span>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 BENEFIT 04
+            ====================================== -->
+
+            <div class="stackly-insurance-why-feature"
+                data-aos="fade-left"
+                data-aos-duration="900"
+                data-aos-delay="600">
+
+                <div class="stackly-insurance-why-feature-icon">
+
+                    <i class="fa-solid fa-headset"></i>
+
+                </div>
+
+                <div class="stackly-insurance-why-feature-text">
+
+                    <h3>Reliable Claims Assistance</h3>
+
+                    <p>
+                        Receive helpful guidance through
+                        the claims process and understand
+                        the next steps.
+                    </p>
+
+                </div>
+
+                <span class="stackly-insurance-why-feature-number">
+                    04
+                </span>
+
+            </div>
+
+
+
+            <!-- BOTTOM ACTION -->
+
+            <div class="stackly-insurance-why-bottom"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="650">
+
+                <a href="404.html"
+                    class="stackly-insurance-why-button">
+
+                    DISCOVER MORE
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+                <div class="stackly-insurance-why-contact">
+
+                    <div class="stackly-insurance-why-contact-icon">
+
+                        <i class="fa-solid fa-phone-volume"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>HAVE QUESTIONS?</span>
+
+                        <a href="404.html">
+                            Talk to Our Team
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     STACKLY INSURANCE TEAM SECTION
+     OUR EXPERT TEAM
+========================================== -->
+
+<section class="stackly-insurance-team"
+    id="insuranceTeam">
+
+    <div class="stackly-insurance-team-container">
+
+        <!-- SECTION HEADER -->
+
+        <div class="stackly-insurance-team-header"
+            data-aos="fade-up"
+            data-aos-duration="950">
+
+            <span class="stackly-insurance-team-label">
+                <i class="fa-solid fa-users"></i>
+                MEET OUR EXPERTS
+            </span>
+
+            <h2>
+                The People Behind
+                <span>Your Protection</span>
+            </h2>
+
+            <p>
+                Meet our dedicated insurance professionals who
+                work every day to protect what matters most.
+                With expert guidance and personalized care,
+                we're here to make your future more secure.
+            </p>
+
+        </div>
+
+
+        <!-- TEAM GRID -->
+
+        <div class="stackly-insurance-team-grid">
+
+
+            <!-- TEAM MEMBER 01 -->
+
+            <div class="stackly-insurance-team-card"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                data-aos-delay="100">
+
+                <div class="stackly-insurance-team-image">
+
+                    <img src="team-1.webp"
+                        alt="Sarah Mitchell - Insurance Director">
+
+                    <div class="stackly-insurance-team-overlay">
+
+                        <div class="stackly-insurance-team-socials">
+
+                            <a href="404.html" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+
+                            <a href="404.html" aria-label="Twitter">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+
+                            <a href="404.html" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <span class="stackly-insurance-team-number">
+                        01
+                    </span>
+
+                </div>
+
+                <div class="stackly-insurance-team-info">
+
+                    <span class="stackly-insurance-team-role">
+                        Leadership
+                    </span>
+
+                    <h3>Sarah Mitchell</h3>
+
+                    <p>Chief Insurance Director</p>
+
+                    <div class="stackly-insurance-team-divider"></div>
+
+                    <div class="stackly-insurance-team-footer">
+
+                        <span>
+                            <i class="fa-solid fa-shield-heart"></i>
+                            15+ Years Experience
+                        </span>
+
+                        <a href="404.html"
+                            aria-label="View Sarah Mitchell profile">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TEAM MEMBER 02 -->
+
+            <div class="stackly-insurance-team-card"
+                data-aos="fade-up"
+                data-aos-duration="1100"
+                data-aos-delay="250">
+
+                <div class="stackly-insurance-team-image">
+
+                    <img src="team-2.webp"
+                        alt="David Anderson - Insurance Advisor">
+
+                    <div class="stackly-insurance-team-overlay">
+
+                        <div class="stackly-insurance-team-socials">
+
+                            <a href="404.html" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+
+                            <a href="404.html" aria-label="Twitter">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+
+                            <a href="404.html" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <span class="stackly-insurance-team-number">
+                        02
+                    </span>
+
+                </div>
+
+                <div class="stackly-insurance-team-info">
+
+                    <span class="stackly-insurance-team-role">
+                        Advisory
+                    </span>
+
+                    <h3>David Anderson</h3>
+
+                    <p>Senior Insurance Advisor</p>
+
+                    <div class="stackly-insurance-team-divider"></div>
+
+                    <div class="stackly-insurance-team-footer">
+
+                        <span>
+                            <i class="fa-solid fa-shield-heart"></i>
+                            12+ Years Experience
+                        </span>
+
+                        <a href="404.html"
+                            aria-label="View David Anderson profile">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TEAM MEMBER 03 -->
+
+            <div class="stackly-insurance-team-card"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-delay="400">
+
+                <div class="stackly-insurance-team-image">
+
+                    <img src="team-3.webp"
+                        alt="Michael Bennett - Claims Manager">
+
+                    <div class="stackly-insurance-team-overlay">
+
+                        <div class="stackly-insurance-team-socials">
+
+                            <a href="404.html" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+
+                            <a href="404.html" aria-label="Twitter">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+
+                            <a href="404.html" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <span class="stackly-insurance-team-number">
+                        03
+                    </span>
+
+                </div>
+
+                <div class="stackly-insurance-team-info">
+
+                    <span class="stackly-insurance-team-role">
+                        Claims Support
+                    </span>
+
+                    <h3>Michael Bennett</h3>
+
+                    <p>Claims Operations Manager</p>
+
+                    <div class="stackly-insurance-team-divider"></div>
+
+                    <div class="stackly-insurance-team-footer">
+
+                        <span>
+                            <i class="fa-solid fa-shield-heart"></i>
+                            10+ Years Experience
+                        </span>
+
+                        <a href="404.html"
+                            aria-label="View Michael Bennett profile">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- TEAM BOTTOM CTA -->
+
+        <div class="stackly-insurance-team-bottom"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="200">
+
+            <div class="stackly-insurance-team-bottom-icon">
+
+                <i class="fa-solid fa-handshake-angle"></i>
+
+            </div>
+
+            <div class="stackly-insurance-team-bottom-content">
+
+                <h3>Need Expert Insurance Guidance?</h3>
+
+                <p>
+                    Our friendly team is ready to help you
+                    find the right protection for your future.
+                </p>
+
+            </div>
+
+            <a href="404.html"
+                class="stackly-insurance-team-button">
+
+                Talk to Our Team
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     STACKLY INSURANCE TESTIMONIAL SECTION
+     WHAT OUR CLIENTS SAY
+========================================== -->
+
+<section class="stackly-insurance-testimonials"
+    id="insuranceTestimonials">
+
+    <div class="stackly-insurance-testimonials-container">
+
+
+        <!-- =====================================
+             SECTION HEADER
+        ====================================== -->
+
+        <div class="stackly-insurance-testimonials-header"
+            data-aos="fade-up"
+            data-aos-duration="950">
+
+            <span class="stackly-insurance-testimonials-label">
+                <i class="fa-solid fa-comments"></i>
+                CLIENT TESTIMONIALS
+            </span>
+
+            <h2>
+                Trusted by People.
+                <span>Proven by Experience.</span>
+            </h2>
+
+            <p>
+                Your trust is our greatest achievement.
+                Discover how our insurance solutions and dedicated
+                support have helped families and businesses feel
+                more confident about their future.
+            </p>
+
+        </div>
+
+
+        <!-- =====================================
+             TESTIMONIAL HIGHLIGHT
+        ====================================== -->
+
+        <div class="stackly-insurance-testimonials-featured"
+            data-aos="zoom-in"
+            data-aos-duration="1100">
+
+            <div class="stackly-insurance-testimonials-featured-quote">
+
+                <i class="fa-solid fa-quote-left"></i>
+
+            </div>
+
+            <div class="stackly-insurance-testimonials-featured-content">
+
+                <span class="stackly-insurance-testimonials-featured-label">
+                    <i class="fa-solid fa-award"></i>
+                    CUSTOMER EXPERIENCE
+                </span>
+
+                <div class="stackly-insurance-testimonials-stars">
+
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+
+                </div>
+
+                <h3>
+                    "Protection That Gives Us
+                    <span>Complete Peace of Mind."</span>
+                </h3>
+
+                <p>
+                    Choosing the right insurance provider was an
+                    important decision for our family. Their team
+                    explained every detail clearly, helped us select
+                    the right coverage, and provided excellent
+                    support whenever we needed assistance.
+                    It feels reassuring to know we're protected
+                    by a team we can trust.
+                </p>
+
+                <div class="stackly-insurance-testimonials-featured-author">
+
+                    <div class="stackly-insurance-testimonials-featured-avatar">
+
+                        <img src="testimonial-1.webp"
+                            alt="Insurance customer testimonial">
+
+                    </div>
+
+                    <div class="stackly-insurance-testimonials-author-info">
+
+                        <h4>Robert Williams</h4>
+
+                        <span>Valued Insurance Client</span>
+
+                    </div>
+
+                    <div class="stackly-insurance-testimonials-verified">
+
+                        <i class="fa-solid fa-circle-check"></i>
+                        Verified Client
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="stackly-insurance-testimonials-featured-decoration">
+
+                <i class="fa-solid fa-shield-heart"></i>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             TESTIMONIAL CARDS
+        ====================================== -->
+
+        <div class="stackly-insurance-testimonials-grid">
+
+
+            <!-- TESTIMONIAL 01 -->
+
+            <div class="stackly-insurance-testimonial-card"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                data-aos-delay="100">
+
+                <div class="stackly-insurance-testimonial-top">
+
+                    <div class="stackly-insurance-testimonial-stars">
+
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+
+                    <span class="stackly-insurance-testimonial-quote-icon">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </span>
+
+                </div>
+
+                <h3>
+                    Excellent Customer Support
+                </h3>
+
+                <p class="stackly-insurance-testimonial-text">
+                    The team made the entire insurance process
+                    simple and stress-free. They answered all my
+                    questions patiently and helped me understand
+                    the coverage options. Truly dependable service.
+                </p>
+
+                <div class="stackly-insurance-testimonial-divider"></div>
+
+                <div class="stackly-insurance-testimonial-author">
+
+                    <div class="stackly-insurance-testimonial-avatar">
+
+                        <img src="testimonial-2.webp"
+                            alt="Insurance customer">
+
+                    </div>
+
+                    <div class="stackly-insurance-testimonial-author-info">
+
+                        <h4>Jennifer Adams</h4>
+
+                        <span>Health Insurance Client</span>
+
+                    </div>
+
+                    <div class="stackly-insurance-testimonial-check">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TESTIMONIAL 02 -->
+
+            <div class="stackly-insurance-testimonial-card"
+                data-aos="fade-up"
+                data-aos-duration="1100"
+                data-aos-delay="250">
+
+                <div class="stackly-insurance-testimonial-top">
+
+                    <div class="stackly-insurance-testimonial-stars">
+
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+
+                    <span class="stackly-insurance-testimonial-quote-icon">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </span>
+
+                </div>
+
+                <h3>
+                    A Reliable Insurance Partner
+                </h3>
+
+                <p class="stackly-insurance-testimonial-text">
+                    What impressed me most was the transparency
+                    and professionalism. Every policy detail was
+                    explained clearly, and the team guided me
+                    through each step. I highly appreciate
+                    their commitment to customer care.
+                </p>
+
+                <div class="stackly-insurance-testimonial-divider"></div>
+
+                <div class="stackly-insurance-testimonial-author">
+
+                    <div class="stackly-insurance-testimonial-avatar">
+
+                        <img src="testimonial-3.webp"
+                            alt="Insurance customer">
+
+                    </div>
+
+                    <div class="stackly-insurance-testimonial-author-info">
+
+                        <h4>Daniel Thompson</h4>
+
+                        <span>Life Insurance Client</span>
+
+                    </div>
+
+                    <div class="stackly-insurance-testimonial-check">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TESTIMONIAL 03 -->
+
+            <div class="stackly-insurance-testimonial-card"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-delay="400">
+
+                <div class="stackly-insurance-testimonial-top">
+
+                    <div class="stackly-insurance-testimonial-stars">
+
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+
+                    <span class="stackly-insurance-testimonial-quote-icon">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </span>
+
+                </div>
+
+                <h3>
+                    Smooth and Hassle-Free Experience
+                </h3>
+
+                <p class="stackly-insurance-testimonial-text">
+                    From selecting a suitable policy to getting
+                    assistance with my questions, everything was
+                    handled professionally. Their friendly team
+                    made me feel confident about my insurance
+                    decisions. A great experience overall.
+                </p>
+
+                <div class="stackly-insurance-testimonial-divider"></div>
+
+                <div class="stackly-insurance-testimonial-author">
+
+                    <div class="stackly-insurance-testimonial-avatar">
+
+                        <img src="testimonial-4.webp"
+                            alt="Insurance customer">
+
+                    </div>
+
+                    <div class="stackly-insurance-testimonial-author-info">
+
+                        <h4>Emily Carter</h4>
+
+                        <span>Vehicle Insurance Client</span>
+
+                    </div>
+
+                    <div class="stackly-insurance-testimonial-check">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =====================================
+             TRUST BOTTOM SECTION
+        ====================================== -->
+
+        <div class="stackly-insurance-testimonials-bottom"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200">
+
+            <div class="stackly-insurance-testimonials-bottom-content">
+
+                <div class="stackly-insurance-testimonials-bottom-icon">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>Your Trust Inspires Us Every Day</h3>
+
+                    <p>
+                        We're committed to delivering dependable
+                        protection and support at every step.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <a href="404.html"
+                class="stackly-insurance-testimonials-button">
+
+                Start Your Journey
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     STACKLY INSURANCE BLOG SECTION
+     LATEST INSIGHTS & ARTICLES
+========================================== -->
+
+<section class="stackly-insurance-blog"
+    id="insuranceBlog">
+
+    <div class="stackly-insurance-blog-container">
+
+
+        <!-- =====================================
+             BLOG SECTION HEADER
+        ====================================== -->
+
+        <div class="stackly-insurance-blog-header"
+            data-aos="fade-up"
+            data-aos-duration="950">
+
+            <div class="stackly-insurance-blog-heading">
+
+                <span class="stackly-insurance-blog-label">
+                    <i class="fa-solid fa-newspaper"></i>
+                    KNOWLEDGE & INSIGHTS
+                </span>
+
+                <h2>
+                    Smart Insights for a
+                    <span>Safer Tomorrow.</span>
+                </h2>
+
+                <p>
+                    Explore expert guidance, practical insurance
+                    tips, and useful insights to help you make
+                    informed decisions and protect what matters
+                    most in life.
+                </p>
+
+            </div>
+
+            <a href="404.html"
+                class="stackly-insurance-blog-all-button">
+
+                Explore All Articles
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <!-- =====================================
+             BLOG CONTENT LAYOUT
+        ====================================== -->
+
+        <div class="stackly-insurance-blog-layout">
+
+
+            <!-- =================================
+                 FEATURED BLOG ARTICLE
+            ================================== -->
+
+            <article class="stackly-insurance-blog-featured"
+                data-aos="fade-right"
+                data-aos-duration="1100">
+
+                <div class="stackly-insurance-blog-featured-image">
+
+                    <img src="blog-1.webp"
+                        alt="Family planning financial protection and insurance">
+
+                    <div class="stackly-insurance-blog-featured-overlay"></div>
+
+                    <span class="stackly-insurance-blog-featured-tag">
+                        <i class="fa-solid fa-fire"></i>
+                        FEATURED ARTICLE
+                    </span>
+
+                    <div class="stackly-insurance-blog-featured-image-bottom">
+
+                        <span>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            November 12, 2026
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            6 Min Read
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-insurance-blog-featured-content">
+
+                    <span class="stackly-insurance-blog-category">
+                        LIFE INSURANCE
+                    </span>
+
+                    <h3>
+                        Why Life Insurance Is One of the
+                        Most Important Decisions for Your Family
+                    </h3>
+
+                    <p>
+                        Discover how the right life insurance
+                        coverage can help protect your family's
+                        financial future, provide stability, and
+                        offer peace of mind through life's
+                        unexpected moments.
+                    </p>
+
+
+                    <div class="stackly-insurance-blog-featured-footer">
+
+                        <div class="stackly-insurance-blog-author">
+
+                            <div class="stackly-insurance-blog-author-icon">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+
+                            <div>
+                                <h4>James Wilson</h4>
+                                <span>Insurance Expert</span>
+                            </div>
+
+                        </div>
+
+                        <a href="404.html"
+                            class="stackly-insurance-blog-read">
+
+                            Read Article
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================
+                 RIGHT SIDE BLOG ARTICLES
+            ================================== -->
+
+            <div class="stackly-insurance-blog-list">
+
+
+                <!-- BLOG ARTICLE 02 -->
+
+                <article class="stackly-insurance-blog-item"
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                    data-aos-delay="100">
+
+                    <div class="stackly-insurance-blog-item-image">
+
+                        <img src="blog-2.webp"
+                            alt="Health insurance and medical protection">
+
+                        <span class="stackly-insurance-blog-item-number">
+                            01
+                        </span>
+
+                    </div>
+
+                    <div class="stackly-insurance-blog-item-content">
+
+                        <div class="stackly-insurance-blog-item-meta">
+
+                            <span>HEALTH INSURANCE</span>
+
+                            <span>
+                                <i class="fa-regular fa-clock"></i>
+                                4 Min Read
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            <a href="404.html">
+                                How to Choose the Right Health
+                                Insurance Plan for Your Needs
+                            </a>
+                        </h3>
+
+                        <p>
+                            Understand the important factors to
+                            consider before selecting health coverage.
+                        </p>
+
+                        <a href="404.html"
+                            class="stackly-insurance-blog-item-link">
+
+                            Explore More
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- BLOG ARTICLE 03 -->
+
+                <article class="stackly-insurance-blog-item"
+                    data-aos="fade-left"
+                    data-aos-duration="1100"
+                    data-aos-delay="250">
+
+                    <div class="stackly-insurance-blog-item-image">
+
+                        <img src="blog-3.webp"
+                            alt="Vehicle insurance and road safety">
+
+                        <span class="stackly-insurance-blog-item-number">
+                            02
+                        </span>
+
+                    </div>
+
+                    <div class="stackly-insurance-blog-item-content">
+
+                        <div class="stackly-insurance-blog-item-meta">
+
+                            <span>VEHICLE INSURANCE</span>
+
+                            <span>
+                                <i class="fa-regular fa-clock"></i>
+                                5 Min Read
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            <a href="404.html">
+                                Essential Things to Know Before
+                                Renewing Your Car Insurance
+                            </a>
+                        </h3>
+
+                        <p>
+                            Learn about coverage, policy benefits,
+                            and important renewal considerations.
+                        </p>
+
+                        <a href="404.html"
+                            class="stackly-insurance-blog-item-link">
+
+                            Explore More
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- BLOG ARTICLE 04 -->
+
+                <article class="stackly-insurance-blog-item"
+                    data-aos="fade-left"
+                    data-aos-duration="1200"
+                    data-aos-delay="400">
+
+                    <div class="stackly-insurance-blog-item-image">
+
+                        <img src="blog-4.webp"
+                            alt="Financial planning and home protection">
+
+                        <span class="stackly-insurance-blog-item-number">
+                            03
+                        </span>
+
+                    </div>
+
+                    <div class="stackly-insurance-blog-item-content">
+
+                        <div class="stackly-insurance-blog-item-meta">
+
+                            <span>FINANCIAL PLANNING</span>
+
+                            <span>
+                                <i class="fa-regular fa-clock"></i>
+                                3 Min Read
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            <a href="404.html">
+                                Simple Ways to Build a Stronger
+                                Financial Safety Net
+                            </a>
+                        </h3>
+
+                        <p>
+                            Explore practical ways to prepare for
+                            unexpected financial situations.
+                        </p>
+
+                        <a href="404.html"
+                            class="stackly-insurance-blog-item-link">
+
+                            Explore More
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             BLOG BOTTOM INFORMATION
+        ====================================== -->
+
+        <div class="stackly-insurance-blog-bottom"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="200">
+
+            <div class="stackly-insurance-blog-bottom-icon">
+
+                <i class="fa-solid fa-lightbulb"></i>
+
+            </div>
+
+            <div class="stackly-insurance-blog-bottom-content">
+
+                <h3>
+                    Better Knowledge. Smarter Protection.
+                </h3>
+
+                <p>
+                    Stay informed with helpful insurance insights
+                    and make confident decisions for your future.
+                </p>
+
+            </div>
+
+            <a href="404.html"
+                class="stackly-insurance-blog-bottom-button">
+
+                Discover More Insights
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+    </main>
+
+
+<!-- =====================================================
+     STACKLY INSURANCE FOOTER
+     PREMIUM CORPORATE FOOTER DESIGN
+====================================================== -->
+
+<footer class="stackly-insurance-footer" id="insuranceFooter">
+
+    <!-- FOOTER MAIN CONTENT -->
+
+    <div class="stackly-insurance-footer-main">
+
+        <div class="stackly-insurance-footer-container">
+
+            <!-- =====================================
+                 COLUMN 01 - BRAND INFORMATION
+            ====================================== -->
+
+            <div class="stackly-insurance-footer-brand"
+                data-aos="fade-up"
+                data-aos-duration="1000">
+
+                <a href="index.html"
+                    class="stackly-insurance-footer-logo">
+
+                    <img src="Stackly-logo-Blue.webp"
+                        alt="Stackly Insurance Logo">
+
+                </a>
+
+                <p class="stackly-insurance-footer-description">
+
+                    At Stackly, we believe protection creates
+                    confidence. Discover reliable insurance
+                    solutions designed to safeguard your family,
+                    assets, and future.
+
+                </p>
+
+                <div class="stackly-insurance-footer-brand-highlight">
+
+                    <div class="stackly-insurance-footer-brand-icon">
+
+                        <i class="fa-solid fa-shield-heart"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4>Protection You Can Trust</h4>
+
+                        <span>Secure Today. Confident Tomorrow.</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SOCIAL MEDIA -->
+
+                <div class="stackly-insurance-footer-social">
+
+                    <span>FOLLOW OUR JOURNEY</span>
+
+                    <div class="stackly-insurance-footer-social-links">
+
+                        <a href="404.html"
+                            aria-label="Facebook">
+
+                            <i class="fa-brands fa-facebook-f"></i>
+
+                        </a>
+
+                        <a href="404.html"
+                            aria-label="Instagram">
+
+                            <i class="fa-brands fa-instagram"></i>
+
+                        </a>
+
+                        <a href="404.html"
+                            aria-label="LinkedIn">
+
+                            <i class="fa-brands fa-linkedin-in"></i>
+
+                        </a>
+
+                        <a href="404.html"
+                            aria-label="Twitter">
+
+                            <i class="fa-brands fa-x-twitter"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 COLUMN 02 - QUICK LINKS
+            ====================================== -->
+
+            <div class="stackly-insurance-footer-links"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="150">
+
+                <div class="stackly-insurance-footer-heading">
+
+                    <span class="stackly-insurance-footer-heading-line"></span>
+
+                    <h3>Quick Links</h3>
+
+                </div>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="insurance.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Insurance Plans
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="services.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Our Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="claims.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Claims Assistance
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="blog.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Blog
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Contact Us
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- =====================================
+                 COLUMN 03 - INSURANCE SERVICES
+            ====================================== -->
+
+            <div class="stackly-insurance-footer-links"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="300">
+
+                <div class="stackly-insurance-footer-heading">
+
+                    <span class="stackly-insurance-footer-heading-line"></span>
+
+                    <h3>Our Coverage</h3>
+
+                </div>
+
+                <ul>
+
+                    <li>
+                        <a href="404.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Life Insurance
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Health Insurance
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Vehicle Insurance
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Home Insurance
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Family Protection
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Financial Security
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Policy Guidance
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- =====================================
+                 COLUMN 04 - CONTACT INFORMATION
+            ====================================== -->
+
+            <div class="stackly-insurance-footer-contact"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="450">
+
+                <div class="stackly-insurance-footer-heading">
+
+                    <span class="stackly-insurance-footer-heading-line"></span>
+
+                    <h3>Get In Touch</h3>
+
+                </div>
+
+
+                <p class="stackly-insurance-footer-contact-intro">
+
+                    Have questions about your coverage?
+                    Our team is ready to help you.
+
+                </p>
+
+
+                <!-- EMAIL -->
+
+                <a href="404.html"
+                    class="stackly-insurance-footer-contact-item">
+
+                    <div class="stackly-insurance-footer-contact-icon">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>Email Us</span>
+
+                        <h4>info@stackly.com</h4>
+
+                    </div>
+
+                </a>
+
+
+                <!-- PHONE -->
+
+                <a href="404.html"
+                    class="stackly-insurance-footer-contact-item">
+
+                    <div class="stackly-insurance-footer-contact-icon">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>Call Our Team</span>
+
+                        <h4>+91 98765 43210</h4>
+
+                    </div>
+
+                </a>
+
+
+                <!-- LOCATION -->
+
+                <div class="stackly-insurance-footer-contact-item">
+
+                    <div class="stackly-insurance-footer-contact-icon">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>Our Location</span>
+
+                        <h4>Chennai, Tamil Nadu, India</h4>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONTACT BUTTON -->
+
+                <a href="404.html"
+                    class="stackly-insurance-footer-contact-button">
+
+                    Contact Our Team
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================
+         NEWSLETTER SECTION
+    ====================================== -->
+
+    <div class="stackly-insurance-footer-newsletter"
+        data-aos="zoom-in-up"
+        data-aos-duration="1000">
+
+        <div class="stackly-insurance-footer-newsletter-container">
+
+            <div class="stackly-insurance-footer-newsletter-content">
+
+                <div class="stackly-insurance-footer-newsletter-icon">
+
+                    <i class="fa-regular fa-paper-plane"></i>
+
+                </div>
+
+                <div>
+
+                    <span>STAY INFORMED WITH STACKLY</span>
+
+                    <h3>Insights That Help You Stay Protected.</h3>
+
+                    <p>
+                        Receive helpful insurance tips, updates,
+                        and protection insights directly in your inbox.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- NEWSLETTER FORM -->
+
+            <form class="stackly-insurance-footer-newsletter-form"
+                id="insuranceNewsletterForm">
+
+                <div class="stackly-insurance-footer-newsletter-input">
+
+                    <i class="fa-regular fa-envelope"></i>
+
+                    <input type="email"
+                        id="insuranceNewsletterEmail"
+                        placeholder="Enter your email address"
+                        aria-label="Email address"
+                        required>
+
+                </div>
+
+                <button type="submit">
+
+                    Subscribe
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+                <p id="insuranceNewsletterMessage"
+                    class="stackly-insurance-footer-newsletter-message"
+                    aria-live="polite">
+
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================
+         FOOTER BOTTOM BAR
+    ====================================== -->
+
+    <div class="stackly-insurance-footer-bottom">
+
+        <div class="stackly-insurance-footer-bottom-container">
+
+            <!-- COPYRIGHT -->
+
+            <p>
+                © <span id="insuranceFooterYear">2026</span>
+                <strong>Stackly Insurance.</strong>
+                All Rights Reserved.
+            </p>
+
+
+            <!-- LEGAL LINKS -->
+
+            <div class="stackly-insurance-footer-legal">
+
+                <a href="404.html">Privacy Policy</a>
+
+                <span></span>
+
+                <a href="404.html">Terms & Conditions</a>
+
+                <span></span>
+
+                <a href="404.html">Disclaimer</a>
+
+            </div>
+
+
+            <!-- BACK TO TOP -->
+
+            <a href="#insuranceHeader"
+                class="stackly-insurance-footer-top"
+                aria-label="Back to top">
+
+                <i class="fa-solid fa-arrow-up"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>

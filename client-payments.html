@@ -1,0 +1,1325 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly | Client Dashboard</title>
+
+    <meta name="description"
+        content="Manage your Stackly Insurance policies, track claims, view payments, and access personalized insurance support from your client dashboard.">
+
+    <meta name="theme-color" content="#1557A6">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="Stackly-logo-Blue.webp" type="image/webp">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS ANIMATION -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- CLIENT DASHBOARD CSS -->
+    <link rel="stylesheet" href="client.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         STACKLY INSURANCE CLIENT DASHBOARD
+         MAIN WRAPPER
+    ====================================================== -->
+
+    <div class="stackly-insurance-client-dashboard">
+
+
+        <!-- =================================================
+             MOBILE SIDEBAR OVERLAY
+        ================================================== -->
+
+        <div class="stackly-insurance-client-overlay"
+            id="stacklyInsuranceClientOverlay">
+        </div>
+
+
+        <!-- =================================================
+             CLIENT SIDEBAR
+        ================================================== -->
+
+        <aside class="stackly-insurance-client-sidebar"
+            id="stacklyInsuranceClientSidebar">
+
+
+            <!-- SIDEBAR BRAND -->
+            <div class="stackly-insurance-client-brand">
+
+                <a href="client.html"
+                    class="stackly-insurance-client-logo">
+
+                    <img src="Stackly-logo-Blue.webp"
+                        alt="Stackly Insurance Logo">
+
+                </a>
+ 
+
+                <!-- MOBILE EXIT BUTTON -->
+                <button type="button"
+                    class="stackly-insurance-client-close"
+                    id="stacklyInsuranceClientClose"
+                    aria-label="Close navigation menu">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- SIDEBAR PROFILE -->
+            <div class="stackly-insurance-client-sidebar-profile">
+
+                <div class="stackly-insurance-client-avatar"
+                    id="stacklyInsuranceClientAvatar">
+
+                    C
+
+                </div>
+
+
+                <div class="stackly-insurance-client-sidebar-user">
+
+                    <h3 id="stacklyInsuranceClientName">
+                        Client
+                    </h3>
+
+                    <span>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Verified Customer
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIDEBAR NAVIGATION -->
+            <nav class="stackly-insurance-client-navigation"
+                aria-label="Client dashboard navigation">
+
+
+                <!-- OVERVIEW -->
+                <div class="stackly-insurance-client-nav-group">
+
+                    <span class="stackly-insurance-client-nav-heading">
+                        OVERVIEW
+                    </span>
+
+
+                    <a href="client.html"
+                        class="stackly-insurance-client-nav-link active"
+                        aria-current="page">
+
+                        <i class="fa-solid fa-house-chimney"></i>
+
+                        <span>Dashboard</span>
+
+                    </a>
+
+                </div>
+
+
+                <!-- INSURANCE MANAGEMENT -->
+                <div class="stackly-insurance-client-nav-group">
+
+                    <span class="stackly-insurance-client-nav-heading">
+                        MY INSURANCE
+                    </span>
+
+
+                    <a href="client-policies.html"
+                        class="stackly-insurance-client-nav-link">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <span>My Policies</span>
+
+                        <span class="stackly-insurance-client-nav-count">
+                            03
+                        </span>
+
+                    </a>
+
+
+                    <a href="client-claims.html"
+                        class="stackly-insurance-client-nav-link">
+
+                        <i class="fa-solid fa-file-circle-check"></i>
+
+                        <span>My Claims</span>
+
+                        <span class="stackly-insurance-client-nav-count">
+                            02
+                        </span>
+
+                    </a>
+
+
+                    <a href="client-payments.html"
+                        class="stackly-insurance-client-nav-link">
+
+                        <i class="fa-solid fa-wallet"></i>
+
+                        <span>Payments</span>
+
+                    </a>
+ 
+                </div>
+
+
+                <!-- SERVICES -->
+                <div class="stackly-insurance-client-nav-group">
+
+                    <span class="stackly-insurance-client-nav-heading">
+                        SERVICES
+                    </span>
+
+
+                    <a href="client-plans.html"
+                        class="stackly-insurance-client-nav-link">
+
+                        <i class="fa-solid fa-layer-group"></i>
+
+                        <span>Explore Plans</span>
+
+                    </a>
+
+
+                    <a href="client-renewals.html"
+                        class="stackly-insurance-client-nav-link">
+
+                        <i class="fa-solid fa-arrows-rotate"></i>
+
+                        <span>Policy Renewal</span>
+
+                    </a>
+
+
+                </div>
+
+
+                <!-- ACCOUNT -->
+                <div class="stackly-insurance-client-nav-group">
+
+                    <span class="stackly-insurance-client-nav-heading">
+                        ACCOUNT
+                    </span>
+
+
+                    <a href="client-profile.html"
+                        class="stackly-insurance-client-nav-link">
+
+                        <i class="fa-solid fa-user-gear"></i>
+
+                        <span>My Profile</span>
+
+                    </a>
+
+
+                </div>
+
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM SUPPORT -->
+            <div class="stackly-insurance-client-sidebar-bottom">
+
+
+                <div class="stackly-insurance-client-help-card">
+
+                    <div class="stackly-insurance-client-help-icon">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                    </div>
+
+
+                    <h4>Need Assistance?</h4>
+
+                    <p>
+                        Our insurance experts are here to help you.
+                    </p>
+
+
+                    <a href="404-client.html">
+
+                        Contact Support
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <!-- LOGOUT -->
+                <a href="index.html"
+                    class="stackly-insurance-client-logout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </a>
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- =================================================
+             MAIN CONTENT AREA
+        ================================================== -->
+
+        <main class="stackly-insurance-client-main">
+
+
+            <!-- =================================================
+                 TOP HEADER
+            ================================================== -->
+
+            <header class="stackly-insurance-client-header">
+
+
+                <!-- HEADER LEFT -->
+                <div class="stackly-insurance-client-header-left">
+
+
+                    <!-- MOBILE HAMBURGER -->
+                    <button type="button"
+                        class="stackly-insurance-client-menu-toggle"
+                        id="stacklyInsuranceClientMenuToggle"
+                        aria-label="Open navigation menu"
+                        aria-controls="stacklyInsuranceClientSidebar"
+                        aria-expanded="false">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+
+                    <div class="stackly-insurance-client-header-title">
+
+                        <span>CLIENT PORTAL</span>
+
+                        <h1>Client Dashboard</h1>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HEADER RIGHT -->
+                <div class="stackly-insurance-client-header-right">
+
+
+                    <!-- NOTIFICATION -->
+                    <a href="404-client.html"
+                        class="stackly-insurance-client-notification"
+                        aria-label="Notifications">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span></span>
+
+                    </a>
+
+
+                    <!-- HEADER DIVIDER -->
+                    <div class="stackly-insurance-client-header-divider">
+                    </div>
+
+
+                    <!-- CLIENT EMAIL -->
+                    <div class="stackly-insurance-client-header-account">
+
+                        <div class="stackly-insurance-client-header-avatar"
+                            id="stacklyInsuranceClientHeaderAvatar">
+
+                            C
+
+                        </div>
+
+
+                        <div class="stackly-insurance-client-header-account-info">
+
+                            <span>MY ACCOUNT</span>
+
+                            <p id="stacklyInsuranceClientEmail">
+                                client@example.com
+                            </p>
+
+                        </div>
+
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+
+                </div>
+
+            </header>
+
+
+<!-- =====================================================
+     STACKLY INSURANCE - MY PAYMENTS PAGE
+====================================================== -->
+
+
+<!-- =====================================================
+     01. PAYMENTS HERO SECTION
+====================================================== -->
+
+<section class="stackly-insurance-payments-hero"
+    data-aos="fade-up"
+    data-aos-duration="900">
+
+    <div class="stackly-insurance-payments-hero-content">
+
+        <div class="stackly-insurance-payments-hero-label">
+            <span></span>
+            PAYMENT MANAGEMENT CENTER
+        </div>
+
+        <h2>
+            Your Payments,
+            <span>Made Simple.</span>
+        </h2>
+
+        <p>
+            Manage your insurance premiums, review transactions,
+            and keep track of every payment in one convenient place.
+        </p>
+
+        <div class="stackly-insurance-payments-hero-actions">
+
+            <a href="404-client.html"
+                class="stackly-insurance-payments-primary-btn">
+                View Transactions
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="404-client.html"
+                class="stackly-insurance-payments-secondary-btn">
+                <i class="fa-solid fa-credit-card"></i>
+                Make a Payment
+            </a>
+
+        </div>
+
+        <div class="stackly-insurance-payments-security">
+            <i class="fa-solid fa-shield-halved"></i>
+            Secure and protected transactions
+        </div>
+
+    </div>
+
+
+    <div class="stackly-insurance-payments-hero-visual">
+
+        <div class="stackly-insurance-payments-hero-circle"></div>
+
+        <div class="stackly-insurance-payments-wallet-card">
+
+            <div class="stackly-insurance-payments-wallet-top">
+
+                <div class="stackly-insurance-payments-wallet-icon">
+                    <i class="fa-solid fa-wallet"></i>
+                </div>
+
+                <span>PAYMENT OVERVIEW</span>
+
+            </div>
+
+            <p>Total Premium Paid</p>
+
+            <h3>₹39,000</h3>
+
+            <div class="stackly-insurance-payments-wallet-bottom">
+                <span>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Payment Up to Date
+                </span>
+
+                <i class="fa-solid fa-arrow-trend-up"></i>
+            </div>
+
+        </div>
+
+        <div class="stackly-insurance-payments-floating-icon payment-float-one">
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+        </div>
+
+        <div class="stackly-insurance-payments-floating-icon payment-float-two">
+            <i class="fa-solid fa-receipt"></i>
+        </div>
+
+        <div class="stackly-insurance-payments-floating-icon payment-float-three">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     02. PAYMENT SUMMARY
+====================================================== -->
+
+<section class="stackly-insurance-payments-overview"
+    data-aos="fade-up"
+    data-aos-duration="900">
+
+    <div class="stackly-insurance-payments-section-heading">
+
+        <div>
+            <span>YOUR FINANCIAL SUMMARY</span>
+            <h2>Payment Overview</h2>
+            <p>Stay informed about your insurance payment activity.</p>
+        </div>
+
+        <div class="stackly-insurance-payments-date">
+            <i class="fa-regular fa-calendar"></i>
+            November 18, 2026
+        </div>
+
+    </div>
+
+
+    <div class="stackly-insurance-payments-stats">
+
+        <!-- TOTAL PAID -->
+        <div class="stackly-insurance-payments-stat-card"
+            data-aos="fade-up"
+            data-aos-delay="100">
+
+            <div class="stackly-insurance-payments-stat-top">
+
+                <div class="stackly-insurance-payments-stat-icon blue">
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                </div>
+
+                <span class="stackly-insurance-payments-stat-tag">
+                    All Time
+                </span>
+
+            </div>
+
+            <h3>₹39,000</h3>
+
+            <p>Total Premium Paid</p>
+
+            <div class="stackly-insurance-payments-stat-bottom">
+                <i class="fa-solid fa-circle-check"></i>
+                Successfully completed payments
+            </div>
+
+        </div>
+
+
+        <!-- SUCCESSFUL -->
+        <div class="stackly-insurance-payments-stat-card"
+            data-aos="fade-up"
+            data-aos-delay="200">
+
+            <div class="stackly-insurance-payments-stat-top">
+
+                <div class="stackly-insurance-payments-stat-icon green">
+                    <i class="fa-solid fa-check-double"></i>
+                </div>
+
+                <span class="stackly-insurance-payments-stat-tag green">
+                    Completed
+                </span>
+
+            </div>
+
+            <h3>05</h3>
+
+            <p>Successful Payments</p>
+
+            <div class="stackly-insurance-payments-stat-bottom">
+                <i class="fa-solid fa-shield-check"></i>
+                Payments confirmed
+            </div>
+
+        </div>
+
+
+        <!-- UPCOMING -->
+        <div class="stackly-insurance-payments-stat-card"
+            data-aos="fade-up"
+            data-aos-delay="300">
+
+            <div class="stackly-insurance-payments-stat-top">
+
+                <div class="stackly-insurance-payments-stat-icon orange">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+
+                <span class="stackly-insurance-payments-stat-tag orange">
+                    Upcoming
+                </span>
+
+            </div>
+
+            <h3>₹8,500</h3>
+
+            <p>Upcoming Premium</p>
+
+            <div class="stackly-insurance-payments-stat-bottom">
+                <i class="fa-regular fa-calendar"></i>
+                Due November 25, 2026
+            </div>
+
+        </div>
+
+
+        <!-- PENDING -->
+        <div class="stackly-insurance-payments-stat-card"
+            data-aos="fade-up"
+            data-aos-delay="400">
+
+            <div class="stackly-insurance-payments-stat-top">
+
+                <div class="stackly-insurance-payments-stat-icon purple">
+                    <i class="fa-solid fa-hourglass-half"></i>
+                </div>
+
+                <span class="stackly-insurance-payments-stat-tag purple">
+                    Pending
+                </span>
+
+            </div>
+
+            <h3>01</h3>
+
+            <p>Pending Transactions</p>
+
+            <div class="stackly-insurance-payments-stat-bottom">
+                <i class="fa-solid fa-circle-info"></i>
+                Awaiting confirmation
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     03. UPCOMING PREMIUM PAYMENT
+====================================================== -->
+
+<section class="stackly-insurance-payments-due"
+    data-aos="fade-up"
+    data-aos-duration="900">
+
+    <div class="stackly-insurance-payments-due-left">
+
+        <div class="stackly-insurance-payments-due-icon">
+            <i class="fa-solid fa-calendar-check"></i>
+        </div>
+
+        <div class="stackly-insurance-payments-due-content">
+
+            <span>NEXT PREMIUM PAYMENT</span>
+
+            <h2>Your Next Payment Is Coming Up</h2>
+
+            <p>
+                Keep your Drive Safe Premium policy active by
+                completing your upcoming premium payment.
+            </p>
+
+            <div class="stackly-insurance-payments-due-details">
+
+                <div>
+                    <span>POLICY</span>
+                    <strong>Drive Safe Premium</strong>
+                </div>
+
+                <div>
+                    <span>DUE DATE</span>
+                    <strong>25 November 2026</strong>
+                </div>
+
+                <div>
+                    <span>POLICY NUMBER</span>
+                    <strong>STK-MTR-2026-00567</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="stackly-insurance-payments-due-right">
+
+        <span>PREMIUM AMOUNT</span>
+
+        <h3>₹8,500</h3>
+
+        <a href="404-client.html"
+            class="stackly-insurance-payments-pay-btn">
+
+            Pay Premium Now
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+        <small>
+            <i class="fa-solid fa-lock"></i>
+            Secure payment gateway
+        </small>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     04. PAYMENT ACTIVITY
+====================================================== -->
+
+<section class="stackly-insurance-payments-activity"
+    data-aos="fade-up"
+    data-aos-duration="900">
+
+    <div class="stackly-insurance-payments-section-heading">
+
+        <div>
+            <span>PAYMENT PERFORMANCE</span>
+            <h2>Payment Activity</h2>
+            <p>A visual summary of your recent premium payments.</p>
+        </div>
+
+        <span class="stackly-insurance-payments-activity-badge">
+            <i class="fa-solid fa-chart-column"></i>
+            2026 Overview
+        </span>
+
+    </div>
+
+
+    <div class="stackly-insurance-payments-activity-card">
+
+        <div class="stackly-insurance-payments-activity-header">
+
+            <div>
+                <span>TOTAL PAYMENTS THIS YEAR</span>
+                <h3>₹39,000</h3>
+            </div>
+
+            <div class="stackly-insurance-payments-activity-indicator">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                Premium History
+            </div>
+
+        </div>
+
+
+        <div class="stackly-insurance-payments-chart">
+
+            <div class="stackly-insurance-payments-chart-y">
+
+                <span>₹15K</span>
+                <span>₹10K</span>
+                <span>₹5K</span>
+                <span>₹0</span>
+
+            </div>
+
+
+            <div class="stackly-insurance-payments-chart-main">
+
+                <div class="stackly-insurance-payments-chart-grid">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+
+                <div class="stackly-insurance-payments-chart-bars">
+
+                    <div class="stackly-insurance-payments-chart-item">
+                        <div class="stackly-insurance-payments-chart-bar"
+                            style="height: 65%;"
+                            data-value="₹8,500"></div>
+                        <span>Jan</span>
+                    </div>
+
+                    <div class="stackly-insurance-payments-chart-item">
+                        <div class="stackly-insurance-payments-chart-bar"
+                            style="height: 85%;"
+                            data-value="₹12,500"></div>
+                        <span>Mar</span>
+                    </div>
+
+                    <div class="stackly-insurance-payments-chart-item">
+                        <div class="stackly-insurance-payments-chart-bar"
+                            style="height: 48%;"
+                            data-value="₹8,000"></div>
+                        <span>May</span>
+                    </div>
+
+                    <div class="stackly-insurance-payments-chart-item">
+                        <div class="stackly-insurance-payments-chart-bar"
+                            style="height: 75%;"
+                            data-value="₹10,000"></div>
+                        <span>Jul</span>
+                    </div>
+
+                    <div class="stackly-insurance-payments-chart-item">
+                        <div class="stackly-insurance-payments-chart-bar"
+                            style="height: 55%;"
+                            data-value="₹0"></div>
+                        <span>Sep</span>
+                    </div>
+
+                    <div class="stackly-insurance-payments-chart-item">
+                        <div class="stackly-insurance-payments-chart-bar upcoming"
+                            style="height: 35%;"
+                            data-value="Upcoming"></div>
+                        <span>Nov</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="stackly-insurance-payments-chart-note">
+            <span></span>
+            <p>Illustrative payment activity based on your policy schedule.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     05. RECENT PAYMENT HISTORY
+====================================================== -->
+
+<section class="stackly-insurance-payments-history"
+    id="stacklyInsurancePaymentHistory"
+    data-aos="fade-up"
+    data-aos-duration="900">
+
+    <div class="stackly-insurance-payments-section-heading">
+
+        <div>
+            <span>YOUR TRANSACTION RECORDS</span>
+            <h2>Recent Transactions</h2>
+            <p>Review your premium payments and transaction details.</p>
+        </div>
+
+        <a href="404-client.html"
+            class="stackly-insurance-payments-download-btn">
+
+            <i class="fa-solid fa-download"></i>
+            Download Statement
+
+        </a>
+
+    </div>
+
+
+    <div class="stackly-insurance-payments-table-wrapper">
+
+        <table class="stackly-insurance-payments-table">
+
+            <thead>
+                <tr>
+                    <th>TRANSACTION</th>
+                    <th>POLICY</th>
+                    <th>DATE</th>
+                    <th>AMOUNT</th>
+                    <th>METHOD</th>
+                    <th>STATUS</th>
+                    <th>RECEIPT</th>
+                </tr>
+            </thead>
+
+
+            <tbody>
+
+                <tr>
+
+                    <td>
+                        <div class="stackly-insurance-payments-transaction">
+                            <div class="stackly-insurance-payments-transaction-icon blue">
+                                <i class="fa-solid fa-heart-pulse"></i>
+                            </div>
+
+                            <div>
+                                <strong>Health Premium</strong>
+                                <span>STK-PAY-2026-00842</span>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td>Health Secure Plus</td>
+
+                    <td>15 Feb 2026</td>
+
+                    <td class="stackly-insurance-payments-amount">
+                        ₹12,500
+                    </td>
+
+                    <td>
+                        <span class="stackly-insurance-payments-method">
+                            <i class="fa-brands fa-cc-visa"></i>
+                            Card
+                        </span>
+                    </td>
+
+                    <td>
+                        <span class="stackly-insurance-payments-status success">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Paid
+                        </span>
+                    </td>
+
+                    <td>
+                        <a href="404-client.html"
+                            class="stackly-insurance-payments-receipt"
+                            aria-label="Download health premium receipt">
+                            <i class="fa-solid fa-file-arrow-down"></i>
+                        </a>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <div class="stackly-insurance-payments-transaction">
+                            <div class="stackly-insurance-payments-transaction-icon purple">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+
+                            <div>
+                                <strong>Life Premium</strong>
+                                <span>STK-PAY-2026-00718</span>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td>Life Protection Elite</td>
+
+                    <td>10 Jul 2026</td>
+
+                    <td class="stackly-insurance-payments-amount">
+                        ₹18,000
+                    </td>
+
+                    <td>
+                        <span class="stackly-insurance-payments-method">
+                            <i class="fa-solid fa-building-columns"></i>
+                            Net Banking
+                        </span>
+                    </td>
+
+                    <td>
+                        <span class="stackly-insurance-payments-status success">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Paid
+                        </span>
+                    </td>
+
+                    <td>
+                        <a href="404-client.html"
+                            class="stackly-insurance-payments-receipt"
+                            aria-label="Download life premium receipt">
+                            <i class="fa-solid fa-file-arrow-down"></i>
+                        </a>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <div class="stackly-insurance-payments-transaction">
+                            <div class="stackly-insurance-payments-transaction-icon orange">
+                                <i class="fa-solid fa-car"></i>
+                            </div>
+
+                            <div>
+                                <strong>Motor Premium</strong>
+                                <span>STK-PAY-2026-00621</span>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td>Drive Safe Premium</td>
+
+                    <td>01 Aug 2026</td>
+
+                    <td class="stackly-insurance-payments-amount">
+                        ₹8,500
+                    </td>
+
+                    <td>
+                        <span class="stackly-insurance-payments-method">
+                            <i class="fa-brands fa-google-pay"></i>
+                            UPI
+                        </span>
+                    </td>
+
+                    <td>
+                        <span class="stackly-insurance-payments-status success">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Paid
+                        </span>
+                    </td>
+
+                    <td>
+                        <a href="404-client.html"
+                            class="stackly-insurance-payments-receipt"
+                            aria-label="Download motor premium receipt">
+                            <i class="fa-solid fa-file-arrow-down"></i>
+                        </a>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <div class="stackly-insurance-payments-transaction">
+                            <div class="stackly-insurance-payments-transaction-icon blue">
+                                <i class="fa-solid fa-shield-heart"></i>
+                            </div>
+
+                            <div>
+                                <strong>Policy Renewal</strong>
+                                <span>STK-PAY-2026-00519</span>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td>Health Secure Plus</td>
+
+                    <td>15 Sep 2026</td>
+
+                    <td class="stackly-insurance-payments-amount">
+                        ₹0
+                    </td>
+
+                    <td>
+                        <span class="stackly-insurance-payments-method">
+                            <i class="fa-solid fa-credit-card"></i>
+                            Card
+                        </span>
+                    </td>
+
+                    <td>
+                        <span class="stackly-insurance-payments-status pending">
+                            <i class="fa-solid fa-clock"></i>
+                            Pending
+                        </span>
+                    </td>
+
+                    <td>
+                        <a href="404-client.html"
+                            class="stackly-insurance-payments-receipt"
+                            aria-label="View pending transaction">
+                            <i class="fa-solid fa-eye"></i>
+                        </a>
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     06. SAVED PAYMENT METHODS
+====================================================== -->
+
+<section class="stackly-insurance-payments-methods"
+    data-aos="fade-up"
+    data-aos-duration="900">
+
+    <div class="stackly-insurance-payments-section-heading">
+
+        <div>
+            <span>QUICK AND CONVENIENT</span>
+            <h2>Payment Methods</h2>
+            <p>Manage the payment options available for your premiums.</p>
+        </div>
+
+        <a href="404-client.html"
+            class="stackly-insurance-payments-add-method">
+
+            <i class="fa-solid fa-plus"></i>
+            Add Payment Method
+
+        </a>
+
+    </div>
+
+
+    <div class="stackly-insurance-payments-method-grid">
+
+
+        <!-- CARD -->
+        <div class="stackly-insurance-payments-method-card"
+            data-aos="fade-up"
+            data-aos-delay="100">
+
+            <div class="stackly-insurance-payments-method-top">
+
+                <div class="stackly-insurance-payments-method-icon blue">
+                    <i class="fa-brands fa-cc-visa"></i>
+                </div>
+
+                <span class="stackly-insurance-payments-default">
+                    DEFAULT
+                </span>
+
+            </div>
+
+            <h3>Visa Card</h3>
+
+            <p>•••• •••• •••• 4829</p>
+
+            <div class="stackly-insurance-payments-method-bottom">
+                <span>Expires 08/28</span>
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+        </div>
+
+
+        <!-- UPI -->
+        <div class="stackly-insurance-payments-method-card"
+            data-aos="fade-up"
+            data-aos-delay="200">
+
+            <div class="stackly-insurance-payments-method-top">
+
+                <div class="stackly-insurance-payments-method-icon green">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+
+                <span class="stackly-insurance-payments-saved">
+                    SAVED
+                </span>
+
+            </div>
+
+            <h3>UPI Payment</h3>
+
+            <p>client@upi</p>
+
+            <div class="stackly-insurance-payments-method-bottom">
+                <span>Instant payments</span>
+                <i class="fa-solid fa-bolt"></i>
+            </div>
+
+        </div>
+
+
+        <!-- BANK -->
+        <div class="stackly-insurance-payments-method-card"
+            data-aos="fade-up"
+            data-aos-delay="300">
+
+            <div class="stackly-insurance-payments-method-top">
+
+                <div class="stackly-insurance-payments-method-icon purple">
+                    <i class="fa-solid fa-building-columns"></i>
+                </div>
+
+                <span class="stackly-insurance-payments-saved">
+                    SAVED
+                </span>
+
+            </div>
+
+            <h3>Bank Transfer</h3>
+
+            <p>Account ending 9021</p>
+
+            <div class="stackly-insurance-payments-method-bottom">
+                <span>Secure transfer</span>
+                <i class="fa-solid fa-lock"></i>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     07. PAYMENT SECURITY BANNER
+====================================================== -->
+
+<section class="stackly-insurance-payments-security-banner"
+    data-aos="zoom-in"
+    data-aos-duration="900">
+
+    <div class="stackly-insurance-payments-security-icon">
+        <i class="fa-solid fa-shield-halved"></i>
+    </div>
+
+    <div class="stackly-insurance-payments-security-content">
+
+        <span>YOUR SECURITY MATTERS</span>
+
+        <h2>Every Payment Is Protected</h2>
+
+        <p>
+            Your payment information is handled through secure
+            payment processes. Keep your account details private
+            and review every transaction carefully.
+        </p>
+
+    </div>
+
+    <div class="stackly-insurance-payments-security-checks">
+
+        <span>
+            <i class="fa-solid fa-check-circle"></i>
+            Secure Transactions
+        </span>
+
+        <span>
+            <i class="fa-solid fa-check-circle"></i>
+            Payment Confirmation
+        </span>
+
+        <span>
+            <i class="fa-solid fa-check-circle"></i>
+            Clear Transaction History
+        </span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     08. BILLING SUPPORT
+====================================================== -->
+
+<section class="stackly-insurance-payments-support"
+    data-aos="fade-up"
+    data-aos-duration="900">
+
+    <div class="stackly-insurance-payments-support-icon">
+        <i class="fa-solid fa-headset"></i>
+    </div>
+
+    <div class="stackly-insurance-payments-support-content">
+
+        <span>PAYMENT ASSISTANCE</span>
+
+        <h2>Have a Question About a Payment?</h2>
+
+        <p>
+            Need help with a transaction, premium amount, or payment receipt?
+            Our support team is ready to guide you.
+        </p>
+
+    </div>
+
+    <a href="404-client.html"
+        class="stackly-insurance-payments-support-btn">
+
+        Contact Support
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+    </a>
+
+</section>
+
+
+            
+        </main>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         AOS JAVASCRIPT
+    ====================================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+    <!-- =====================================================
+         CLIENT DASHBOARD JAVASCRIPT
+    ====================================================== -->
+
+    <script src="client.js" defer></script>
+
+
+</body>
+
+</html>

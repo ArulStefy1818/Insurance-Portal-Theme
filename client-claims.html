@@ -1,0 +1,1220 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly | Client Dashboard</title>
+
+    <meta name="description"
+        content="Manage your Stackly Insurance policies, track claims, view payments, and access personalized insurance support from your client dashboard.">
+
+    <meta name="theme-color" content="#1557A6">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="Stackly-logo-Blue.webp" type="image/webp">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS ANIMATION -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- CLIENT DASHBOARD CSS -->
+    <link rel="stylesheet" href="client.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         STACKLY INSURANCE CLIENT DASHBOARD
+         MAIN WRAPPER
+    ====================================================== -->
+
+    <div class="stackly-insurance-client-dashboard">
+
+
+        <!-- =================================================
+             MOBILE SIDEBAR OVERLAY
+        ================================================== -->
+
+        <div class="stackly-insurance-client-overlay"
+            id="stacklyInsuranceClientOverlay">
+        </div>
+
+
+        <!-- =================================================
+             CLIENT SIDEBAR
+        ================================================== -->
+
+        <aside class="stackly-insurance-client-sidebar"
+            id="stacklyInsuranceClientSidebar">
+
+
+            <!-- SIDEBAR BRAND -->
+            <div class="stackly-insurance-client-brand">
+
+                <a href="client.html"
+                    class="stackly-insurance-client-logo">
+
+                    <img src="Stackly-logo-Blue.webp"
+                        alt="Stackly Insurance Logo">
+
+                </a>
+ 
+
+                <!-- MOBILE EXIT BUTTON -->
+                <button type="button"
+                    class="stackly-insurance-client-close"
+                    id="stacklyInsuranceClientClose"
+                    aria-label="Close navigation menu">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- SIDEBAR PROFILE -->
+            <div class="stackly-insurance-client-sidebar-profile">
+
+                <div class="stackly-insurance-client-avatar"
+                    id="stacklyInsuranceClientAvatar">
+
+                    C
+
+                </div>
+
+
+                <div class="stackly-insurance-client-sidebar-user">
+
+                    <h3 id="stacklyInsuranceClientName">
+                        Client
+                    </h3>
+
+                    <span>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Verified Customer
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIDEBAR NAVIGATION -->
+            <nav class="stackly-insurance-client-navigation"
+                aria-label="Client dashboard navigation">
+
+
+                <!-- OVERVIEW -->
+                <div class="stackly-insurance-client-nav-group">
+
+                    <span class="stackly-insurance-client-nav-heading">
+                        OVERVIEW
+                    </span>
+
+
+                    <a href="client.html"
+                        class="stackly-insurance-client-nav-link active"
+                        aria-current="page">
+
+                        <i class="fa-solid fa-house-chimney"></i>
+
+                        <span>Dashboard</span>
+
+                    </a>
+
+                </div>
+
+
+                <!-- INSURANCE MANAGEMENT -->
+                <div class="stackly-insurance-client-nav-group">
+
+                    <span class="stackly-insurance-client-nav-heading">
+                        MY INSURANCE
+                    </span>
+
+
+                    <a href="client-policies.html"
+                        class="stackly-insurance-client-nav-link">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <span>My Policies</span>
+
+                        <span class="stackly-insurance-client-nav-count">
+                            03
+                        </span>
+
+                    </a>
+
+
+                    <a href="client-claims.html"
+                        class="stackly-insurance-client-nav-link">
+
+                        <i class="fa-solid fa-file-circle-check"></i>
+
+                        <span>My Claims</span>
+
+                        <span class="stackly-insurance-client-nav-count">
+                            02
+                        </span>
+
+                    </a>
+
+
+                    <a href="client-payments.html"
+                        class="stackly-insurance-client-nav-link">
+
+                        <i class="fa-solid fa-wallet"></i>
+
+                        <span>Payments</span>
+
+                    </a>
+ 
+                </div>
+
+
+                <!-- SERVICES -->
+                <div class="stackly-insurance-client-nav-group">
+
+                    <span class="stackly-insurance-client-nav-heading">
+                        SERVICES
+                    </span>
+
+
+                    <a href="client-plans.html"
+                        class="stackly-insurance-client-nav-link">
+
+                        <i class="fa-solid fa-layer-group"></i>
+
+                        <span>Explore Plans</span>
+
+                    </a>
+
+
+                    <a href="client-renewals.html"
+                        class="stackly-insurance-client-nav-link">
+
+                        <i class="fa-solid fa-arrows-rotate"></i>
+
+                        <span>Policy Renewal</span>
+
+                    </a>
+
+
+                </div>
+
+
+                <!-- ACCOUNT -->
+                <div class="stackly-insurance-client-nav-group">
+
+                    <span class="stackly-insurance-client-nav-heading">
+                        ACCOUNT
+                    </span>
+
+
+                    <a href="client-profile.html"
+                        class="stackly-insurance-client-nav-link">
+
+                        <i class="fa-solid fa-user-gear"></i>
+
+                        <span>My Profile</span>
+
+                    </a>
+
+
+                </div>
+
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM SUPPORT -->
+            <div class="stackly-insurance-client-sidebar-bottom">
+
+
+                <div class="stackly-insurance-client-help-card">
+
+                    <div class="stackly-insurance-client-help-icon">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                    </div>
+
+
+                    <h4>Need Assistance?</h4>
+
+                    <p>
+                        Our insurance experts are here to help you.
+                    </p>
+
+
+                    <a href="404-client.html">
+
+                        Contact Support
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <!-- LOGOUT -->
+                <a href="index.html"
+                    class="stackly-insurance-client-logout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </a>
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- =================================================
+             MAIN CONTENT AREA
+        ================================================== -->
+
+        <main class="stackly-insurance-client-main">
+
+
+            <!-- =================================================
+                 TOP HEADER
+            ================================================== -->
+
+            <header class="stackly-insurance-client-header">
+
+
+                <!-- HEADER LEFT -->
+                <div class="stackly-insurance-client-header-left">
+
+
+                    <!-- MOBILE HAMBURGER -->
+                    <button type="button"
+                        class="stackly-insurance-client-menu-toggle"
+                        id="stacklyInsuranceClientMenuToggle"
+                        aria-label="Open navigation menu"
+                        aria-controls="stacklyInsuranceClientSidebar"
+                        aria-expanded="false">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+
+                    <div class="stackly-insurance-client-header-title">
+
+                        <span>CLIENT PORTAL</span>
+
+                        <h1>Client Dashboard</h1>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HEADER RIGHT -->
+                <div class="stackly-insurance-client-header-right">
+
+
+                    <!-- NOTIFICATION -->
+                    <a href="404-client.html"
+                        class="stackly-insurance-client-notification"
+                        aria-label="Notifications">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span></span>
+
+                    </a>
+
+
+                    <!-- HEADER DIVIDER -->
+                    <div class="stackly-insurance-client-header-divider">
+                    </div>
+
+
+                    <!-- CLIENT EMAIL -->
+                    <div class="stackly-insurance-client-header-account">
+
+                        <div class="stackly-insurance-client-header-avatar"
+                            id="stacklyInsuranceClientHeaderAvatar">
+
+                            C
+
+                        </div>
+
+
+                        <div class="stackly-insurance-client-header-account-info">
+
+                            <span>MY ACCOUNT</span>
+
+                            <p id="stacklyInsuranceClientEmail">
+                                client@example.com
+                            </p>
+
+                        </div>
+
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+
+                </div>
+
+            </header>
+
+<!-- =====================================================
+     STACKLY INSURANCE - MY CLAIMS PAGE
+====================================================== -->
+<div class="stackly-insurance-client-content">
+
+
+<!-- =====================================================
+     01. CLAIMS HERO SECTION
+====================================================== -->
+
+<section class="stackly-insurance-claims-hero"
+    data-aos="fade-up"
+    data-aos-duration="900">
+
+    <div class="stackly-insurance-claims-hero-content">
+
+        <div class="stackly-insurance-claims-hero-label">
+            <span></span>
+            CLAIMS MANAGEMENT CENTER
+        </div>
+
+        <h2>
+            We're Here When
+            <span>You Need Us Most.</span>
+        </h2>
+
+        <p>
+            Track your insurance claims, monitor progress, and
+            stay updated at every step of your protection journey.
+        </p>
+
+        <div class="stackly-insurance-claims-hero-actions">
+
+            <a href="404-client.html"
+                class="stackly-insurance-claims-primary-btn">
+                View My Claims
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="404-client.html"
+                class="stackly-insurance-claims-secondary-btn">
+                <i class="fa-solid fa-plus"></i>
+                Submit New Claim
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="stackly-insurance-claims-hero-visual">
+
+        <div class="stackly-insurance-claims-visual-circle"></div>
+
+        <div class="stackly-insurance-claims-visual-card">
+
+            <div class="stackly-insurance-claims-visual-icon">
+                <i class="fa-solid fa-file-shield"></i>
+            </div>
+
+            <span>CLAIM ASSISTANCE</span>
+
+            <h3>Your Protection Matters</h3>
+
+            <p>
+                Every claim deserves attention and care.
+            </p>
+
+            <div class="stackly-insurance-claims-visual-status">
+                <i class="fa-solid fa-circle-check"></i>
+                Support is always available
+            </div>
+
+        </div>
+
+        <div class="stackly-insurance-claims-floating-icon claims-float-one">
+            <i class="fa-solid fa-shield-heart"></i>
+        </div>
+
+        <div class="stackly-insurance-claims-floating-icon claims-float-two">
+            <i class="fa-solid fa-file-circle-check"></i>
+        </div>
+
+        <div class="stackly-insurance-claims-floating-icon claims-float-three">
+            <i class="fa-solid fa-headset"></i>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     02. CLAIMS OVERVIEW
+====================================================== -->
+
+<section class="stackly-insurance-claims-overview"
+    data-aos="fade-up"
+    data-aos-duration="900">
+
+    <div class="stackly-insurance-claims-section-heading">
+
+        <div>
+            <span>YOUR CLAIM SUMMARY</span>
+            <h2>Claims Overview</h2>
+            <p>A quick look at your insurance claim activity.</p>
+        </div>
+
+        <div class="stackly-insurance-claims-overview-date">
+            <i class="fa-regular fa-calendar"></i>
+            November 18, 2026
+        </div>
+
+    </div>
+
+
+    <div class="stackly-insurance-claims-stats">
+
+        <!-- TOTAL CLAIMS -->
+        <div class="stackly-insurance-claims-stat-card"
+            data-aos="fade-up"
+            data-aos-delay="100">
+
+            <div class="stackly-insurance-claims-stat-top">
+
+                <div class="stackly-insurance-claims-stat-icon blue">
+                    <i class="fa-solid fa-folder-open"></i>
+                </div>
+
+                <span class="stackly-insurance-claims-stat-tag">
+                    All Records
+                </span>
+
+            </div>
+
+            <h3>04</h3>
+
+            <p>Total Claims</p>
+
+            <div class="stackly-insurance-claims-stat-bottom">
+                <i class="fa-solid fa-chart-line"></i>
+                Your complete claim history
+            </div>
+
+        </div>
+
+
+        <!-- APPROVED -->
+        <div class="stackly-insurance-claims-stat-card"
+            data-aos="fade-up"
+            data-aos-delay="200">
+
+            <div class="stackly-insurance-claims-stat-top">
+
+                <div class="stackly-insurance-claims-stat-icon green">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <span class="stackly-insurance-claims-stat-tag green">
+                    Completed
+                </span>
+
+            </div>
+
+            <h3>02</h3>
+
+            <p>Approved Claims</p>
+
+            <div class="stackly-insurance-claims-stat-bottom">
+                <i class="fa-solid fa-check"></i>
+                Successfully processed
+            </div>
+
+        </div>
+
+
+        <!-- PROCESSING -->
+        <div class="stackly-insurance-claims-stat-card"
+            data-aos="fade-up"
+            data-aos-delay="300">
+
+            <div class="stackly-insurance-claims-stat-top">
+
+                <div class="stackly-insurance-claims-stat-icon orange">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+
+                <span class="stackly-insurance-claims-stat-tag orange">
+                    In Progress
+                </span>
+
+            </div>
+
+            <h3>01</h3>
+
+            <p>Under Review</p>
+
+            <div class="stackly-insurance-claims-stat-bottom">
+                <i class="fa-solid fa-hourglass-half"></i>
+                Verification in progress
+            </div>
+
+        </div>
+
+
+        <!-- SETTLED AMOUNT -->
+        <div class="stackly-insurance-claims-stat-card"
+            data-aos="fade-up"
+            data-aos-delay="400">
+
+            <div class="stackly-insurance-claims-stat-top">
+
+                <div class="stackly-insurance-claims-stat-icon purple">
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                </div>
+
+                <span class="stackly-insurance-claims-stat-tag purple">
+                    Settled
+                </span>
+
+            </div>
+
+            <h3>₹85,000</h3>
+
+            <p>Total Settlement</p>
+
+            <div class="stackly-insurance-claims-stat-bottom">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                Across approved claims
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     03. FEATURED CLAIM TRACKER
+====================================================== -->
+
+<section class="stackly-insurance-claims-tracker-section"
+    data-aos="fade-up"
+    data-aos-duration="900">
+
+    <div class="stackly-insurance-claims-section-heading">
+
+        <div>
+            <span>LIVE CLAIM ACTIVITY</span>
+            <h2>Track Your Claim</h2>
+            <p>Follow the progress of your recently submitted claim.</p>
+        </div>
+
+        <span class="stackly-insurance-claims-review-badge">
+            <i class="fa-solid fa-circle"></i>
+            Under Review
+        </span>
+
+    </div>
+
+
+    <div class="stackly-insurance-claims-tracker-card">
+
+        <div class="stackly-insurance-claims-tracker-top">
+
+            <div class="stackly-insurance-claims-tracker-info">
+
+                <div class="stackly-insurance-claims-type-icon health">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+
+                <div>
+                    <span>HEALTH INSURANCE CLAIM</span>
+                    <h3>Medical Treatment Claim</h3>
+                    <p>Claim ID: STK-CLM-2026-00842</p>
+                </div>
+
+            </div>
+
+            <div class="stackly-insurance-claims-tracker-amount">
+                <span>CLAIM AMOUNT</span>
+                <h3>₹45,000</h3>
+            </div>
+
+        </div>
+
+
+        <div class="stackly-insurance-claims-tracker-divider"></div>
+
+
+        <div class="stackly-insurance-claims-progress-heading">
+
+            <h4>Claim Progress</h4>
+
+            <span>75% Completed</span>
+
+        </div>
+
+
+        <div class="stackly-insurance-claims-progress-track">
+            <span style="width: 75%;"></span>
+        </div>
+
+
+        <div class="stackly-insurance-claims-timeline">
+
+            <div class="stackly-insurance-claims-timeline-item completed">
+
+                <div class="stackly-insurance-claims-timeline-icon">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div>
+                    <h4>Claim Submitted</h4>
+                    <p>Documents received successfully</p>
+                    <span>November 12, 2026</span>
+                </div>
+
+            </div>
+
+
+            <div class="stackly-insurance-claims-timeline-item completed">
+
+                <div class="stackly-insurance-claims-timeline-icon">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div>
+                    <h4>Document Verification</h4>
+                    <p>Submitted documents verified</p>
+                    <span>November 14, 2026</span>
+                </div>
+
+            </div>
+
+
+            <div class="stackly-insurance-claims-timeline-item current">
+
+                <div class="stackly-insurance-claims-timeline-icon">
+                    <i class="fa-solid fa-spinner"></i>
+                </div>
+
+                <div>
+                    <h4>Claim Under Review</h4>
+                    <p>Our claims team is reviewing your request</p>
+                    <span>In progress</span>
+                </div>
+
+            </div>
+
+
+            <div class="stackly-insurance-claims-timeline-item">
+
+                <div class="stackly-insurance-claims-timeline-icon">
+                    <i class="fa-solid fa-flag-checkered"></i>
+                </div>
+
+                <div>
+                    <h4>Final Settlement</h4>
+                    <p>Awaiting review completion</p>
+                    <span>Pending</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-insurance-claims-tracker-footer">
+
+            <div>
+                <i class="fa-solid fa-circle-info"></i>
+                We will notify you when your claim status changes.
+            </div>
+
+            <a href="404-client.html">
+                View Claim Details
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     04. MY CLAIM HISTORY
+====================================================== -->
+
+<section class="stackly-insurance-claims-list-section"
+    id="stacklyInsuranceClaimsList"
+    data-aos="fade-up"
+    data-aos-duration="900">
+
+    <div class="stackly-insurance-claims-section-heading">
+
+        <div>
+            <span>YOUR CLAIM RECORDS</span>
+            <h2>My Claim History</h2>
+            <p>Review your submitted claims and their latest status.</p>
+        </div>
+
+        <a href="404-client.html"
+            class="stackly-insurance-claims-download-btn">
+            <i class="fa-solid fa-download"></i>
+            Download History
+        </a>
+
+    </div>
+
+
+    <div class="stackly-insurance-claims-list">
+
+
+        <!-- CLAIM 01 -->
+        <div class="stackly-insurance-claims-list-card"
+            data-aos="fade-up"
+            data-aos-delay="100">
+
+            <div class="stackly-insurance-claims-list-icon health">
+                <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+
+            <div class="stackly-insurance-claims-list-main">
+
+                <div class="stackly-insurance-claims-list-title">
+
+                    <div>
+                        <h3>Medical Treatment Claim</h3>
+                        <span>STK-CLM-2026-00842</span>
+                    </div>
+
+                    <span class="stackly-insurance-claims-status under-review">
+                        <i class="fa-solid fa-circle"></i>
+                        Under Review
+                    </span>
+
+                </div>
+
+                <div class="stackly-insurance-claims-list-details">
+
+                    <div>
+                        <span>POLICY TYPE</span>
+                        <p>Health Secure Plus</p>
+                    </div>
+
+                    <div>
+                        <span>SUBMITTED DATE</span>
+                        <p>12 Nov 2026</p>
+                    </div>
+
+                    <div>
+                        <span>CLAIM AMOUNT</span>
+                        <p>₹45,000</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <a href="404-client.html"
+                class="stackly-insurance-claims-view-btn"
+                aria-label="View medical treatment claim">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+        </div>
+
+
+
+        <!-- CLAIM 02 -->
+        <div class="stackly-insurance-claims-list-card"
+            data-aos="fade-up"
+            data-aos-delay="200">
+
+            <div class="stackly-insurance-claims-list-icon motor">
+                <i class="fa-solid fa-car"></i>
+            </div>
+
+            <div class="stackly-insurance-claims-list-main">
+
+                <div class="stackly-insurance-claims-list-title">
+
+                    <div>
+                        <h3>Vehicle Accident Claim</h3>
+                        <span>STK-CLM-2026-00621</span>
+                    </div>
+
+                    <span class="stackly-insurance-claims-status approved">
+                        <i class="fa-solid fa-circle"></i>
+                        Approved
+                    </span>
+
+                </div>
+
+                <div class="stackly-insurance-claims-list-details">
+
+                    <div>
+                        <span>POLICY TYPE</span>
+                        <p>Drive Safe Premium</p>
+                    </div>
+
+                    <div>
+                        <span>SUBMITTED DATE</span>
+                        <p>18 Sep 2026</p>
+                    </div>
+
+                    <div>
+                        <span>CLAIM AMOUNT</span>
+                        <p>₹35,000</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <a href="404-client.html"
+                class="stackly-insurance-claims-view-btn"
+                aria-label="View vehicle accident claim">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+        </div>
+
+
+
+        <!-- CLAIM 03 -->
+        <div class="stackly-insurance-claims-list-card"
+            data-aos="fade-up"
+            data-aos-delay="300">
+
+            <div class="stackly-insurance-claims-list-icon life">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+
+            <div class="stackly-insurance-claims-list-main">
+
+                <div class="stackly-insurance-claims-list-title">
+
+                    <div>
+                        <h3>Life Coverage Claim</h3>
+                        <span>STK-CLM-2026-00418</span>
+                    </div>
+
+                    <span class="stackly-insurance-claims-status approved">
+                        <i class="fa-solid fa-circle"></i>
+                        Approved
+                    </span>
+
+                </div>
+
+                <div class="stackly-insurance-claims-list-details">
+
+                    <div>
+                        <span>POLICY TYPE</span>
+                        <p>Life Protection Elite</p>
+                    </div>
+
+                    <div>
+                        <span>SUBMITTED DATE</span>
+                        <p>05 Aug 2026</p>
+                    </div>
+
+                    <div>
+                        <span>CLAIM AMOUNT</span>
+                        <p>₹50,000</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <a href="404-client.html"
+                class="stackly-insurance-claims-view-btn"
+                aria-label="View life coverage claim">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+        </div>
+
+
+
+        <!-- CLAIM 04 -->
+        <div class="stackly-insurance-claims-list-card"
+            data-aos="fade-up"
+            data-aos-delay="400">
+
+            <div class="stackly-insurance-claims-list-icon health">
+                <i class="fa-solid fa-hospital"></i>
+            </div>
+
+            <div class="stackly-insurance-claims-list-main">
+
+                <div class="stackly-insurance-claims-list-title">
+
+                    <div>
+                        <h3>Hospitalization Claim</h3>
+                        <span>STK-CLM-2026-00215</span>
+                    </div>
+
+                    <span class="stackly-insurance-claims-status settled">
+                        <i class="fa-solid fa-circle"></i>
+                        Settled
+                    </span>
+
+                </div>
+
+                <div class="stackly-insurance-claims-list-details">
+
+                    <div>
+                        <span>POLICY TYPE</span>
+                        <p>Health Secure Plus</p>
+                    </div>
+
+                    <div>
+                        <span>SUBMITTED DATE</span>
+                        <p>14 Jun 2026</p>
+                    </div>
+
+                    <div>
+                        <span>CLAIM AMOUNT</span>
+                        <p>₹35,000</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <a href="404-client.html"
+                class="stackly-insurance-claims-view-btn"
+                aria-label="View hospitalization claim">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     05. HOW CLAIMS WORK
+====================================================== -->
+
+<section class="stackly-insurance-claims-process"
+    data-aos="fade-up"
+    data-aos-duration="900">
+
+    <div class="stackly-insurance-claims-process-heading">
+
+        <span>OUR SIMPLE PROCESS</span>
+
+        <h2>From Submission to Settlement</h2>
+
+        <p>
+            We make every step of your claims journey clear,
+            convenient, and straightforward.
+        </p>
+
+    </div>
+
+
+    <div class="stackly-insurance-claims-process-grid">
+
+
+        <div class="stackly-insurance-claims-process-card"
+            data-aos="fade-up"
+            data-aos-delay="100">
+
+            <div class="stackly-insurance-claims-process-number">
+                01
+            </div>
+
+            <div class="stackly-insurance-claims-process-icon">
+                <i class="fa-solid fa-file-arrow-up"></i>
+            </div>
+
+            <h3>Submit Your Claim</h3>
+
+            <p>
+                Share your claim details and upload the required documents.
+            </p>
+
+        </div>
+
+
+        <div class="stackly-insurance-claims-process-card"
+            data-aos="fade-up"
+            data-aos-delay="200">
+
+            <div class="stackly-insurance-claims-process-number">
+                02
+            </div>
+
+            <div class="stackly-insurance-claims-process-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <h3>Document Review</h3>
+
+            <p>
+                Our team checks your information and verifies the documents.
+            </p>
+
+        </div>
+
+
+        <div class="stackly-insurance-claims-process-card"
+            data-aos="fade-up"
+            data-aos-delay="300">
+
+            <div class="stackly-insurance-claims-process-number">
+                03
+            </div>
+
+            <div class="stackly-insurance-claims-process-icon">
+                <i class="fa-solid fa-clipboard-check"></i>
+            </div>
+
+            <h3>Claim Assessment</h3>
+
+            <p>
+                Your claim is assessed according to the applicable policy terms.
+            </p>
+
+        </div>
+
+
+        <div class="stackly-insurance-claims-process-card"
+            data-aos="fade-up"
+            data-aos-delay="400">
+
+            <div class="stackly-insurance-claims-process-number">
+                04
+            </div>
+
+            <div class="stackly-insurance-claims-process-icon">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+            </div>
+
+            <h3>Final Settlement</h3>
+
+            <p>
+                Receive the settlement decision and relevant claim updates.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     06. CLAIMS SUPPORT BANNER
+====================================================== -->
+
+<section class="stackly-insurance-claims-support"
+    data-aos="zoom-in"
+    data-aos-duration="900">
+
+    <div class="stackly-insurance-claims-support-icon">
+        <i class="fa-solid fa-headset"></i>
+    </div>
+
+
+    <div class="stackly-insurance-claims-support-content">
+
+        <span>WE'RE READY TO HELP</span>
+
+        <h2>Need Help With Your Claim?</h2>
+
+        <p>
+            Have questions about your claim status or required documents?
+            Our dedicated support team is ready to assist you.
+        </p>
+
+    </div>
+
+
+    <a href="404-client.html"
+        class="stackly-insurance-claims-support-btn">
+
+        Contact Our Team
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+    </a>
+
+</section>
+
+            
+</div>
+        </main>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         AOS JAVASCRIPT
+    ====================================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+    <!-- =====================================================
+         CLIENT DASHBOARD JAVASCRIPT
+    ====================================================== -->
+
+    <script src="client.js" defer></script>
+
+
+</body>
+
+</html>

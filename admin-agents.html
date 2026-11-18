@@ -1,0 +1,1422 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly | Insurance Admin Dashboard</title>
+
+    <meta name="description"
+        content="Manage insurance policies, customers, claims, payments and business performance through the Stackly Insurance Admin Dashboard.">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="Stackly-logo-Blue.webp">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS ANIMATION -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- ADMIN CSS -->
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================
+         ADMIN DASHBOARD MAIN WRAPPER
+    =========================================== -->
+
+    <div class="stackly-insurance-admin">
+
+
+        <!-- ==========================================
+             MOBILE SIDEBAR OVERLAY
+        =========================================== -->
+
+        <div class="stackly-insurance-admin-overlay"
+            id="stacklyInsuranceAdminOverlay"></div>
+
+
+        <!-- ==========================================
+             SIDEBAR
+        =========================================== -->
+
+        <aside class="stackly-insurance-admin-sidebar"
+            id="stacklyInsuranceAdminSidebar">
+
+
+            <!-- SIDEBAR BRAND -->
+
+            <div class="stackly-insurance-admin-brand">
+
+                <a href="admin.html"
+                    class="stackly-insurance-admin-logo">
+
+                    <img src="Stackly-logo-Blue.webp"
+                        alt="Stackly Insurance Logo">
+
+                </a>
+
+                <button class="stackly-insurance-admin-close"
+                    id="stacklyInsuranceAdminClose"
+                    aria-label="Close sidebar">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- ADMIN PROFILE -->
+
+            <div class="stackly-insurance-admin-profile">
+
+                <div class="stackly-insurance-admin-avatar">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                    <span class="stackly-insurance-admin-online"></span>
+
+                </div>
+
+                <div class="stackly-insurance-admin-profile-info">
+
+                    <h3 id="stacklyInsuranceAdminName">Administrator</h3>
+
+                    <p>Super Admin</p>
+
+                </div>
+
+ 
+            </div>
+
+
+            <!-- SIDEBAR NAVIGATION -->
+
+            <nav class="stackly-insurance-admin-nav">
+
+                <p class="stackly-insurance-admin-nav-heading">
+                    MAIN MENU
+                </p>
+
+
+                <a href="admin.html"
+                    class="stackly-insurance-admin-nav-link active">
+
+                    <i class="fa-solid fa-table-columns"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a href="admin-policies.html"
+                    class="stackly-insurance-admin-nav-link">
+
+                    <i class="fa-solid fa-file-shield"></i>
+
+                    <span>Insurance Policies</span>
+
+                    <span class="stackly-insurance-admin-nav-count">
+                        12
+                    </span>
+
+                </a>
+
+
+                <a href="admin-claims.html"
+                    class="stackly-insurance-admin-nav-link">
+
+                    <i class="fa-solid fa-file-circle-check"></i>
+
+                    <span>Claims Management</span>
+
+                    <span class="stackly-insurance-admin-nav-count">
+                        08
+                    </span>
+
+                </a>
+
+
+                <a href="admin-customers.html"
+                    class="stackly-insurance-admin-nav-link">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <span>Customers</span>
+
+                </a>
+
+
+                <a href="admin-payments.html"
+                    class="stackly-insurance-admin-nav-link">
+
+                    <i class="fa-solid fa-wallet"></i>
+
+                    <span>Payments</span>
+
+                </a>
+
+
+                <a href="admin-agents.html"
+                    class="stackly-insurance-admin-nav-link">
+
+                    <i class="fa-solid fa-user-tie"></i>
+
+                    <span>Insurance Agents</span>
+
+                </a>
+
+
+                <p class="stackly-insurance-admin-nav-heading stackly-insurance-admin-nav-heading-space">
+                    MANAGEMENT
+                </p>
+
+ 
+
+                <a href="admin-settings.html"
+                    class="stackly-insurance-admin-nav-link">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    <span>Settings</span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="stackly-insurance-admin-sidebar-bottom">
+
+                <div class="stackly-insurance-admin-help-card">
+
+                    <div class="stackly-insurance-admin-help-icon">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                    </div>
+
+                    <h4>Need Assistance?</h4>
+
+                    <p>Our support team is here to help you.</p>
+
+                    <a href="404-admin.html">
+
+                        Contact Support
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <a href="index.html"
+                    class="stackly-insurance-admin-logout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ==========================================
+             MAIN CONTENT AREA
+        =========================================== -->
+
+        <main class="stackly-insurance-admin-main">
+
+
+            <!-- ==========================================
+                 TOP HEADER
+            =========================================== -->
+
+            <header class="stackly-insurance-admin-header">
+
+
+                <!-- HEADER LEFT -->
+
+                <div class="stackly-insurance-admin-header-left">
+
+                    <button class="stackly-insurance-admin-menu-toggle"
+                        id="stacklyInsuranceAdminMenuToggle"
+                        aria-label="Open sidebar"
+                        aria-expanded="false"
+                        aria-controls="stacklyInsuranceAdminSidebar">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+
+                    <div class="stackly-insurance-admin-header-title">
+
+                        <span>INSURANCE MANAGEMENT</span>
+
+                        <h1>Dashboard</h1>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HEADER RIGHT -->
+
+                <div class="stackly-insurance-admin-header-right">
+
+
+                     
+
+                    <!-- NOTIFICATION -->
+
+                    <a href="404-admin.html"
+                        class="stackly-insurance-admin-icon-btn stackly-insurance-admin-notification"
+                        aria-label="Notifications">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span></span>
+
+                    </a>
+
+
+                    <!-- EMAIL PROFILE -->
+
+                    <div class="stackly-insurance-admin-header-user">
+
+                        <div class="stackly-insurance-admin-header-user-info">
+
+                            <span>Administrator Account</span>
+
+                            <strong id="stacklyInsuranceAdminEmail">
+                                admin@stacklyinsurance.com
+                            </strong>
+
+                        </div>
+
+                        <div class="stackly-insurance-admin-header-user-avatar">
+
+                            <i class="fa-solid fa-user-shield"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+<!-- =====================================================
+     STACKLY INSURANCE AGENT MANAGEMENT PAGE
+====================================================== -->
+<div class="stackly-insurance-admin-content">
+
+<!-- =====================================================
+     01. AGENT MANAGEMENT HERO
+====================================================== -->
+
+<section class="stackly-insurance-agents-hero"
+    id="insuranceAgentsHero">
+
+    <div class="stackly-insurance-agents-hero-content">
+
+        <div class="stackly-insurance-agents-breadcrumb"
+            data-aos="fade-right">
+
+            <a href="admin.html">Dashboard</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span>Agent Management</span>
+
+        </div>
+
+        <div class="stackly-insurance-agents-eyebrow"
+            data-aos="fade-up">
+
+            <span></span>
+            AGENT NETWORK MANAGEMENT
+
+        </div>
+
+        <h2 data-aos="fade-up" data-aos-delay="100">
+
+            Empowering Our
+            <span>Insurance Experts.</span>
+
+        </h2>
+
+        <p data-aos="fade-up" data-aos-delay="200">
+
+            Manage your insurance professionals, monitor their
+            performance, track policy sales and build a stronger
+            network of trusted insurance advisors.
+
+        </p>
+
+        <div class="stackly-insurance-agents-hero-actions"
+            data-aos="fade-up" data-aos-delay="300">
+
+            <a href="404-admin.html"
+                class="stackly-insurance-agents-primary-btn">
+
+                <i class="fa-solid fa-users"></i>
+                Explore Agents
+
+            </a>
+
+            <a href="404-admin.html"
+                class="stackly-insurance-agents-outline-btn">
+
+                <i class="fa-solid fa-user-plus"></i>
+                Recruit New Agent
+
+            </a>
+
+        </div>
+
+        <div class="stackly-insurance-agents-hero-trust"
+            data-aos="fade-up" data-aos-delay="400">
+
+            <div>
+                <i class="fa-solid fa-circle-check"></i>
+                Verified Professionals
+            </div>
+
+            <div>
+                <i class="fa-solid fa-chart-line"></i>
+                Performance Tracking
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- HERO VISUAL -->
+
+    <div class="stackly-insurance-agents-hero-visual"
+        data-aos="zoom-in"
+        data-aos-duration="1100">
+
+        <div class="stackly-insurance-agents-visual-orbit"></div>
+
+        <div class="stackly-insurance-agents-visual-main">
+
+            <div class="stackly-insurance-agents-visual-icon">
+
+                <i class="fa-solid fa-user-tie"></i>
+
+            </div>
+
+            <span>OUR AGENT NETWORK</span>
+
+            <h3>Trusted Experts.</h3>
+
+            <p>Building confidence through every policy.</p>
+
+        </div>
+
+
+        <div class="stackly-insurance-agents-floating-card agent-float-top">
+
+            <div class="stackly-insurance-agents-float-icon green">
+
+                <i class="fa-solid fa-arrow-trend-up"></i>
+
+            </div>
+
+            <div>
+                <strong>+18.6%</strong>
+                <span>Sales Growth</span>
+            </div>
+
+        </div>
+
+
+        <div class="stackly-insurance-agents-floating-card agent-float-bottom">
+
+            <div class="stackly-insurance-agents-float-icon blue">
+
+                <i class="fa-solid fa-award"></i>
+
+            </div>
+
+            <div>
+                <strong>Top Performers</strong>
+                <span>Recognizing Excellence</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     02. AGENT OVERVIEW STATISTICS
+====================================================== -->
+
+<section class="stackly-insurance-agents-overview"
+    id="agentOverview">
+
+    <div class="stackly-insurance-agents-section-heading"
+        data-aos="fade-up">
+
+        <div>
+            <span>NETWORK OVERVIEW</span>
+            <h2>Agent Performance at a Glance</h2>
+            <p>Monitor your agent network and overall productivity.</p>
+        </div>
+
+        <div class="stackly-insurance-agents-overview-date">
+
+            <i class="fa-regular fa-calendar"></i>
+            November 2026
+
+        </div>
+
+    </div>
+
+
+    <div class="stackly-insurance-agents-stats-grid">
+
+
+        <!-- TOTAL AGENTS -->
+
+        <div class="stackly-insurance-agents-stat-card"
+            data-aos="fade-up">
+
+            <div class="stackly-insurance-agents-stat-top">
+
+                <div class="stackly-insurance-agents-stat-icon blue">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <span class="stackly-insurance-agents-stat-trend positive">
+                    <i class="fa-solid fa-arrow-up"></i>
+                    12.5%
+                </span>
+
+            </div>
+
+            <span class="stackly-insurance-agents-stat-label">
+                Total Insurance Agents
+            </span>
+
+            <h3>1,248</h3>
+
+            <div class="stackly-insurance-agents-stat-bottom">
+                Compared to last month
+            </div>
+
+        </div>
+
+
+        <!-- ACTIVE AGENTS -->
+
+        <div class="stackly-insurance-agents-stat-card"
+            data-aos="fade-up"
+            data-aos-delay="100">
+
+            <div class="stackly-insurance-agents-stat-top">
+
+                <div class="stackly-insurance-agents-stat-icon green">
+                    <i class="fa-solid fa-user-check"></i>
+                </div>
+
+                <span class="stackly-insurance-agents-stat-trend positive">
+                    <i class="fa-solid fa-arrow-up"></i>
+                    8.4%
+                </span>
+
+            </div>
+
+            <span class="stackly-insurance-agents-stat-label">
+                Active Agents
+            </span>
+
+            <h3>1,086</h3>
+
+            <div class="stackly-insurance-agents-stat-bottom">
+                Currently working agents
+            </div>
+
+        </div>
+
+
+        <!-- POLICIES SOLD -->
+
+        <div class="stackly-insurance-agents-stat-card"
+            data-aos="fade-up"
+            data-aos-delay="200">
+
+            <div class="stackly-insurance-agents-stat-top">
+
+                <div class="stackly-insurance-agents-stat-icon orange">
+                    <i class="fa-solid fa-file-shield"></i>
+                </div>
+
+                <span class="stackly-insurance-agents-stat-trend positive">
+                    <i class="fa-solid fa-arrow-up"></i>
+                    16.2%
+                </span>
+
+            </div>
+
+            <span class="stackly-insurance-agents-stat-label">
+                Policies Sold
+            </span>
+
+            <h3>3,842</h3>
+
+            <div class="stackly-insurance-agents-stat-bottom">
+                Total policies this month
+            </div>
+
+        </div>
+
+
+        <!-- AGENT COMMISSION -->
+
+        <div class="stackly-insurance-agents-stat-card"
+            data-aos="fade-up"
+            data-aos-delay="300">
+
+            <div class="stackly-insurance-agents-stat-top">
+
+                <div class="stackly-insurance-agents-stat-icon purple">
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                </div>
+
+                <span class="stackly-insurance-agents-stat-trend positive">
+                    <i class="fa-solid fa-arrow-up"></i>
+                    10.8%
+                </span>
+
+            </div>
+
+            <span class="stackly-insurance-agents-stat-label">
+                Total Commissions
+            </span>
+
+            <h3>₹18.6L</h3>
+
+            <div class="stackly-insurance-agents-stat-bottom">
+                Commission generated this month
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     03. TOP PERFORMING AGENTS
+====================================================== -->
+
+<section class="stackly-insurance-agents-featured"
+    id="agentDirectory">
+
+    <div class="stackly-insurance-agents-section-heading"
+        data-aos="fade-up">
+
+        <div>
+            <span>OUR PROFESSIONAL NETWORK</span>
+            <h2>Meet Our Top Insurance Agents</h2>
+            <p>Recognizing the people who make protection possible.</p>
+        </div>
+
+        <a href="404-admin.html"
+            class="stackly-insurance-agents-view-all">
+
+            View All Agents
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+
+    <div class="stackly-insurance-agents-featured-grid">
+
+
+        <!-- AGENT 01 -->
+
+        <article class="stackly-insurance-agents-profile-card"
+            data-aos="fade-up">
+
+            <div class="stackly-insurance-agents-profile-top">
+
+                <span class="stackly-insurance-agents-rank">
+                    <i class="fa-solid fa-trophy"></i>
+                    TOP 01
+                </span>
+
+                <span class="stackly-insurance-agents-online">
+                    <span></span>
+                    Active
+                </span>
+
+            </div>
+
+            <div class="stackly-insurance-agents-profile-avatar avatar-blue">
+                <i class="fa-solid fa-user-tie"></i>
+            </div>
+
+            <h3>Arun Kumar</h3>
+
+            <p class="stackly-insurance-agents-profile-role">
+                Senior Insurance Advisor
+            </p>
+
+            <div class="stackly-insurance-agents-agent-rating">
+
+                <i class="fa-solid fa-star"></i>
+                <strong>4.9</strong>
+                <span>(128 Reviews)</span>
+
+            </div>
+
+            <div class="stackly-insurance-agents-profile-details">
+
+                <div>
+                    <span>Policies Sold</span>
+                    <strong>186</strong>
+                </div>
+
+                <div>
+                    <span>Commission</span>
+                    <strong>₹2.45L</strong>
+                </div>
+
+            </div>
+
+            <a href="404-admin.html"
+                class="stackly-insurance-agents-profile-btn">
+
+                View Agent Profile
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </article>
+
+
+        <!-- AGENT 02 -->
+
+        <article class="stackly-insurance-agents-profile-card"
+            data-aos="fade-up"
+            data-aos-delay="100">
+
+            <div class="stackly-insurance-agents-profile-top">
+
+                <span class="stackly-insurance-agents-rank silver">
+                    <i class="fa-solid fa-medal"></i>
+                    TOP 02
+                </span>
+
+                <span class="stackly-insurance-agents-online">
+                    <span></span>
+                    Active
+                </span>
+
+            </div>
+
+            <div class="stackly-insurance-agents-profile-avatar avatar-teal">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <h3>Priya Sharma</h3>
+
+            <p class="stackly-insurance-agents-profile-role">
+                Life Insurance Specialist
+            </p>
+
+            <div class="stackly-insurance-agents-agent-rating">
+
+                <i class="fa-solid fa-star"></i>
+                <strong>4.8</strong>
+                <span>(96 Reviews)</span>
+
+            </div>
+
+            <div class="stackly-insurance-agents-profile-details">
+
+                <div>
+                    <span>Policies Sold</span>
+                    <strong>154</strong>
+                </div>
+
+                <div>
+                    <span>Commission</span>
+                    <strong>₹2.12L</strong>
+                </div>
+
+            </div>
+
+            <a href="404-admin.html"
+                class="stackly-insurance-agents-profile-btn">
+
+                View Agent Profile
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </article>
+
+
+        <!-- AGENT 03 -->
+
+        <article class="stackly-insurance-agents-profile-card"
+            data-aos="fade-up"
+            data-aos-delay="200">
+
+            <div class="stackly-insurance-agents-profile-top">
+
+                <span class="stackly-insurance-agents-rank bronze">
+                    <i class="fa-solid fa-medal"></i>
+                    TOP 03
+                </span>
+
+                <span class="stackly-insurance-agents-online">
+                    <span></span>
+                    Active
+                </span>
+
+            </div>
+
+            <div class="stackly-insurance-agents-profile-avatar avatar-orange">
+                <i class="fa-solid fa-user-tie"></i>
+            </div>
+
+            <h3>Vikram Raj</h3>
+
+            <p class="stackly-insurance-agents-profile-role">
+                Health Insurance Advisor
+            </p>
+
+            <div class="stackly-insurance-agents-agent-rating">
+
+                <i class="fa-solid fa-star"></i>
+                <strong>4.7</strong>
+                <span>(84 Reviews)</span>
+
+            </div>
+
+            <div class="stackly-insurance-agents-profile-details">
+
+                <div>
+                    <span>Policies Sold</span>
+                    <strong>132</strong>
+                </div>
+
+                <div>
+                    <span>Commission</span>
+                    <strong>₹1.86L</strong>
+                </div>
+
+            </div>
+
+            <a href="404-admin.html"
+                class="stackly-insurance-agents-profile-btn">
+
+                View Agent Profile
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     04. AGENT PERFORMANCE LEADERBOARD
+====================================================== -->
+
+<section class="stackly-insurance-agents-performance"
+    id="agentPerformance">
+
+    <div class="stackly-insurance-agents-section-heading"
+        data-aos="fade-up">
+
+        <div>
+            <span>PERFORMANCE ANALYTICS</span>
+            <h2>Agent Performance Leaderboard</h2>
+            <p>Track sales contributions and identify top performers.</p>
+        </div>
+
+        <a href="404-admin.html"
+            class="stackly-insurance-agents-view-all">
+
+            Detailed Analytics
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+
+    <div class="stackly-insurance-agents-performance-panel"
+        data-aos="fade-up">
+
+
+        <div class="stackly-insurance-agents-performance-header">
+
+            <div>
+                <h3>Monthly Sales Performance</h3>
+                <p>Top agents based on policies sold</p>
+            </div>
+
+            <span class="stackly-insurance-agents-performance-period">
+                <i class="fa-regular fa-calendar"></i>
+                November 2026
+            </span>
+
+        </div>
+
+
+        <div class="stackly-insurance-agents-leaderboard">
+
+
+            <!-- LEADER 01 -->
+
+            <div class="stackly-insurance-agents-leader-row">
+
+                <div class="stackly-insurance-agents-leader-person">
+
+                    <span class="stackly-insurance-agents-leader-number gold">
+                        01
+                    </span>
+
+                    <div class="stackly-insurance-agents-leader-avatar">
+                        AK
+                    </div>
+
+                    <div>
+                        <strong>Arun Kumar</strong>
+                        <span>Chennai Branch</span>
+                    </div>
+
+                </div>
+
+                <div class="stackly-insurance-agents-leader-progress">
+
+                    <div class="stackly-insurance-agents-progress-info">
+                        <span>186 Policies</span>
+                        <strong>96%</strong>
+                    </div>
+
+                    <div class="stackly-insurance-agents-progress-track">
+                        <span style="--progress-width:96%"></span>
+                    </div>
+
+                </div>
+
+                <strong class="stackly-insurance-agents-leader-sales">
+                    ₹2.45L
+                </strong>
+
+            </div>
+
+
+            <!-- LEADER 02 -->
+
+            <div class="stackly-insurance-agents-leader-row">
+
+                <div class="stackly-insurance-agents-leader-person">
+
+                    <span class="stackly-insurance-agents-leader-number silver">
+                        02
+                    </span>
+
+                    <div class="stackly-insurance-agents-leader-avatar teal">
+                        PS
+                    </div>
+
+                    <div>
+                        <strong>Priya Sharma</strong>
+                        <span>Coimbatore Branch</span>
+                    </div>
+
+                </div>
+
+                <div class="stackly-insurance-agents-leader-progress">
+
+                    <div class="stackly-insurance-agents-progress-info">
+                        <span>154 Policies</span>
+                        <strong>82%</strong>
+                    </div>
+
+                    <div class="stackly-insurance-agents-progress-track">
+                        <span style="--progress-width:82%"></span>
+                    </div>
+
+                </div>
+
+                <strong class="stackly-insurance-agents-leader-sales">
+                    ₹2.12L
+                </strong>
+
+            </div>
+
+
+            <!-- LEADER 03 -->
+
+            <div class="stackly-insurance-agents-leader-row">
+
+                <div class="stackly-insurance-agents-leader-person">
+
+                    <span class="stackly-insurance-agents-leader-number bronze">
+                        03
+                    </span>
+
+                    <div class="stackly-insurance-agents-leader-avatar orange">
+                        VR
+                    </div>
+
+                    <div>
+                        <strong>Vikram Raj</strong>
+                        <span>Madurai Branch</span>
+                    </div>
+
+                </div>
+
+                <div class="stackly-insurance-agents-leader-progress">
+
+                    <div class="stackly-insurance-agents-progress-info">
+                        <span>132 Policies</span>
+                        <strong>71%</strong>
+                    </div>
+
+                    <div class="stackly-insurance-agents-progress-track">
+                        <span style="--progress-width:71%"></span>
+                    </div>
+
+                </div>
+
+                <strong class="stackly-insurance-agents-leader-sales">
+                    ₹1.86L
+                </strong>
+
+            </div>
+
+
+            <!-- LEADER 04 -->
+
+            <div class="stackly-insurance-agents-leader-row">
+
+                <div class="stackly-insurance-agents-leader-person">
+
+                    <span class="stackly-insurance-agents-leader-number">
+                        04
+                    </span>
+
+                    <div class="stackly-insurance-agents-leader-avatar purple">
+                        SK
+                    </div>
+
+                    <div>
+                        <strong>Sanjay Kumar</strong>
+                        <span>Salem Branch</span>
+                    </div>
+
+                </div>
+
+                <div class="stackly-insurance-agents-leader-progress">
+
+                    <div class="stackly-insurance-agents-progress-info">
+                        <span>108 Policies</span>
+                        <strong>58%</strong>
+                    </div>
+
+                    <div class="stackly-insurance-agents-progress-track">
+                        <span style="--progress-width:58%"></span>
+                    </div>
+
+                </div>
+
+                <strong class="stackly-insurance-agents-leader-sales">
+                    ₹1.52L
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     05. AGENT RECRUITMENT PIPELINE
+====================================================== -->
+
+<section class="stackly-insurance-agents-recruitment"
+    id="agentRecruitment">
+
+    <div class="stackly-insurance-agents-section-heading"
+        data-aos="fade-up">
+
+        <div>
+            <span>GROW YOUR NETWORK</span>
+            <h2>Agent Recruitment Pipeline</h2>
+            <p>Follow new agent applications through every stage.</p>
+        </div>
+
+        <a href="404-admin.html"
+            class="stackly-insurance-agents-primary-btn">
+
+            <i class="fa-solid fa-user-plus"></i>
+            Add New Agent
+
+        </a>
+
+    </div>
+
+
+    <div class="stackly-insurance-agents-recruitment-grid">
+
+
+        <!-- APPLICATIONS RECEIVED -->
+
+        <div class="stackly-insurance-agents-recruit-card"
+            data-aos="fade-up">
+
+            <div class="stackly-insurance-agents-recruit-icon blue">
+                <i class="fa-solid fa-file-circle-plus"></i>
+            </div>
+
+            <span>Applications Received</span>
+
+            <h3>48</h3>
+
+            <div class="stackly-insurance-agents-recruit-footer">
+                <span class="recruit-dot blue"></span>
+                New applications this month
+            </div>
+
+        </div>
+
+
+        <!-- UNDER REVIEW -->
+
+        <div class="stackly-insurance-agents-recruit-card"
+            data-aos="fade-up"
+            data-aos-delay="100">
+
+            <div class="stackly-insurance-agents-recruit-icon orange">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+
+            <span>Under Review</span>
+
+            <h3>16</h3>
+
+            <div class="stackly-insurance-agents-recruit-footer">
+                <span class="recruit-dot orange"></span>
+                Awaiting document verification
+            </div>
+
+        </div>
+
+
+        <!-- APPROVED -->
+
+        <div class="stackly-insurance-agents-recruit-card"
+            data-aos="fade-up"
+            data-aos-delay="200">
+
+            <div class="stackly-insurance-agents-recruit-icon green">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <span>Approved Agents</span>
+
+            <h3>24</h3>
+
+            <div class="stackly-insurance-agents-recruit-footer">
+                <span class="recruit-dot green"></span>
+                Successfully verified
+            </div>
+
+        </div>
+
+
+        <!-- PENDING -->
+
+        <div class="stackly-insurance-agents-recruit-card"
+            data-aos="fade-up"
+            data-aos-delay="300">
+
+            <div class="stackly-insurance-agents-recruit-icon purple">
+                <i class="fa-solid fa-user-clock"></i>
+            </div>
+
+            <span>Pending Onboarding</span>
+
+            <h3>08</h3>
+
+            <div class="stackly-insurance-agents-recruit-footer">
+                <span class="recruit-dot purple"></span>
+                Training and activation pending
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     06. RECENT AGENT ACTIVITIES
+====================================================== -->
+
+<section class="stackly-insurance-agents-activity"
+    id="agentActivity">
+
+    <div class="stackly-insurance-agents-section-heading"
+        data-aos="fade-up">
+
+        <div>
+            <span>LIVE NETWORK UPDATES</span>
+            <h2>Recent Agent Activities</h2>
+            <p>Stay informed about important agent network updates.</p>
+        </div>
+
+        <a href="404-admin.html"
+            class="stackly-insurance-agents-view-all">
+
+            View Activity Log
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+
+    <div class="stackly-insurance-agents-activity-panel"
+        data-aos="fade-up">
+
+
+        <!-- ACTIVITY 01 -->
+
+        <div class="stackly-insurance-agents-activity-item">
+
+            <div class="stackly-insurance-agents-activity-icon green">
+                <i class="fa-solid fa-file-circle-check"></i>
+            </div>
+
+            <div class="stackly-insurance-agents-activity-content">
+
+                <h3>New Policy Successfully Issued</h3>
+
+                <p>
+                    <strong>Arun Kumar</strong> issued a new life
+                    insurance policy for a customer.
+                </p>
+
+                <span>Policy ID: STK-LI-2026-0842</span>
+
+            </div>
+
+            <time>10 minutes ago</time>
+
+        </div>
+
+
+        <!-- ACTIVITY 02 -->
+
+        <div class="stackly-insurance-agents-activity-item">
+
+            <div class="stackly-insurance-agents-activity-icon blue">
+                <i class="fa-solid fa-user-plus"></i>
+            </div>
+
+            <div class="stackly-insurance-agents-activity-content">
+
+                <h3>New Agent Joined the Network</h3>
+
+                <p>
+                    <strong>Meena Raj</strong> has successfully
+                    completed agent registration.
+                </p>
+
+                <span>Agent ID: AGT-2026-0128</span>
+
+            </div>
+
+            <time>35 minutes ago</time>
+
+        </div>
+
+
+        <!-- ACTIVITY 03 -->
+
+        <div class="stackly-insurance-agents-activity-item">
+
+            <div class="stackly-insurance-agents-activity-icon orange">
+                <i class="fa-solid fa-award"></i>
+            </div>
+
+            <div class="stackly-insurance-agents-activity-content">
+
+                <h3>Monthly Performance Milestone</h3>
+
+                <p>
+                    <strong>Priya Sharma</strong> achieved her
+                    monthly policy sales target.
+                </p>
+
+                <span>Performance target completed: 100%</span>
+
+            </div>
+
+            <time>1 hour ago</time>
+
+        </div>
+
+
+        <!-- ACTIVITY 04 -->
+
+        <div class="stackly-insurance-agents-activity-item">
+
+            <div class="stackly-insurance-agents-activity-icon purple">
+                <i class="fa-solid fa-file-circle-exclamation"></i>
+            </div>
+
+            <div class="stackly-insurance-agents-activity-content">
+
+                <h3>Agent Documents Awaiting Verification</h3>
+
+                <p>
+                    <strong>Ramesh Kumar</strong> submitted updated
+                    documents for administrator approval.
+                </p>
+
+                <span>Verification status: Pending</span>
+
+            </div>
+
+            <time>3 hours ago</time>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     07. AGENT MANAGEMENT QUICK ACTIONS
+====================================================== -->
+
+<section class="stackly-insurance-agents-quick-actions"
+    id="agentQuickActions">
+
+    <div class="stackly-insurance-agents-quick-content"
+        data-aos="fade-right">
+
+        <span>MANAGE WITH CONFIDENCE</span>
+
+        <h2>
+            Build a Stronger
+            <span>Insurance Network.</span>
+        </h2>
+
+        <p>
+            Support your agents with the right tools, clear performance
+            insights and effective management. Take the next step
+            towards growing your insurance business.
+        </p>
+
+        <a href="404-admin.html"
+            class="stackly-insurance-agents-primary-btn">
+
+            Explore Agent Tools
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+
+    <div class="stackly-insurance-agents-quick-visual"
+        data-aos="zoom-in">
+
+        <div class="stackly-insurance-agents-quick-circle">
+
+            <i class="fa-solid fa-people-group"></i>
+
+        </div>
+
+        <div class="stackly-insurance-agents-quick-badge">
+
+            <i class="fa-solid fa-shield-heart"></i>
+
+            <div>
+                <strong>Stronger Together</strong>
+                <span>One Trusted Network</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</div>
+
+</main>
+
+    </div>
+
+
+    <!-- AOS JS -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- ADMIN JS -->
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

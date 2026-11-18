@@ -1,0 +1,693 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly | Login & Signup</title>
+
+    <meta name="description"
+        content="Login or create your Stackly Insurance account to manage your insurance services.">
+
+    <link rel="icon" href="Stackly-logo-Blue.webp">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS ANIMATION -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="login.css">
+
+</head>
+
+<body>
+
+
+    <!-- =================================================
+         STACKLY AUTHENTICATION PAGE
+    ================================================== -->
+
+    <section class="stackly-insurance-auth"
+        id="stacklyInsuranceAuth">
+
+        <div class="stackly-insurance-auth-container">
+
+
+            <!-- LEFT VISUAL CONTENT -->
+
+            <div class="stackly-insurance-auth-visual"
+                data-aos="fade-right"
+                data-aos-duration="1100">
+
+                <div class="stackly-insurance-auth-visual-overlay"></div>
+
+                <div class="stackly-insurance-auth-visual-content">
+
+                    <a href="index.html"
+                        class="stackly-insurance-auth-logo">
+
+                        <img src="Stackly-logo-Blue.webp"
+                            alt="Stackly Insurance Logo">
+
+                    </a>
+
+                    <span class="stackly-insurance-auth-eyebrow">
+                        YOUR TRUSTED INSURANCE PARTNER
+                    </span>
+
+                    <h1>
+                        Protection Today.
+                        <span>Confidence Tomorrow.</span>
+                    </h1>
+
+                    <p>
+                        Welcome to Stackly Insurance. Access your
+                        account and take control of your protection,
+                        policies, and peace of mind.
+                    </p>
+
+                    <div class="stackly-insurance-auth-benefits">
+
+                        <div class="stackly-insurance-auth-benefit">
+
+                            <i class="fa-solid fa-shield-heart"></i>
+
+                            <span>
+                                Reliable Protection
+                            </span>
+
+                        </div>
+
+                        <div class="stackly-insurance-auth-benefit">
+
+                            <i class="fa-solid fa-user-shield"></i>
+
+                            <span>
+                                Secure Account Access
+                            </span>
+
+                        </div>
+
+                        <div class="stackly-insurance-auth-benefit">
+
+                            <i class="fa-solid fa-headset"></i>
+
+                            <span>
+                                Dedicated Support
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="stackly-insurance-auth-visual-footer">
+
+                    <span>
+                        <i class="fa-solid fa-circle-check"></i>
+                        YOUR FUTURE, OUR PRIORITY
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT AUTHENTICATION CONTENT -->
+
+            <div class="stackly-insurance-auth-content"
+                data-aos="fade-left"
+                data-aos-duration="1100">
+
+
+                <!-- TOP NAVIGATION -->
+
+                <div class="stackly-insurance-auth-top">
+
+                    <a href="index.html"
+                        class="stackly-insurance-auth-back">
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                        Back to Home
+
+                    </a>
+
+                </div>
+
+
+                <!-- AUTHENTICATION FORMS -->
+
+                <div class="stackly-insurance-auth-form-wrapper">
+
+
+                    <!-- =================================
+                         LOGIN FORM
+                    ================================== -->
+
+                    <div class="stackly-insurance-login-panel active"
+                        id="stacklyInsuranceLoginPanel">
+
+                        <div class="stackly-insurance-auth-heading">
+
+                            <span class="stackly-insurance-auth-label">
+                                WELCOME BACK
+                            </span>
+
+                            <h2>
+                                Login to Your Account
+                            </h2>
+
+                            <p>
+                                Enter your details to access your
+                                Stackly Insurance account.
+                            </p>
+
+                        </div>
+
+
+                        <form id="stacklyInsuranceLoginForm"
+                            class="stackly-insurance-auth-form">
+
+
+                            <!-- EMAIL -->
+
+                            <div class="stackly-insurance-auth-group">
+
+                                <label for="stacklyLoginEmail">
+                                    Email Address
+                                </label>
+
+                                <div class="stackly-insurance-auth-input">
+
+                                    <i class="fa-regular fa-envelope"></i>
+
+                                    <input type="email"
+                                        id="stacklyLoginEmail"
+                                        name="email"
+                                        placeholder="Enter your email address"
+                                        autocomplete="email"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- PASSWORD -->
+
+                            <div class="stackly-insurance-auth-group">
+
+                                <label for="stacklyLoginPassword">
+                                    Password
+                                </label>
+
+                                <div class="stackly-insurance-auth-input">
+
+                                    <i class="fa-solid fa-lock"></i>
+
+                                    <input type="password"
+                                        id="stacklyLoginPassword"
+                                        name="password"
+                                        placeholder="Enter your password"
+                                        autocomplete="current-password"
+                                        required>
+
+                                    <button type="button"
+                                        class="stackly-insurance-password-toggle"
+                                        data-password="stacklyLoginPassword"
+                                        aria-label="Show password">
+
+                                        <i class="fa-regular fa-eye"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- ROLE DROPDOWN -->
+
+                            <div class="stackly-insurance-auth-group">
+
+                                <label>
+                                    Login As
+                                </label>
+
+                                <div class="stackly-insurance-role-dropdown"
+                                    data-role-dropdown>
+
+                                    <button type="button"
+                                        class="stackly-insurance-role-trigger"
+                                        aria-expanded="false">
+
+                                        <span class="stackly-insurance-role-selected">
+
+                                            <i class="fa-solid fa-user"></i>
+
+                                            Select Your Role
+
+                                        </span>
+
+                                        <i class="fa-solid fa-chevron-down stackly-insurance-role-arrow"></i>
+
+                                    </button>
+
+                                    <div class="stackly-insurance-role-menu">
+
+                                        <button type="button"
+                                            class="stackly-insurance-role-option"
+                                            data-value="Admin">
+
+                                            <i class="fa-solid fa-user-shield"></i>
+
+                                            <span>Admin</span>
+
+                                        </button>
+
+                                        <button type="button"
+                                            class="stackly-insurance-role-option"
+                                            data-value="Client">
+
+                                            <i class="fa-solid fa-user"></i>
+
+                                            <span>Client</span>
+
+                                        </button>
+
+                                    </div>
+
+                                    <input type="hidden"
+                                        name="role"
+                                        class="stackly-insurance-role-value"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- REMEMBER & FORGOT PASSWORD -->
+
+                            <div class="stackly-insurance-auth-options">
+
+                                <label class="stackly-insurance-remember">
+
+                                    <input type="checkbox"
+                                        id="stacklyLoginRemember"
+                                        name="remember">
+
+                                    <span>
+                                        Remember Me
+                                    </span>
+
+                                </label>
+
+                                <a href="#forgotPassword"
+                                    class="stackly-insurance-forgot-link"
+                                    id="stacklyForgotPassword">
+
+                                    Forgot Password?
+
+                                </a>
+
+                            </div>
+
+
+                            <!-- LOGIN BUTTON -->
+
+                            <button type="submit"
+                                class="stackly-insurance-auth-submit">
+
+                                Login to Account
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </button>
+
+
+                            <!-- LOGIN MESSAGE -->
+
+                            <p class="stackly-insurance-auth-message"
+                                id="stacklyLoginMessage"
+                                aria-live="polite">
+                            </p>
+
+
+                            <!-- SWITCH TO SIGNUP -->
+
+                            <div class="stackly-insurance-auth-switch">
+
+                                Don't have an account?
+
+                                <button type="button"
+                                    id="stacklyShowSignup">
+
+                                    Sign Up
+
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         SIGNUP FORM
+                    ================================== -->
+
+                    <div class="stackly-insurance-signup-panel"
+                        id="stacklyInsuranceSignupPanel">
+
+                        <div class="stackly-insurance-auth-heading">
+
+                            <span class="stackly-insurance-auth-label">
+                                CREATE YOUR ACCOUNT
+                            </span>
+
+                            <h2>
+                                Join Stackly Insurance
+                            </h2>
+
+                            <p>
+                                Create your account to get started
+                                with a more secure future.
+                            </p>
+
+                        </div>
+
+
+                        <form id="stacklyInsuranceSignupForm"
+                            class="stackly-insurance-auth-form">
+
+
+                            <!-- FULL NAME -->
+
+                            <div class="stackly-insurance-auth-group">
+
+                                <label for="stacklySignupName">
+                                    Full Name
+                                </label>
+
+                                <div class="stackly-insurance-auth-input">
+
+                                    <i class="fa-regular fa-user"></i>
+
+                                    <input type="text"
+                                        id="stacklySignupName"
+                                        name="name"
+                                        placeholder="Enter your full name"
+                                        autocomplete="name"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- EMAIL -->
+
+                            <div class="stackly-insurance-auth-group">
+
+                                <label for="stacklySignupEmail">
+                                    Email Address
+                                </label>
+
+                                <div class="stackly-insurance-auth-input">
+
+                                    <i class="fa-regular fa-envelope"></i>
+
+                                    <input type="email"
+                                        id="stacklySignupEmail"
+                                        name="email"
+                                        placeholder="Enter your email address"
+                                        autocomplete="email"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- PHONE -->
+
+                            <div class="stackly-insurance-auth-group">
+
+                                <label for="stacklySignupPhone">
+                                    Phone Number
+                                </label>
+
+                                <div class="stackly-insurance-auth-input">
+
+                                    <i class="fa-solid fa-phone"></i>
+
+                                    <input type="tel"
+                                        id="stacklySignupPhone"
+                                        name="phone"
+                                        placeholder="Enter your phone number"
+                                        autocomplete="tel"
+                                        inputmode="numeric"
+                                        pattern="[0-9]{10}"
+                                        maxlength="10"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- PASSWORD -->
+
+                            <div class="stackly-insurance-auth-group">
+
+                                <label for="stacklySignupPassword">
+                                    Create Password
+                                </label>
+
+                                <div class="stackly-insurance-auth-input">
+
+                                    <i class="fa-solid fa-lock"></i>
+
+                                    <input type="password"
+                                        id="stacklySignupPassword"
+                                        name="password"
+                                        placeholder="Create a password"
+                                        autocomplete="new-password"
+                                        minlength="6"
+                                        required>
+
+                                    <button type="button"
+                                        class="stackly-insurance-password-toggle"
+                                        data-password="stacklySignupPassword"
+                                        aria-label="Show password">
+
+                                        <i class="fa-regular fa-eye"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- CONFIRM PASSWORD -->
+
+                            <div class="stackly-insurance-auth-group">
+
+                                <label for="stacklySignupConfirmPassword">
+                                    Confirm Password
+                                </label>
+
+                                <div class="stackly-insurance-auth-input">
+
+                                    <i class="fa-solid fa-lock"></i>
+
+                                    <input type="password"
+                                        id="stacklySignupConfirmPassword"
+                                        name="confirmPassword"
+                                        placeholder="Confirm your password"
+                                        autocomplete="new-password"
+                                        required>
+
+                                    <button type="button"
+                                        class="stackly-insurance-password-toggle"
+                                        data-password="stacklySignupConfirmPassword"
+                                        aria-label="Show password">
+
+                                        <i class="fa-regular fa-eye"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- ROLE DROPDOWN -->
+
+                            <div class="stackly-insurance-auth-group">
+
+                                <label>
+                                    Register As
+                                </label>
+
+                                <div class="stackly-insurance-role-dropdown"
+                                    data-role-dropdown>
+
+                                    <button type="button"
+                                        class="stackly-insurance-role-trigger"
+                                        aria-expanded="false">
+
+                                        <span class="stackly-insurance-role-selected">
+
+                                            <i class="fa-solid fa-user"></i>
+
+                                            Select Your Role
+
+                                        </span>
+
+                                        <i class="fa-solid fa-chevron-down stackly-insurance-role-arrow"></i>
+
+                                    </button>
+
+                                    <div class="stackly-insurance-role-menu">
+
+                                        <button type="button"
+                                            class="stackly-insurance-role-option"
+                                            data-value="Admin">
+
+                                            <i class="fa-solid fa-user-shield"></i>
+
+                                            <span>Admin</span>
+
+                                        </button>
+
+                                        <button type="button"
+                                            class="stackly-insurance-role-option"
+                                            data-value="Client">
+
+                                            <i class="fa-solid fa-user"></i>
+
+                                            <span>Client</span>
+
+                                        </button>
+
+                                    </div>
+
+                                    <input type="hidden"
+                                        name="role"
+                                        class="stackly-insurance-role-value"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- TERMS AND CONDITIONS -->
+
+                            <label class="stackly-insurance-terms">
+
+                                <input type="checkbox"
+                                    id="stacklySignupTerms"
+                                    required>
+
+                                <span>
+                                    I agree to the
+                                    <a href="404.html">Terms & Conditions</a>
+                                    and
+                                    <a href="404.html">Privacy Policy</a>.
+                                </span>
+
+                            </label>
+
+
+                            <!-- SIGNUP BUTTON -->
+
+                            <button type="submit"
+                                class="stackly-insurance-auth-submit">
+
+                                Create Account
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </button>
+
+
+                            <!-- SIGNUP MESSAGE -->
+
+                            <p class="stackly-insurance-auth-message"
+                                id="stacklySignupMessage"
+                                aria-live="polite">
+                            </p>
+
+
+                            <!-- SWITCH TO LOGIN -->
+
+                            <div class="stackly-insurance-auth-switch">
+
+                                Already have an account?
+
+                                <button type="button"
+                                    id="stacklyShowLogin">
+
+                                    Login
+
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOTTOM COPYRIGHT -->
+
+                <div class="stackly-insurance-auth-copyright">
+
+                    <p>
+                        © <span id="stacklyAuthYear"></span>
+                        Stackly Insurance. All Rights Reserved.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- AOS SCRIPT -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- CUSTOM JAVASCRIPT -->
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>

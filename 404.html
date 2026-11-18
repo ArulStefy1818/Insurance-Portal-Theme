@@ -1,0 +1,1802 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>404 - Page Not Found | Stackly Insurance</title>
+
+    <meta name="description"
+        content="The page you are looking for could not be found. Return to Stackly Insurance and explore our protection solutions.">
+
+    <link rel="icon" href="Stackly-logo-Blue.webp">
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =========================================
+         404 PAGE CSS
+    ========================================== -->
+
+    <style>
+
+        /* =========================================
+           01. ROOT VARIABLES
+        ========================================= */
+
+        :root {
+
+            --insurance-primary: #1557A6;
+
+            --insurance-primary-dark: #104580;
+
+            --insurance-teal: #087F8C;
+
+            --insurance-gold: #E9B75A;
+
+            --insurance-dark: #182C46;
+
+            --insurance-text: #64758A;
+
+            --insurance-light: #F4F8FC;
+
+            --insurance-white: #FFFFFF;
+
+        }
+
+
+        /* =========================================
+           02. GLOBAL RESET
+        ========================================= */
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+        body {
+
+            width: 100%;
+
+            min-height: 100vh;
+
+            min-height: 100svh;
+
+            overflow: hidden;
+
+            font-family: 'DM Sans', sans-serif;
+
+            background: var(--insurance-light);
+
+            color: var(--insurance-dark);
+
+        }
+
+
+        a {
+
+            text-decoration: none;
+
+        }
+
+
+        button {
+
+            font-family: inherit;
+
+        }
+
+
+        /* =========================================
+           03. MAIN PAGE
+        ========================================= */
+
+        .stackly-insurance-error-page {
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 100%;
+
+            min-height: 100vh;
+
+            min-height: 100svh;
+
+            padding: 35px;
+
+            overflow: hidden;
+
+            isolation: isolate;
+
+            background:
+
+                radial-gradient(
+                    circle at 10% 15%,
+                    rgba(21, 87, 166, 0.09),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 90% 85%,
+                    rgba(8, 127, 140, 0.10),
+                    transparent 30%
+                ),
+
+                #F4F8FC;
+
+        }
+
+
+        /* =========================================
+           04. BACKGROUND DECORATIONS
+        ========================================= */
+
+        .stackly-insurance-error-decoration {
+
+            position: absolute;
+
+            inset: 0;
+
+            overflow: hidden;
+
+            pointer-events: none;
+
+            z-index: -1;
+
+        }
+
+
+        .stackly-insurance-error-circle {
+
+            position: absolute;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(21, 87, 166, 0.10);
+
+            animation: insuranceCircleFloat 9s ease-in-out infinite;
+
+        }
+
+
+        .stackly-insurance-error-circle.one {
+
+            width: 400px;
+
+            height: 400px;
+
+            top: -190px;
+
+            right: -100px;
+
+        }
+
+
+        .stackly-insurance-error-circle.two {
+
+            width: 280px;
+
+            height: 280px;
+
+            bottom: -140px;
+
+            left: -90px;
+
+            animation-delay: 2s;
+
+        }
+
+
+        .stackly-insurance-error-circle.three {
+
+            width: 140px;
+
+            height: 140px;
+
+            top: 20%;
+
+            left: 8%;
+
+            border: 2px dashed rgba(8, 127, 140, 0.14);
+
+            animation: insuranceCircleRotate 25s linear infinite;
+
+        }
+
+
+        /* BACKGROUND DOTS */
+
+        .stackly-insurance-error-dots {
+
+            position: absolute;
+
+            top: 12%;
+
+            right: 12%;
+
+            width: 120px;
+
+            height: 120px;
+
+            background-image: radial-gradient(
+                #1557A6 1.5px,
+                transparent 1.5px
+            );
+
+            background-size: 15px 15px;
+
+            opacity: 0.17;
+
+        }
+
+
+        /* =========================================
+           05. MAIN CONTENT CONTAINER
+        ========================================= */
+
+        .stackly-insurance-error-container {
+
+            position: relative;
+
+            width: 100%;
+
+            max-width: 1050px;
+
+            display: grid;
+
+            grid-template-columns: 1.1fr 0.9fr;
+
+            align-items: center;
+
+            gap: 55px;
+
+            padding: 55px 65px;
+
+            background: rgba(255, 255, 255, 0.92);
+
+            border: 1px solid rgba(21, 87, 166, 0.09);
+
+            border-radius: 12px;
+
+            box-shadow:
+
+                0 25px 80px rgba(24, 44, 70, 0.08),
+
+                0 5px 20px rgba(24, 44, 70, 0.03);
+
+            animation: insuranceErrorAppear 0.9s ease both;
+
+        }
+
+
+        /* =========================================
+           06. LEFT CONTENT
+        ========================================= */
+
+        .stackly-insurance-error-content {
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        /* ERROR LABEL */
+
+        .stackly-insurance-error-label {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin-bottom: 20px;
+
+            color: var(--insurance-teal);
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            animation: insuranceFadeUp 0.8s 0.2s both;
+
+        }
+
+
+        .stackly-insurance-error-label i {
+
+            font-size: 15px;
+
+        }
+
+
+        /* 404 NUMBER */
+
+        .stackly-insurance-error-number {
+
+            font-family: 'Space Grotesk', sans-serif;
+
+            font-size: clamp(95px, 13vw, 155px);
+
+            line-height: 0.95;
+
+            font-weight: 700;
+
+            letter-spacing: -10px;
+
+            color: var(--insurance-primary);
+
+            margin-bottom: 20px;
+
+            animation: insuranceNumberReveal 1s 0.15s both;
+
+        }
+
+
+        .stackly-insurance-error-number span {
+
+            display: inline-block;
+
+            color: var(--insurance-teal);
+
+            animation: insuranceNumberFloat 4s ease-in-out infinite;
+
+        }
+
+
+        /* HEADING */
+
+        .stackly-insurance-error-content h1 {
+
+            color: var(--insurance-dark);
+
+            font-family: 'Space Grotesk', sans-serif;
+
+            font-size: clamp(27px, 3.2vw, 38px);
+
+            line-height: 1.2;
+
+            font-weight: 700;
+
+            margin-bottom: 17px;
+
+            animation: insuranceFadeUp 0.8s 0.35s both;
+
+        }
+
+
+        .stackly-insurance-error-content h1 span {
+
+            color: var(--insurance-primary);
+
+        }
+
+
+        /* DESCRIPTION */
+
+        .stackly-insurance-error-description {
+
+            max-width: 440px;
+
+            color: var(--insurance-text);
+
+            font-size: 16px;
+
+            line-height: 1.85;
+
+            margin-bottom: 30px;
+
+            animation: insuranceFadeUp 0.8s 0.5s both;
+
+        }
+
+
+        /* =========================================
+           07. BUTTONS
+        ========================================= */
+
+        .stackly-insurance-error-buttons {
+
+            display: flex;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 14px;
+
+            animation: insuranceFadeUp 0.8s 0.65s both;
+
+        }
+
+
+        /* COMMON BUTTON */
+
+        .stackly-insurance-error-btn {
+
+            position: relative;
+
+            isolation: isolate;
+
+            overflow: hidden;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 11px;
+
+            min-height: 51px;
+
+            padding: 0 23px;
+
+            border-radius: 4px;
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            transition: all 0.4s ease;
+
+        }
+
+
+        /* HOME BUTTON */
+
+        .stackly-insurance-error-home {
+
+            color: #FFFFFF;
+
+            background: var(--insurance-primary);
+
+            box-shadow:
+
+                0 8px 20px rgba(21, 87, 166, 0.20);
+
+        }
+
+
+        .stackly-insurance-error-home::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background: linear-gradient(
+                100deg,
+                var(--insurance-teal),
+                #0A9EAA
+            );
+
+            transform: translateX(-101%);
+
+            transition: transform 0.45s ease;
+
+            z-index: -1;
+
+        }
+
+
+        .stackly-insurance-error-home:hover::before {
+
+            transform: translateX(0);
+
+        }
+
+
+        .stackly-insurance-error-home:hover {
+
+            color: #FFFFFF;
+
+            transform: translateY(-5px);
+
+            box-shadow:
+
+                0 15px 28px rgba(8, 127, 140, 0.25);
+
+        }
+
+
+        /* BACK BUTTON */
+
+        .stackly-insurance-error-back {
+
+            color: var(--insurance-dark);
+
+            background: #FFFFFF;
+
+            border: 1px solid #DCE5EF;
+
+            cursor: pointer;
+
+        }
+
+
+        .stackly-insurance-error-back:hover {
+
+            color: var(--insurance-primary);
+
+            border-color: var(--insurance-primary);
+
+            background: #EFF5FC;
+
+            transform: translateY(-5px);
+
+            box-shadow:
+
+                0 10px 22px rgba(21, 87, 166, 0.10);
+
+        }
+
+
+        /* BUTTON ICONS */
+
+        .stackly-insurance-error-btn i {
+
+            font-size: 14px;
+
+            transition: transform 0.35s ease;
+
+        }
+
+
+        .stackly-insurance-error-home:hover i {
+
+            transform: translateX(5px);
+
+        }
+
+
+        .stackly-insurance-error-back:hover i {
+
+            transform: translateX(-5px);
+
+        }
+
+
+        /* =========================================
+           08. SUPPORT MESSAGE
+        ========================================= */
+
+        .stackly-insurance-error-support {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin-top: 35px;
+
+            color: #8190A2;
+
+            font-size: 13px;
+
+            animation: insuranceFadeUp 0.8s 0.8s both;
+
+        }
+
+
+        .stackly-insurance-error-support i {
+
+            color: var(--insurance-teal);
+
+            font-size: 15px;
+
+        }
+
+
+        .stackly-insurance-error-support a {
+
+            color: var(--insurance-primary);
+
+            font-weight: 800;
+
+            transition: color 0.3s ease;
+
+        }
+
+
+        .stackly-insurance-error-support a:hover {
+
+            color: var(--insurance-teal);
+
+            text-decoration: underline;
+
+        }
+
+
+        /* =========================================
+           09. RIGHT SIDE ILLUSTRATION
+        ========================================= */
+
+        .stackly-insurance-error-visual {
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 350px;
+
+            animation: insuranceVisualReveal 1.1s 0.3s both;
+
+        }
+
+
+        /* MAIN SHIELD */
+
+        .stackly-insurance-error-shield {
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 245px;
+
+            height: 280px;
+
+            background: linear-gradient(
+                145deg,
+                #1557A6,
+                #087F8C
+            );
+
+            clip-path: polygon(
+                50% 0%,
+                94% 17%,
+                88% 65%,
+                74% 84%,
+                50% 100%,
+                26% 84%,
+                12% 65%,
+                6% 17%
+            );
+
+            filter: drop-shadow(
+                0 20px 25px rgba(21, 87, 166, 0.22)
+            );
+
+            animation: insuranceShieldFloat 4s ease-in-out infinite;
+
+        }
+
+
+        .stackly-insurance-error-shield::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 12px;
+
+            clip-path: polygon(
+                50% 0%,
+                94% 17%,
+                88% 65%,
+                74% 84%,
+                50% 100%,
+                26% 84%,
+                12% 65%,
+                6% 17%
+            );
+
+            border: 2px solid rgba(255,255,255,0.35);
+
+            background: rgba(255,255,255,0.07);
+
+        }
+
+
+        .stackly-insurance-error-shield i {
+
+            position: relative;
+
+            z-index: 2;
+
+            color: #FFFFFF;
+
+            font-size: 105px;
+
+            text-shadow:
+
+                0 8px 20px rgba(0,0,0,0.15);
+
+            transition: transform 0.5s ease;
+
+        }
+
+
+        .stackly-insurance-error-visual:hover
+        .stackly-insurance-error-shield i {
+
+            transform: scale(1.12) rotate(-8deg);
+
+        }
+
+
+        /* SHIELD OUTER RING */
+
+        .stackly-insurance-error-ring {
+
+            position: absolute;
+
+            width: 320px;
+
+            height: 320px;
+
+            border: 1px dashed rgba(21, 87, 166, 0.25);
+
+            border-radius: 50%;
+
+            animation: insuranceCircleRotate 30s linear infinite;
+
+        }
+
+
+        .stackly-insurance-error-ring::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 20px;
+
+            right: 40px;
+
+            width: 17px;
+
+            height: 17px;
+
+            background: var(--insurance-gold);
+
+            border-radius: 50%;
+
+            box-shadow:
+
+                0 0 0 7px rgba(233, 183, 90, 0.15);
+
+        }
+
+
+        /* FLOATING ICONS */
+
+        .stackly-insurance-error-floating {
+
+            position: absolute;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 53px;
+
+            height: 53px;
+
+            border-radius: 14px;
+
+            background: #FFFFFF;
+
+            color: var(--insurance-primary);
+
+            font-size: 21px;
+
+            box-shadow:
+
+                0 12px 30px rgba(24, 44, 70, 0.12);
+
+            animation: insuranceFloating 4s ease-in-out infinite;
+
+        }
+
+
+        .stackly-insurance-error-floating.one {
+
+            top: 18px;
+
+            right: 18px;
+
+            color: var(--insurance-teal);
+
+        }
+
+
+        .stackly-insurance-error-floating.two {
+
+            bottom: 28px;
+
+            left: 5px;
+
+            color: #D49B38;
+
+            animation-delay: 1s;
+
+        }
+
+
+        .stackly-insurance-error-floating.three {
+
+            top: 55%;
+
+            right: -5px;
+
+            color: var(--insurance-primary);
+
+            animation-delay: 2s;
+
+        }
+
+
+        /* =========================================
+           10. BOTTOM BRAND
+        ========================================= */
+
+        .stackly-insurance-error-brand {
+
+            position: absolute;
+
+            bottom: 22px;
+
+            left: 0;
+
+            width: 100%;
+
+            text-align: center;
+
+            color: #8290A1;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            letter-spacing: 0.5px;
+
+        }
+
+
+        .stackly-insurance-error-brand span {
+
+            color: var(--insurance-primary);
+
+            font-weight: 800;
+
+        }
+
+
+        /* =========================================
+           11. ANIMATIONS
+        ========================================= */
+
+        @keyframes insuranceErrorAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(35px) scale(0.97);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0) scale(1);
+
+            }
+
+        }
+
+
+        @keyframes insuranceFadeUp {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(22px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
+        }
+
+
+        @keyframes insuranceNumberReveal {
+
+            from {
+
+                opacity: 0;
+
+                transform: scale(0.7);
+
+                filter: blur(10px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: scale(1);
+
+                filter: blur(0);
+
+            }
+
+        }
+
+
+        @keyframes insuranceNumberFloat {
+
+            0%, 100% {
+
+                transform: translateY(0);
+
+            }
+
+            50% {
+
+                transform: translateY(-9px);
+
+            }
+
+        }
+
+
+        @keyframes insuranceVisualReveal {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateX(40px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateX(0);
+
+            }
+
+        }
+
+
+        @keyframes insuranceShieldFloat {
+
+            0%, 100% {
+
+                transform: translateY(0) rotate(0deg);
+
+            }
+
+            50% {
+
+                transform: translateY(-13px) rotate(2deg);
+
+            }
+
+        }
+
+
+        @keyframes insuranceFloating {
+
+            0%, 100% {
+
+                transform: translateY(0) rotate(0deg);
+
+            }
+
+            50% {
+
+                transform: translateY(-12px) rotate(8deg);
+
+            }
+
+        }
+
+
+        @keyframes insuranceCircleFloat {
+
+            0%, 100% {
+
+                transform: translateY(0);
+
+            }
+
+            50% {
+
+                transform: translateY(20px);
+
+            }
+
+        }
+
+
+        @keyframes insuranceCircleRotate {
+
+            from {
+
+                transform: rotate(0deg);
+
+            }
+
+            to {
+
+                transform: rotate(360deg);
+
+            }
+
+        }
+
+
+        /* =========================================
+           12. TABLET RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .stackly-insurance-error-page {
+
+                padding: 25px;
+
+            }
+
+            .stackly-insurance-error-container {
+
+                max-width: 720px;
+
+                grid-template-columns: 1fr 0.8fr;
+
+                gap: 25px;
+
+                padding: 45px 35px;
+
+            }
+
+            .stackly-insurance-error-number {
+
+                font-size: 110px;
+
+            }
+
+            .stackly-insurance-error-content h1 {
+
+                font-size: 30px;
+
+            }
+
+            .stackly-insurance-error-description {
+
+                font-size: 14px;
+
+            }
+
+            .stackly-insurance-error-shield {
+
+                width: 195px;
+
+                height: 230px;
+
+            }
+
+            .stackly-insurance-error-shield i {
+
+                font-size: 85px;
+
+            }
+
+            .stackly-insurance-error-ring {
+
+                width: 260px;
+
+                height: 260px;
+
+            }
+
+        }
+
+
+        /* =========================================
+           13. MOBILE RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 600px) {
+
+            body {
+
+                overflow: hidden;
+
+            }
+
+            .stackly-insurance-error-page {
+
+                padding: 20px;
+
+                min-height: 100vh;
+
+                min-height: 100svh;
+
+                align-items: center;
+
+            }
+
+            .stackly-insurance-error-container {
+
+                width: 100%;
+
+                max-width: 430px;
+
+                display: flex;
+
+                flex-direction: column-reverse;
+
+                align-items: center;
+
+                justify-content: center;
+
+                gap: 10px;
+
+                padding: 28px 22px;
+
+                border-radius: 10px;
+
+                text-align: center;
+
+            }
+
+            .stackly-insurance-error-visual {
+
+                width: 100%;
+
+                min-height: 155px;
+
+            }
+
+            .stackly-insurance-error-shield {
+
+                width: 125px;
+
+                height: 145px;
+
+            }
+
+            .stackly-insurance-error-shield i {
+
+                font-size: 55px;
+
+            }
+
+            .stackly-insurance-error-ring {
+
+                width: 175px;
+
+                height: 175px;
+
+            }
+
+            .stackly-insurance-error-floating {
+
+                width: 37px;
+
+                height: 37px;
+
+                border-radius: 10px;
+
+                font-size: 15px;
+
+            }
+
+            .stackly-insurance-error-floating.one {
+
+                top: 0;
+
+                right: 15%;
+
+            }
+
+            .stackly-insurance-error-floating.two {
+
+                bottom: 0;
+
+                left: 13%;
+
+            }
+
+            .stackly-insurance-error-floating.three {
+
+                right: 10%;
+
+            }
+
+            .stackly-insurance-error-content {
+
+                width: 100%;
+
+            }
+
+            .stackly-insurance-error-label {
+
+                justify-content: center;
+
+                font-size: 10px;
+
+                letter-spacing: 1.5px;
+
+                margin-bottom: 12px;
+
+            }
+
+            .stackly-insurance-error-number {
+
+                font-size: clamp(75px, 20vw, 105px);
+
+                letter-spacing: -6px;
+
+                margin-bottom: 12px;
+
+            }
+
+            .stackly-insurance-error-content h1 {
+
+                font-size: clamp(24px, 6vw, 29px);
+
+                margin-bottom: 12px;
+
+            }
+
+            .stackly-insurance-error-description {
+
+                max-width: 340px;
+
+                margin: 0 auto 20px;
+
+                font-size: 13px;
+
+                line-height: 1.7;
+
+            }
+
+            .stackly-insurance-error-buttons {
+
+                justify-content: center;
+
+                gap: 10px;
+
+            }
+
+            .stackly-insurance-error-btn {
+
+                min-height: 45px;
+
+                padding: 0 17px;
+
+                font-size: 12px;
+
+            }
+
+            .stackly-insurance-error-support {
+
+                justify-content: center;
+
+                flex-wrap: wrap;
+
+                gap: 7px;
+
+                margin-top: 20px;
+
+                font-size: 11px;
+
+            }
+
+            .stackly-insurance-error-brand {
+
+                bottom: 8px;
+
+                font-size: 10px;
+
+            }
+
+        }
+
+
+        /* =========================================
+           14. SMALL MOBILE
+        ========================================= */
+
+        @media (max-width: 380px) {
+
+            .stackly-insurance-error-page {
+
+                padding: 12px;
+
+            }
+
+            .stackly-insurance-error-container {
+
+                padding: 20px 15px;
+
+                gap: 5px;
+
+            }
+
+            .stackly-insurance-error-visual {
+
+                min-height: 125px;
+
+            }
+
+            .stackly-insurance-error-shield {
+
+                width: 105px;
+
+                height: 120px;
+
+            }
+
+            .stackly-insurance-error-shield i {
+
+                font-size: 45px;
+
+            }
+
+            .stackly-insurance-error-ring {
+
+                width: 145px;
+
+                height: 145px;
+
+            }
+
+            .stackly-insurance-error-number {
+
+                font-size: 76px;
+
+            }
+
+            .stackly-insurance-error-content h1 {
+
+                font-size: 23px;
+
+            }
+
+            .stackly-insurance-error-description {
+
+                font-size: 12px;
+
+                margin-bottom: 15px;
+
+            }
+
+            .stackly-insurance-error-btn {
+
+                min-height: 42px;
+
+                padding: 0 13px;
+
+                font-size: 11px;
+
+            }
+
+            .stackly-insurance-error-support {
+
+                margin-top: 14px;
+
+                font-size: 10px;
+
+            }
+
+        }
+
+
+        /* =========================================
+           15. SHORT SCREEN RESPONSIVE
+        ========================================= */
+
+        @media (max-height: 650px) and (min-width: 601px) {
+
+            .stackly-insurance-error-page {
+
+                padding: 15px;
+
+            }
+
+            .stackly-insurance-error-container {
+
+                padding: 30px 40px;
+
+                gap: 30px;
+
+            }
+
+            .stackly-insurance-error-number {
+
+                font-size: 100px;
+
+            }
+
+            .stackly-insurance-error-visual {
+
+                min-height: 270px;
+
+            }
+
+            .stackly-insurance-error-shield {
+
+                width: 190px;
+
+                height: 220px;
+
+            }
+
+            .stackly-insurance-error-ring {
+
+                width: 250px;
+
+                height: 250px;
+
+            }
+
+            .stackly-insurance-error-description {
+
+                margin-bottom: 20px;
+
+            }
+
+            .stackly-insurance-error-support {
+
+                margin-top: 20px;
+
+            }
+
+            .stackly-insurance-error-brand {
+
+                bottom: 8px;
+
+            }
+
+        }
+
+
+        /* =========================================
+           16. REDUCED MOTION
+        ========================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+
+                animation-duration: 0.01ms !important;
+
+                animation-iteration-count: 1 !important;
+
+                scroll-behavior: auto !important;
+
+                transition-duration: 0.01ms !important;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         STACKLY INSURANCE 404 PAGE
+    ========================================== -->
+
+    <main class="stackly-insurance-error-page">
+
+
+        <!-- BACKGROUND DECORATIONS -->
+
+        <div class="stackly-insurance-error-decoration">
+
+            <div class="stackly-insurance-error-circle one"></div>
+
+            <div class="stackly-insurance-error-circle two"></div>
+
+            <div class="stackly-insurance-error-circle three"></div>
+
+            <div class="stackly-insurance-error-dots"></div>
+
+        </div>
+
+
+
+        <!-- =====================================
+             MAIN CONTENT
+        ====================================== -->
+
+        <div class="stackly-insurance-error-container">
+
+
+            <!-- =================================
+                 LEFT CONTENT
+            ================================== -->
+
+            <div class="stackly-insurance-error-content">
+
+
+                <!-- LABEL -->
+
+                <div class="stackly-insurance-error-label">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    STACKLY INSURANCE
+
+                </div>
+
+
+                <!-- ERROR NUMBER -->
+
+                <div class="stackly-insurance-error-number">
+
+                    4<span>0</span>4
+
+                </div>
+
+
+                <!-- HEADING -->
+
+                <h1>
+
+                    Oops! Page <span>Not Found.</span>
+
+                </h1>
+
+
+                <!-- DESCRIPTION -->
+
+                <p class="stackly-insurance-error-description">
+
+                    The page you're looking for may have been moved,
+                    removed, or is temporarily unavailable.
+                    Don't worry, we're here to help you find your way back.
+
+                </p>
+
+
+                <!-- BUTTONS -->
+
+                <div class="stackly-insurance-error-buttons">
+
+
+                    <!-- GO HOME -->
+
+                    <a href="index.html"
+                        class="stackly-insurance-error-btn stackly-insurance-error-home">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        Go Home
+
+                    </a>
+
+
+                    <!-- GO BACK -->
+
+                    <button type="button"
+                        class="stackly-insurance-error-btn stackly-insurance-error-back"
+                        id="insuranceErrorBack">
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                        Go Back
+
+                    </button>
+
+
+                </div>
+
+ 
+
+            </div>
+
+
+
+            <!-- =================================
+                 RIGHT ILLUSTRATION
+            ================================== -->
+
+            <div class="stackly-insurance-error-visual">
+
+
+                <!-- OUTER RING -->
+
+                <div class="stackly-insurance-error-ring"></div>
+
+
+                <!-- MAIN SHIELD -->
+
+                <div class="stackly-insurance-error-shield">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+
+                <!-- FLOATING ICON 01 -->
+
+                <div class="stackly-insurance-error-floating one">
+
+                    <i class="fa-solid fa-heart-pulse"></i>
+
+                </div>
+
+
+                <!-- FLOATING ICON 02 -->
+
+                <div class="stackly-insurance-error-floating two">
+
+                    <i class="fa-solid fa-house"></i>
+
+                </div>
+
+
+                <!-- FLOATING ICON 03 -->
+
+                <div class="stackly-insurance-error-floating three">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =====================================
+             FOOTER BRAND
+        ====================================== -->
+
+        <div class="stackly-insurance-error-brand">
+
+            © 2026 <span>Stackly</span>. All Rights Reserved.
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+
+        // =========================================
+        // GO BACK BUTTON
+        // =========================================
+
+        const insuranceErrorBack =
+            document.getElementById("insuranceErrorBack");
+
+
+        insuranceErrorBack.addEventListener("click", function () {
+
+
+            // CHECK PREVIOUS PAGE
+
+            if (window.history.length > 1) {
+
+                window.history.back();
+
+            }
+
+            else {
+
+                window.location.href = "index.html";
+
+            }
+
+        });
+
+
+
+        // =========================================
+        // PREVENT MULTIPLE BACK CLICKS
+        // =========================================
+
+        insuranceErrorBack.addEventListener("click", function () {
+
+            insuranceErrorBack.style.pointerEvents = "none";
+
+        });
+
+
+        // =========================================
+        // PAGE LOAD ANIMATION
+        // =========================================
+
+        window.addEventListener("load", function () {
+
+            document.body.classList.add("insurance-error-loaded");
+
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>

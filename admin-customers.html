@@ -1,0 +1,1792 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly | Insurance Admin Dashboard</title>
+
+    <meta name="description"
+        content="Manage insurance policies, customers, claims, payments and business performance through the Stackly Insurance Admin Dashboard.">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="Stackly-logo-Blue.webp">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS ANIMATION -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- ADMIN CSS -->
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================
+         ADMIN DASHBOARD MAIN WRAPPER
+    =========================================== -->
+
+    <div class="stackly-insurance-admin">
+
+
+        <!-- ==========================================
+             MOBILE SIDEBAR OVERLAY
+        =========================================== -->
+
+        <div class="stackly-insurance-admin-overlay"
+            id="stacklyInsuranceAdminOverlay"></div>
+
+
+        <!-- ==========================================
+             SIDEBAR
+        =========================================== -->
+
+        <aside class="stackly-insurance-admin-sidebar"
+            id="stacklyInsuranceAdminSidebar">
+
+
+            <!-- SIDEBAR BRAND -->
+
+            <div class="stackly-insurance-admin-brand">
+
+                <a href="admin.html"
+                    class="stackly-insurance-admin-logo">
+
+                    <img src="Stackly-logo-Blue.webp"
+                        alt="Stackly Insurance Logo">
+
+                </a>
+
+                <button class="stackly-insurance-admin-close"
+                    id="stacklyInsuranceAdminClose"
+                    aria-label="Close sidebar">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- ADMIN PROFILE -->
+
+            <div class="stackly-insurance-admin-profile">
+
+                <div class="stackly-insurance-admin-avatar">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                    <span class="stackly-insurance-admin-online"></span>
+
+                </div>
+
+                <div class="stackly-insurance-admin-profile-info">
+
+                    <h3 id="stacklyInsuranceAdminName">Administrator</h3>
+
+                    <p>Super Admin</p>
+
+                </div>
+
+ 
+            </div>
+
+
+            <!-- SIDEBAR NAVIGATION -->
+
+            <nav class="stackly-insurance-admin-nav">
+
+                <p class="stackly-insurance-admin-nav-heading">
+                    MAIN MENU
+                </p>
+
+
+                <a href="admin.html"
+                    class="stackly-insurance-admin-nav-link active">
+
+                    <i class="fa-solid fa-table-columns"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a href="admin-policies.html"
+                    class="stackly-insurance-admin-nav-link">
+
+                    <i class="fa-solid fa-file-shield"></i>
+
+                    <span>Insurance Policies</span>
+
+                    <span class="stackly-insurance-admin-nav-count">
+                        12
+                    </span>
+
+                </a>
+
+
+                <a href="admin-claims.html"
+                    class="stackly-insurance-admin-nav-link">
+
+                    <i class="fa-solid fa-file-circle-check"></i>
+
+                    <span>Claims Management</span>
+
+                    <span class="stackly-insurance-admin-nav-count">
+                        08
+                    </span>
+
+                </a>
+
+
+                <a href="admin-customers.html"
+                    class="stackly-insurance-admin-nav-link">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <span>Customers</span>
+
+                </a>
+
+
+                <a href="admin-payments.html"
+                    class="stackly-insurance-admin-nav-link">
+
+                    <i class="fa-solid fa-wallet"></i>
+
+                    <span>Payments</span>
+
+                </a>
+
+
+                <a href="admin-agents.html"
+                    class="stackly-insurance-admin-nav-link">
+
+                    <i class="fa-solid fa-user-tie"></i>
+
+                    <span>Insurance Agents</span>
+
+                </a>
+
+
+                <p class="stackly-insurance-admin-nav-heading stackly-insurance-admin-nav-heading-space">
+                    MANAGEMENT
+                </p>
+
+ 
+
+                <a href="admin-settings.html"
+                    class="stackly-insurance-admin-nav-link">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    <span>Settings</span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="stackly-insurance-admin-sidebar-bottom">
+
+                <div class="stackly-insurance-admin-help-card">
+
+                    <div class="stackly-insurance-admin-help-icon">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                    </div>
+
+                    <h4>Need Assistance?</h4>
+
+                    <p>Our support team is here to help you.</p>
+
+                    <a href="404-admin.html">
+
+                        Contact Support
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <a href="index.html"
+                    class="stackly-insurance-admin-logout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ==========================================
+             MAIN CONTENT AREA
+        =========================================== -->
+
+        <main class="stackly-insurance-admin-main">
+
+
+            <!-- ==========================================
+                 TOP HEADER
+            =========================================== -->
+
+            <header class="stackly-insurance-admin-header">
+
+
+                <!-- HEADER LEFT -->
+
+                <div class="stackly-insurance-admin-header-left">
+
+                    <button class="stackly-insurance-admin-menu-toggle"
+                        id="stacklyInsuranceAdminMenuToggle"
+                        aria-label="Open sidebar"
+                        aria-expanded="false"
+                        aria-controls="stacklyInsuranceAdminSidebar">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+
+                    <div class="stackly-insurance-admin-header-title">
+
+                        <span>INSURANCE MANAGEMENT</span>
+
+                        <h1>Dashboard</h1>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HEADER RIGHT -->
+
+                <div class="stackly-insurance-admin-header-right">
+
+
+                     
+
+                    <!-- NOTIFICATION -->
+
+                    <a href="404-admin.html"
+                        class="stackly-insurance-admin-icon-btn stackly-insurance-admin-notification"
+                        aria-label="Notifications">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span></span>
+
+                    </a>
+
+
+                    <!-- EMAIL PROFILE -->
+
+                    <div class="stackly-insurance-admin-header-user">
+
+                        <div class="stackly-insurance-admin-header-user-info">
+
+                            <span>Administrator Account</span>
+
+                            <strong id="stacklyInsuranceAdminEmail">
+                                admin@stacklyinsurance.com
+                            </strong>
+
+                        </div>
+
+                        <div class="stackly-insurance-admin-header-user-avatar">
+
+                            <i class="fa-solid fa-user-shield"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+<!-- =====================================================
+     STACKLY INSURANCE CUSTOMERS MANAGEMENT PAGE
+     PREMIUM ADMIN DASHBOARD CONTENT
+====================================================== -->
+<div class="stackly-insurance-admin-content">
+
+<!-- =====================================================
+     01. CUSTOMERS PAGE INTRODUCTION
+====================================================== -->
+
+<section class="stackly-insurance-customers-intro"
+    id="stacklyInsuranceCustomersIntro">
+
+    <div class="stackly-insurance-customers-intro-content"
+        data-aos="fade-right"
+        data-aos-duration="1000">
+
+        <div class="stackly-insurance-customers-breadcrumb">
+            <a href="admin.html">Dashboard</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span>Customers</span>
+        </div>
+
+        <span class="stackly-insurance-customers-eyebrow">
+            <i class="fa-solid fa-users"></i>
+            CUSTOMER RELATIONSHIP MANAGEMENT
+        </span>
+
+        <h2>
+            Build Stronger
+            <span>Customer Relationships.</span>
+        </h2>
+
+        <p>
+            Manage your customer community, understand policy
+            preferences, monitor account activity, and deliver
+            a better insurance experience with Stackly.
+        </p>
+
+        <div class="stackly-insurance-customers-intro-actions">
+
+            <a href="404-admin.html"
+                class="stackly-insurance-customers-primary-btn">
+                <i class="fa-solid fa-user-plus"></i>
+                Add New Customer
+            </a>
+
+            <a href="404-admin.html"
+                class="stackly-insurance-customers-secondary-btn">
+                <i class="fa-solid fa-file-export"></i>
+                Export Records
+            </a>
+
+        </div>
+
+        <div class="stackly-insurance-customers-intro-trust">
+
+            <div>
+                <i class="fa-solid fa-shield-halved"></i>
+                Secure Customer Data
+            </div>
+
+            <div>
+                <i class="fa-solid fa-headset"></i>
+                Dedicated Support
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- INTRO VISUAL -->
+
+    <div class="stackly-insurance-customers-intro-visual"
+        data-aos="fade-left"
+        data-aos-duration="1100">
+
+        <div class="stackly-insurance-customers-visual-circle">
+
+            <div class="stackly-insurance-customers-visual-icon">
+                <i class="fa-solid fa-people-group"></i>
+            </div>
+
+            <div class="stackly-insurance-customers-floating-card customers-float-one">
+                <i class="fa-solid fa-user-check"></i>
+                <div>
+                    <strong>Verified Profiles</strong>
+                    <span>Trusted customers</span>
+                </div>
+            </div>
+
+            <div class="stackly-insurance-customers-floating-card customers-float-two">
+                <i class="fa-solid fa-heart"></i>
+                <div>
+                    <strong>Customer First</strong>
+                    <span>Better experiences</span>
+                </div>
+            </div>
+
+            <div class="stackly-insurance-customers-floating-card customers-float-three">
+                <i class="fa-solid fa-chart-line"></i>
+                <div>
+                    <strong>Growing Community</strong>
+                    <span>Positive progress</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="stackly-insurance-customers-visual-note">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Every customer matters</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     02. CUSTOMER STATISTICS
+====================================================== -->
+
+<section class="stackly-insurance-customers-stats"
+    id="stacklyInsuranceCustomersStats">
+
+    <div class="stackly-insurance-customers-section-heading"
+        data-aos="fade-up">
+
+        <div>
+            <span>CUSTOMER OVERVIEW</span>
+            <h3>Customer Insights at a Glance</h3>
+            <p>Monitor your customer base and account performance.</p>
+        </div>
+
+        <div class="stackly-insurance-customers-stats-period">
+            <i class="fa-regular fa-calendar"></i>
+            November 2026
+        </div>
+
+    </div>
+
+
+    <div class="stackly-insurance-customers-stats-grid">
+
+
+        <!-- TOTAL CUSTOMERS -->
+
+        <div class="stackly-insurance-customers-stat-card"
+            data-aos="fade-up"
+            data-aos-delay="100">
+
+            <div class="stackly-insurance-customers-stat-top">
+
+                <div class="stackly-insurance-customers-stat-icon blue">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <span class="stackly-insurance-customers-stat-trend positive">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                    12.8%
+                </span>
+
+            </div>
+
+            <span class="stackly-insurance-customers-stat-label">
+                Total Customers
+            </span>
+
+            <h3>3,562</h3>
+
+            <div class="stackly-insurance-customers-stat-bottom">
+                <span>Compared to last month</span>
+                <strong>+405</strong>
+            </div>
+
+        </div>
+
+
+        <!-- ACTIVE CUSTOMERS -->
+
+        <div class="stackly-insurance-customers-stat-card"
+            data-aos="fade-up"
+            data-aos-delay="200">
+
+            <div class="stackly-insurance-customers-stat-top">
+
+                <div class="stackly-insurance-customers-stat-icon green">
+                    <i class="fa-solid fa-user-check"></i>
+                </div>
+
+                <span class="stackly-insurance-customers-stat-trend positive">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                    8.4%
+                </span>
+
+            </div>
+
+            <span class="stackly-insurance-customers-stat-label">
+                Active Customers
+            </span>
+
+            <h3>2,845</h3>
+
+            <div class="stackly-insurance-customers-stat-bottom">
+                <span>Currently active accounts</span>
+                <strong>79.9%</strong>
+            </div>
+
+        </div>
+
+
+        <!-- NEW CUSTOMERS -->
+
+        <div class="stackly-insurance-customers-stat-card"
+            data-aos="fade-up"
+            data-aos-delay="300">
+
+            <div class="stackly-insurance-customers-stat-top">
+
+                <div class="stackly-insurance-customers-stat-icon orange">
+                    <i class="fa-solid fa-user-plus"></i>
+                </div>
+
+                <span class="stackly-insurance-customers-stat-trend positive">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                    15.6%
+                </span>
+
+            </div>
+
+            <span class="stackly-insurance-customers-stat-label">
+                New Customers
+            </span>
+
+            <h3>428</h3>
+
+            <div class="stackly-insurance-customers-stat-bottom">
+                <span>Joined this month</span>
+                <strong>+58</strong>
+            </div>
+
+        </div>
+
+
+        <!-- INACTIVE CUSTOMERS -->
+
+        <div class="stackly-insurance-customers-stat-card"
+            data-aos="fade-up"
+            data-aos-delay="400">
+
+            <div class="stackly-insurance-customers-stat-top">
+
+                <div class="stackly-insurance-customers-stat-icon purple">
+                    <i class="fa-solid fa-user-clock"></i>
+                </div>
+
+                <span class="stackly-insurance-customers-stat-trend neutral">
+                    <i class="fa-solid fa-minus"></i>
+                    2.3%
+                </span>
+
+            </div>
+
+            <span class="stackly-insurance-customers-stat-label">
+                Inactive Customers
+            </span>
+
+            <h3>717</h3>
+
+            <div class="stackly-insurance-customers-stat-bottom">
+                <span>Require engagement</span>
+                <strong>20.1%</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     03. CUSTOMER GROWTH ANALYTICS
+====================================================== -->
+
+<section class="stackly-insurance-customers-analytics"
+    id="stacklyInsuranceCustomersAnalytics">
+
+    <div class="stackly-insurance-customers-analytics-grid">
+
+
+        <!-- CUSTOMER GROWTH CHART -->
+
+        <div class="stackly-insurance-customers-analytics-card growth-card"
+            data-aos="fade-right"
+            data-aos-duration="1000">
+
+            <div class="stackly-insurance-customers-card-heading">
+
+                <div>
+                    <span>CUSTOMER PERFORMANCE</span>
+                    <h3>Customer Growth</h3>
+                    <p>New customer registrations over the year.</p>
+                </div>
+
+                <a href="404-admin.html"
+                    aria-label="View customer growth details">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </a>
+
+            </div>
+
+
+            <div class="stackly-insurance-customers-growth-summary">
+
+                <div>
+                    <h2>3,562</h2>
+                    <span>
+                        <i class="fa-solid fa-arrow-up"></i>
+                        12.8% growth
+                    </span>
+                </div>
+
+                <p>Total registered customers</p>
+
+            </div>
+
+
+            <!-- CSS BAR CHART -->
+
+            <div class="stackly-insurance-customers-chart">
+
+                <div class="stackly-insurance-customers-chart-grid">
+
+                    <span>400</span>
+                    <span>300</span>
+                    <span>200</span>
+                    <span>100</span>
+                    <span>0</span>
+
+                </div>
+
+                <div class="stackly-insurance-customers-chart-bars">
+
+                    <div class="customers-chart-column">
+                        <div class="customers-chart-bar" style="--bar-height: 38%;">
+                            <span>142</span>
+                        </div>
+                        <span>Jan</span>
+                    </div>
+
+                    <div class="customers-chart-column">
+                        <div class="customers-chart-bar" style="--bar-height: 48%;">
+                            <span>186</span>
+                        </div>
+                        <span>Feb</span>
+                    </div>
+
+                    <div class="customers-chart-column">
+                        <div class="customers-chart-bar" style="--bar-height: 43%;">
+                            <span>169</span>
+                        </div>
+                        <span>Mar</span>
+                    </div>
+
+                    <div class="customers-chart-column">
+                        <div class="customers-chart-bar" style="--bar-height: 57%;">
+                            <span>224</span>
+                        </div>
+                        <span>Apr</span>
+                    </div>
+
+                    <div class="customers-chart-column">
+                        <div class="customers-chart-bar" style="--bar-height: 63%;">
+                            <span>251</span>
+                        </div>
+                        <span>May</span>
+                    </div>
+
+                    <div class="customers-chart-column">
+                        <div class="customers-chart-bar" style="--bar-height: 54%;">
+                            <span>213</span>
+                        </div>
+                        <span>Jun</span>
+                    </div>
+
+                    <div class="customers-chart-column">
+                        <div class="customers-chart-bar" style="--bar-height: 69%;">
+                            <span>275</span>
+                        </div>
+                        <span>Jul</span>
+                    </div>
+
+                    <div class="customers-chart-column">
+                        <div class="customers-chart-bar" style="--bar-height: 76%;">
+                            <span>302</span>
+                        </div>
+                        <span>Aug</span>
+                    </div>
+
+                    <div class="customers-chart-column">
+                        <div class="customers-chart-bar" style="--bar-height: 65%;">
+                            <span>258</span>
+                        </div>
+                        <span>Sep</span>
+                    </div>
+
+                    <div class="customers-chart-column">
+                        <div class="customers-chart-bar" style="--bar-height: 84%;">
+                            <span>335</span>
+                        </div>
+                        <span>Oct</span>
+                    </div>
+
+                    <div class="customers-chart-column active">
+                        <div class="customers-chart-bar" style="--bar-height: 95%;">
+                            <span>428</span>
+                        </div>
+                        <span>Nov</span>
+                    </div>
+
+                    <div class="customers-chart-column">
+                        <div class="customers-chart-bar" style="--bar-height: 70%;">
+                            <span>280</span>
+                        </div>
+                        <span>Dec</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="stackly-insurance-customers-chart-footer">
+                <span>
+                    <i></i>
+                    Monthly customer registrations
+                </span>
+                <strong>2026 Overview</strong>
+            </div>
+
+        </div>
+
+
+
+        <!-- CUSTOMER DISTRIBUTION -->
+
+        <div class="stackly-insurance-customers-analytics-card distribution-card"
+            data-aos="fade-left"
+            data-aos-duration="1000">
+
+            <div class="stackly-insurance-customers-card-heading">
+
+                <div>
+                    <span>CUSTOMER SEGMENTS</span>
+                    <h3>Customer Distribution</h3>
+                    <p>Customers by insurance category.</p>
+                </div>
+
+                <a href="404-admin.html"
+                    aria-label="View customer distribution details">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </a>
+
+            </div>
+
+
+            <div class="stackly-insurance-customers-distribution-visual">
+
+                <div class="stackly-insurance-customers-donut">
+
+                    <div class="stackly-insurance-customers-donut-inner">
+                        <strong>3,562</strong>
+                        <span>Customers</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="stackly-insurance-customers-distribution-legend">
+
+                <div class="customers-legend-item">
+
+                    <span class="customers-legend-dot life"></span>
+
+                    <div>
+                        <strong>Life Insurance</strong>
+                        <span>1,425 Customers</span>
+                    </div>
+
+                    <b>40%</b>
+
+                </div>
+
+
+                <div class="customers-legend-item">
+
+                    <span class="customers-legend-dot health"></span>
+
+                    <div>
+                        <strong>Health Insurance</strong>
+                        <span>1,068 Customers</span>
+                    </div>
+
+                    <b>30%</b>
+
+                </div>
+
+
+                <div class="customers-legend-item">
+
+                    <span class="customers-legend-dot vehicle"></span>
+
+                    <div>
+                        <strong>Vehicle Insurance</strong>
+                        <span>713 Customers</span>
+                    </div>
+
+                    <b>20%</b>
+
+                </div>
+
+
+                <div class="customers-legend-item">
+
+                    <span class="customers-legend-dot property"></span>
+
+                    <div>
+                        <strong>Property Insurance</strong>
+                        <span>356 Customers</span>
+                    </div>
+
+                    <b>10%</b>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     04. CUSTOMER SEGMENT HIGHLIGHTS
+====================================================== -->
+
+<section class="stackly-insurance-customers-segments"
+    id="stacklyInsuranceCustomersSegments">
+
+    <div class="stackly-insurance-customers-section-heading"
+        data-aos="fade-up">
+
+        <div>
+            <span>RELATIONSHIP MANAGEMENT</span>
+            <h3>Know Your Customer Groups</h3>
+            <p>Understand customer engagement and account categories.</p>
+        </div>
+
+        <a href="404-admin.html"
+            class="stackly-insurance-customers-view-all">
+            View All Segments
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+
+    <div class="stackly-insurance-customers-segment-grid">
+
+
+        <!-- PREMIUM CUSTOMERS -->
+
+        <div class="stackly-insurance-customers-segment-card premium"
+            data-aos="fade-up"
+            data-aos-delay="100">
+
+            <div class="stackly-insurance-customers-segment-icon">
+                <i class="fa-solid fa-crown"></i>
+            </div>
+
+            <div class="stackly-insurance-customers-segment-info">
+                <span>PREMIUM MEMBERS</span>
+                <h3>684</h3>
+                <p>High-value policyholders</p>
+            </div>
+
+            <div class="stackly-insurance-customers-segment-footer">
+                <span>19.2% of customers</span>
+                <a href="404.html">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- LOYAL CUSTOMERS -->
+
+        <div class="stackly-insurance-customers-segment-card loyal"
+            data-aos="fade-up"
+            data-aos-delay="200">
+
+            <div class="stackly-insurance-customers-segment-icon">
+                <i class="fa-solid fa-handshake"></i>
+            </div>
+
+            <div class="stackly-insurance-customers-segment-info">
+                <span>LOYAL CUSTOMERS</span>
+                <h3>1,248</h3>
+                <p>Long-term policyholders</p>
+            </div>
+
+            <div class="stackly-insurance-customers-segment-footer">
+                <span>35% of customers</span>
+                <a href="404.html">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- NEW CUSTOMERS -->
+
+        <div class="stackly-insurance-customers-segment-card new">
+            <div class="stackly-insurance-customers-segment-icon">
+                <i class="fa-solid fa-user-plus"></i>
+            </div>
+
+            <div class="stackly-insurance-customers-segment-info">
+                <span>NEW CUSTOMERS</span>
+                <h3>428</h3>
+                <p>Recently registered accounts</p>
+            </div>
+
+            <div class="stackly-insurance-customers-segment-footer">
+                <span>Joined this month</span>
+                <a href="404.html">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- RENEWAL DUE -->
+
+        <div class="stackly-insurance-customers-segment-card renewal"
+            data-aos="fade-up"
+            data-aos-delay="400">
+
+            <div class="stackly-insurance-customers-segment-icon">
+                <i class="fa-solid fa-calendar-check"></i>
+            </div>
+
+            <div class="stackly-insurance-customers-segment-info">
+                <span>RENEWAL DUE</span>
+                <h3>196</h3>
+                <p>Upcoming policy renewals</p>
+            </div>
+
+            <div class="stackly-insurance-customers-segment-footer">
+                <span>Next 30 days</span>
+                <a href="404.html">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     05. PREMIUM CUSTOMER SPOTLIGHT
+====================================================== -->
+
+<section class="stackly-insurance-customers-spotlight"
+    id="stacklyInsuranceCustomersSpotlight"
+    data-aos="fade-up"
+    data-aos-duration="1000">
+
+    <div class="stackly-insurance-customers-spotlight-content">
+
+        <span class="stackly-insurance-customers-spotlight-label">
+            <i class="fa-solid fa-star"></i>
+            CUSTOMER SPOTLIGHT
+        </span>
+
+        <h3>
+            Recognizing the Value of
+            <span>Long-Term Relationships.</span>
+        </h3>
+
+        <p>
+            Your loyal customers are the foundation of lasting
+            success. Discover your top policyholders and strengthen
+            relationships through personalized service.
+        </p>
+
+        <a href="404-admin.html"
+            class="stackly-insurance-customers-spotlight-btn">
+            Explore Premium Customers
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+
+    <div class="stackly-insurance-customers-spotlight-profiles">
+
+        <div class="stackly-insurance-customers-spotlight-profile profile-one">
+            <div class="customers-spotlight-avatar blue">RK</div>
+            <div>
+                <strong>Rahul Kumar</strong>
+                <span>Premium Member</span>
+            </div>
+            <i class="fa-solid fa-crown"></i>
+        </div>
+
+        <div class="stackly-insurance-customers-spotlight-profile profile-two">
+            <div class="customers-spotlight-avatar purple">PS</div>
+            <div>
+                <strong>Priya Sharma</strong>
+                <span>Loyal Customer</span>
+            </div>
+            <i class="fa-solid fa-award"></i>
+        </div>
+
+        <div class="stackly-insurance-customers-spotlight-profile profile-three">
+            <div class="customers-spotlight-avatar teal">AM</div>
+            <div>
+                <strong>Arun Mehta</strong>
+                <span>Premium Member</span>
+            </div>
+            <i class="fa-solid fa-crown"></i>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     06. CUSTOMER RECORDS TABLE
+====================================================== -->
+
+<section class="stackly-insurance-customers-table-section"
+    id="stacklyInsuranceCustomersTable">
+
+    <div class="stackly-insurance-admin-panel stackly-insurance-customers-table-panel"
+        data-aos="fade-up"
+        data-aos-duration="1000">
+
+
+        <!-- TABLE HEADER -->
+
+        <div class="stackly-insurance-admin-panel-header">
+
+            <div>
+                <span class="stackly-insurance-admin-panel-subtitle">
+                    CUSTOMER DATABASE
+                </span>
+
+                <h3>All Customer Records</h3>
+
+                <p class="stackly-insurance-customers-table-description">
+                    Manage customer profiles, policies, and account status.
+                </p>
+            </div>
+
+            <a href="404-admin.html"
+                class="stackly-insurance-customers-add-link">
+
+                <i class="fa-solid fa-plus"></i>
+                Add Customer
+
+            </a>
+
+        </div>
+
+
+
+        <!-- TABLE TOOLBAR -->
+
+        <div class="stackly-insurance-customers-toolbar">
+
+            <div class="stackly-insurance-customers-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input type="search"
+                    id="stacklyInsuranceCustomersSearch"
+                    placeholder="Search name, email or customer ID..."
+                    aria-label="Search customers">
+
+            </div>
+
+
+            <!-- STATUS FILTER -->
+
+            <div class="stackly-insurance-customers-filter">
+
+                <button type="button"
+                    class="stackly-insurance-customers-filter-btn"
+                    id="stacklyInsuranceCustomersFilterBtn"
+                    aria-expanded="false"
+                    aria-haspopup="true">
+
+                    <span id="stacklyInsuranceCustomersFilterText">
+                        All Customers
+                    </span>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </button>
+
+
+                <div class="stackly-insurance-customers-filter-menu"
+                    id="stacklyInsuranceCustomersFilterMenu">
+
+                    <button type="button"
+                        class="stackly-insurance-customers-filter-option active"
+                        data-value="all">
+
+                        <span class="customers-filter-dot all"></span>
+                        All Customers
+
+                    </button>
+
+                    <button type="button"
+                        class="stackly-insurance-customers-filter-option"
+                        data-value="active">
+
+                        <span class="customers-filter-dot active-dot"></span>
+                        Active
+
+                    </button>
+
+                    <button type="button"
+                        class="stackly-insurance-customers-filter-option"
+                        data-value="inactive">
+
+                        <span class="customers-filter-dot inactive-dot"></span>
+                        Inactive
+
+                    </button>
+
+                    <button type="button"
+                        class="stackly-insurance-customers-filter-option"
+                        data-value="pending">
+
+                        <span class="customers-filter-dot pending-dot"></span>
+                        Pending Verification
+
+                    </button>
+
+                </div>
+
+                <input type="hidden"
+                    id="stacklyInsuranceCustomersFilter"
+                    value="all">
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CUSTOMER TABLE -->
+
+        <div class="stackly-insurance-admin-table-wrap">
+
+            <table class="stackly-insurance-customers-table">
+
+                <thead>
+
+                    <tr>
+                        <th>Customer ID</th>
+                        <th>Customer</th>
+                        <th>Policy Type</th>
+                        <th>Total Premium</th>
+                        <th>Joined Date</th>
+                        <th>Assigned Agent</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="stacklyInsuranceCustomersTableBody">
+
+
+                    <!-- CUSTOMER 01 -->
+
+                    <tr data-status="active">
+
+                        <td>
+                            <strong class="stackly-insurance-customers-id">
+                                #CUS-2026-001
+                            </strong>
+                        </td>
+
+                        <td>
+                            <div class="stackly-insurance-customers-customer">
+
+                                <div class="customers-avatar blue">RK</div>
+
+                                <div>
+                                    <strong>Rahul Kumar</strong>
+                                    <span>rahul@example.com</span>
+                                </div>
+
+                            </div>
+                        </td>
+
+                        <td>Life Insurance</td>
+
+                        <td><strong>₹45,000</strong></td>
+
+                        <td>05 Jan 2026</td>
+
+                        <td>Arjun Verma</td>
+
+                        <td>
+                            <span class="stackly-insurance-customers-badge active">
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="404-admin.html"
+                                class="stackly-insurance-customers-action"
+                                aria-label="View Rahul Kumar profile">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- CUSTOMER 02 -->
+
+                    <tr data-status="active">
+
+                        <td>
+                            <strong class="stackly-insurance-customers-id">
+                                #CUS-2026-002
+                            </strong>
+                        </td>
+
+                        <td>
+                            <div class="stackly-insurance-customers-customer">
+
+                                <div class="customers-avatar teal">PS</div>
+
+                                <div>
+                                    <strong>Priya Sharma</strong>
+                                    <span>priya@example.com</span>
+                                </div>
+
+                            </div>
+                        </td>
+
+                        <td>Health Insurance</td>
+
+                        <td><strong>₹28,500</strong></td>
+
+                        <td>18 Feb 2026</td>
+
+                        <td>Meera Nair</td>
+
+                        <td>
+                            <span class="stackly-insurance-customers-badge active">
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="404-admin.html"
+                                class="stackly-insurance-customers-action"
+                                aria-label="View Priya Sharma profile">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- CUSTOMER 03 -->
+
+                    <tr data-status="pending">
+
+                        <td>
+                            <strong class="stackly-insurance-customers-id">
+                                #CUS-2026-003
+                            </strong>
+                        </td>
+
+                        <td>
+                            <div class="stackly-insurance-customers-customer">
+
+                                <div class="customers-avatar orange">AM</div>
+
+                                <div>
+                                    <strong>Arun Mehta</strong>
+                                    <span>arun@example.com</span>
+                                </div>
+
+                            </div>
+                        </td>
+
+                        <td>Vehicle Insurance</td>
+
+                        <td><strong>₹18,000</strong></td>
+
+                        <td>12 Mar 2026</td>
+
+                        <td>Ravi Kumar</td>
+
+                        <td>
+                            <span class="stackly-insurance-customers-badge pending">
+                                Pending
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="404-admin.html"
+                                class="stackly-insurance-customers-action"
+                                aria-label="View Arun Mehta profile">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- CUSTOMER 04 -->
+
+                    <tr data-status="inactive">
+
+                        <td>
+                            <strong class="stackly-insurance-customers-id">
+                                #CUS-2026-004
+                            </strong>
+                        </td>
+
+                        <td>
+                            <div class="stackly-insurance-customers-customer">
+
+                                <div class="customers-avatar purple">SK</div>
+
+                                <div>
+                                    <strong>Sneha Kapoor</strong>
+                                    <span>sneha@example.com</span>
+                                </div>
+
+                            </div>
+                        </td>
+
+                        <td>Property Insurance</td>
+
+                        <td><strong>₹32,000</strong></td>
+
+                        <td>26 Apr 2026</td>
+
+                        <td>Vikram Das</td>
+
+                        <td>
+                            <span class="stackly-insurance-customers-badge inactive">
+                                Inactive
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="404-admin.html"
+                                class="stackly-insurance-customers-action"
+                                aria-label="View Sneha Kapoor profile">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- CUSTOMER 05 -->
+
+                    <tr data-status="active">
+
+                        <td>
+                            <strong class="stackly-insurance-customers-id">
+                                #CUS-2026-005
+                            </strong>
+                        </td>
+
+                        <td>
+                            <div class="stackly-insurance-customers-customer">
+
+                                <div class="customers-avatar green">VK</div>
+
+                                <div>
+                                    <strong>Vikram Kumar</strong>
+                                    <span>vikram@example.com</span>
+                                </div>
+
+                            </div>
+                        </td>
+
+                        <td>Life Insurance</td>
+
+                        <td><strong>₹52,000</strong></td>
+
+                        <td>09 Jun 2026</td>
+
+                        <td>Arjun Verma</td>
+
+                        <td>
+                            <span class="stackly-insurance-customers-badge active">
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="404-admin.html"
+                                class="stackly-insurance-customers-action"
+                                aria-label="View Vikram Kumar profile">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- CUSTOMER 06 -->
+
+                    <tr data-status="active">
+
+                        <td>
+                            <strong class="stackly-insurance-customers-id">
+                                #CUS-2026-006
+                            </strong>
+                        </td>
+
+                        <td>
+                            <div class="stackly-insurance-customers-customer">
+
+                                <div class="customers-avatar blue">AD</div>
+
+                                <div>
+                                    <strong>Ananya Das</strong>
+                                    <span>ananya@example.com</span>
+                                </div>
+
+                            </div>
+                        </td>
+
+                        <td>Health Insurance</td>
+
+                        <td><strong>₹24,500</strong></td>
+
+                        <td>15 Aug 2026</td>
+
+                        <td>Meera Nair</td>
+
+                        <td>
+                            <span class="stackly-insurance-customers-badge active">
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="404-admin.html"
+                                class="stackly-insurance-customers-action"
+                                aria-label="View Ananya Das profile">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+
+            <!-- EMPTY STATE -->
+
+            <div class="stackly-insurance-customers-empty"
+                id="stacklyInsuranceCustomersEmpty"
+                hidden>
+
+                <i class="fa-solid fa-user-slash"></i>
+
+                <h4>No Customers Found</h4>
+
+                <p>
+                    Try changing your search or customer status filter.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- TABLE FOOTER -->
+
+        <div class="stackly-insurance-customers-table-footer">
+
+            <span>
+                Showing
+                <strong id="stacklyInsuranceCustomersCount">6</strong>
+                customer records
+            </span>
+
+            <a href="404-admin.html">
+                Manage All Customers
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     07. CUSTOMER ENGAGEMENT ACTIVITY
+====================================================== -->
+
+<section class="stackly-insurance-customers-activity"
+    id="stacklyInsuranceCustomersActivity">
+
+    <div class="stackly-insurance-customers-section-heading"
+        data-aos="fade-up">
+
+        <div>
+            <span>RECENT CUSTOMER UPDATES</span>
+            <h3>Customer Activity</h3>
+            <p>Stay informed about the latest customer account events.</p>
+        </div>
+
+        <a href="404-admin.html"
+            class="stackly-insurance-customers-view-all">
+            View Activity
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+
+    <div class="stackly-insurance-customers-activity-card"
+        data-aos="fade-up"
+        data-aos-delay="150">
+
+
+        <!-- ACTIVITY 01 -->
+
+        <div class="stackly-insurance-customers-activity-item">
+
+            <div class="stackly-insurance-customers-activity-icon registered">
+                <i class="fa-solid fa-user-plus"></i>
+            </div>
+
+            <div class="stackly-insurance-customers-activity-content">
+
+                <h4>New Customer Registration</h4>
+
+                <p>
+                    <strong>Ananya Das</strong> created a new
+                    customer account.
+                </p>
+
+                <span>Customer ID: #CUS-2026-006</span>
+
+            </div>
+
+            <div class="stackly-insurance-customers-activity-time">
+                <strong>10:45 AM</strong>
+                <span>Today</span>
+            </div>
+
+        </div>
+
+
+
+        <!-- ACTIVITY 02 -->
+
+        <div class="stackly-insurance-customers-activity-item">
+
+            <div class="stackly-insurance-customers-activity-icon verified">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <div class="stackly-insurance-customers-activity-content">
+
+                <h4>Customer Verification Completed</h4>
+
+                <p>
+                    <strong>Priya Sharma</strong> completed
+                    her account verification.
+                </p>
+
+                <span>Customer ID: #CUS-2026-002</span>
+
+            </div>
+
+            <div class="stackly-insurance-customers-activity-time">
+                <strong>09:30 AM</strong>
+                <span>Today</span>
+            </div>
+
+        </div>
+
+
+
+        <!-- ACTIVITY 03 -->
+
+        <div class="stackly-insurance-customers-activity-item">
+
+            <div class="stackly-insurance-customers-activity-icon renewal">
+                <i class="fa-solid fa-calendar-check"></i>
+            </div>
+
+            <div class="stackly-insurance-customers-activity-content">
+
+                <h4>Policy Renewal Reminder</h4>
+
+                <p>
+                    A renewal reminder was scheduled for
+                    <strong>Rahul Kumar</strong>.
+                </p>
+
+                <span>Customer ID: #CUS-2026-001</span>
+
+            </div>
+
+            <div class="stackly-insurance-customers-activity-time">
+                <strong>Yesterday</strong>
+                <span>04:15 PM</span>
+            </div>
+
+        </div>
+
+
+
+        <!-- ACTIVITY 04 -->
+
+        <div class="stackly-insurance-customers-activity-item">
+
+            <div class="stackly-insurance-customers-activity-icon updated">
+                <i class="fa-solid fa-pen-to-square"></i>
+            </div>
+
+            <div class="stackly-insurance-customers-activity-content">
+
+                <h4>Customer Profile Updated</h4>
+
+                <p>
+                    <strong>Vikram Kumar</strong> updated
+                    his contact information.
+                </p>
+
+                <span>Customer ID: #CUS-2026-005</span>
+
+            </div>
+
+            <div class="stackly-insurance-customers-activity-time">
+                <strong>Yesterday</strong>
+                <span>11:20 AM</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     08. CUSTOMER SUPPORT CTA
+====================================================== -->
+
+<section class="stackly-insurance-customers-cta"
+    id="stacklyInsuranceCustomersCTA"
+    data-aos="zoom-in"
+    data-aos-duration="900">
+
+    <div class="stackly-insurance-customers-cta-content">
+
+        <div class="stackly-insurance-customers-cta-icon">
+            <i class="fa-solid fa-headset"></i>
+        </div>
+
+        <div>
+
+            <span>CUSTOMER EXPERIENCE MATTERS</span>
+
+            <h3>Make Every Customer Interaction Count.</h3>
+
+            <p>
+                Keep your customers connected with timely support,
+                personalized assistance, and reliable insurance services.
+            </p>
+
+        </div>
+
+    </div>
+
+    <a href="404-admin.html"
+        class="stackly-insurance-customers-cta-btn">
+
+        Contact Support Team
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+    </a>
+
+</section>
+
+</div>
+
+</main>
+
+    </div>
+
+
+    <!-- AOS JS -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- ADMIN JS -->
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

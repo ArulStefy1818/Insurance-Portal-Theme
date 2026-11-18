@@ -1,0 +1,1364 @@
+
+/* =====================================================
+   STACKLY INSURANCE LOGIN & SIGNUP
+   PREMIUM AUTHENTICATION DESIGN
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #f4f8fc;
+    color: #182c46;
+    overflow-x: hidden;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.stackly-insurance-auth {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 35px;
+    background:
+        radial-gradient(circle at 10% 15%, rgba(21, 87, 166, 0.12), transparent 30%),
+        radial-gradient(circle at 90% 85%, rgba(8, 127, 140, 0.10), transparent 30%),
+        #f4f8fc;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.stackly-insurance-auth::before,
+.stackly-insurance-auth::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: stacklyAuthFloat 9s ease-in-out infinite;
+}
+
+.stackly-insurance-auth::before {
+    width: 300px;
+    height: 300px;
+    top: -120px;
+    left: -100px;
+    border: 1px solid rgba(21, 87, 166, 0.13);
+    box-shadow:
+        0 0 0 30px rgba(21, 87, 166, 0.025),
+        0 0 0 60px rgba(21, 87, 166, 0.02);
+}
+
+.stackly-insurance-auth::after {
+    width: 250px;
+    height: 250px;
+    right: -100px;
+    bottom: -90px;
+    border: 1px solid rgba(8, 127, 140, 0.16);
+    animation-delay: 2s;
+}
+
+@keyframes stacklyAuthFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(0);
+    }
+    50% {
+        transform: translateY(-25px) rotate(10deg);
+    }
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.stackly-insurance-auth-container {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    width: 100%;
+    max-width: 1400px;
+    min-height: 850px;
+    background: #ffffff;
+    border: 1px solid rgba(21, 87, 166, 0.08);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 25px 80px rgba(24, 44, 70, 0.13);
+}
+
+
+/* =====================================================
+   LEFT VISUAL SECTION
+===================================================== */
+
+.stackly-insurance-auth-visual {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 850px;
+    padding: 55px 50px;
+    background:
+        linear-gradient(135deg, rgba(245, 247, 248, 0.94), rgba(60, 119, 192, 0.88), rgba(2, 69, 77, 0.78)),
+        url("login-bg.webp") center/cover no-repeat;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.stackly-insurance-auth-visual::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 430px;
+    height: 430px;
+    right: -180px;
+    bottom: -180px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 35px rgba(255, 255, 255, 0.035),
+        0 0 0 70px rgba(255, 255, 255, 0.025);
+    animation: stacklyVisualCircle 14s linear infinite;
+}
+
+@keyframes stacklyVisualCircle {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.stackly-insurance-auth-visual-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        180deg,
+        rgba(15, 32, 54, 0.12),
+        rgba(15, 32, 54, 0.28)
+    );
+}
+
+.stackly-insurance-auth-visual-content {
+    position: relative;
+    z-index: 2;
+    animation: stacklyAuthContent 1s ease both;
+}
+
+@keyframes stacklyAuthContent {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* LOGO */
+
+.stackly-insurance-auth-logo {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+.stackly-insurance-auth-logo img {
+    display: block;
+    width: 165px;
+    height: auto;
+    max-height: 85px;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.stackly-insurance-auth-logo:hover img {
+    transform: scale(1.08) rotate(-3deg);
+}
+
+
+/* LEFT HEADING */
+
+.stackly-insurance-auth-eyebrow {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: #f1c76d;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.stackly-insurance-auth-visual-content h1 {
+    max-width: 540px;
+    margin-bottom: 25px;
+    color: #ffffff;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(38px, 4.3vw, 58px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1.7px;
+}
+
+.stackly-insurance-auth-visual-content h1 span {
+    display: block;
+    color: #f1c76d;
+}
+
+.stackly-insurance-auth-visual-content > p {
+    max-width: 470px;
+    margin-bottom: 35px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   BENEFIT ITEMS
+===================================================== */
+
+.stackly-insurance-auth-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.stackly-insurance-auth-benefit {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: fit-content;
+    min-width: 255px;
+    padding: 12px 18px;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 9px;
+    backdrop-filter: blur(8px);
+    transition: all 0.4s ease;
+}
+
+.stackly-insurance-auth-benefit i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    color: #182c46;
+    background: #f1c76d;
+    border-radius: 9px;
+    font-size: 17px;
+    transition: all 0.4s ease;
+}
+
+.stackly-insurance-auth-benefit span {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.stackly-insurance-auth-benefit:hover {
+    transform: translateX(9px);
+    background: rgba(255, 255, 255, 0.19);
+    border-color: rgba(241, 199, 109, 0.7);
+}
+
+.stackly-insurance-auth-benefit:hover i {
+    transform: rotate(-10deg) scale(1.1);
+}
+
+
+/* LEFT FOOTER */
+
+.stackly-insurance-auth-visual-footer {
+    position: relative;
+    z-index: 2;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stackly-insurance-auth-visual-footer span {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+}
+
+.stackly-insurance-auth-visual-footer i {
+    margin-right: 8px;
+    color: #f1c76d;
+}
+
+
+/* =====================================================
+   RIGHT AUTHENTICATION SECTION
+===================================================== */
+
+.stackly-insurance-auth-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+    padding: 38px 65px 25px;
+    background: #ffffff;
+}
+
+
+/* TOP NAVIGATION */
+
+.stackly-insurance-auth-top {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.stackly-insurance-auth-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 19px;
+    color: #1557a6;
+    background: #edf4fc;
+    border: 1px solid #dce9f8;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.35s ease;
+}
+
+.stackly-insurance-auth-back i {
+    transition: transform 0.35s ease;
+}
+
+.stackly-insurance-auth-back:hover {
+    color: #ffffff;
+    background: #1557a6;
+    border-color: #1557a6;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(21, 87, 166, 0.18);
+}
+
+.stackly-insurance-auth-back:hover i {
+    transform: translateX(-5px);
+}
+
+
+/* =====================================================
+   FORM WRAPPER
+===================================================== */
+
+.stackly-insurance-auth-form-wrapper {
+    width: 100%;
+    max-width: 530px;
+    margin: 35px auto;
+}
+
+.stackly-insurance-login-panel,
+.stackly-insurance-signup-panel {
+    display: none;
+    animation: stacklyAuthPanel 0.55s ease both;
+}
+
+.stackly-insurance-login-panel.active,
+.stackly-insurance-signup-panel.active {
+    display: block;
+}
+
+@keyframes stacklyAuthPanel {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* FORM HEADING */
+
+.stackly-insurance-auth-heading {
+    margin-bottom: 32px;
+}
+
+.stackly-insurance-auth-label {
+    display: inline-block;
+    margin-bottom: 13px;
+    color: #087f8c;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.stackly-insurance-auth-heading h2 {
+    margin-bottom: 12px;
+    color: #182c46;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(29px, 3vw, 38px);
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -1px;
+}
+
+.stackly-insurance-auth-heading p {
+    color: #718096;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   FORM GROUPS
+===================================================== */
+
+.stackly-insurance-auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+
+.stackly-insurance-auth-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    min-width: 0;
+}
+
+.stackly-insurance-auth-group > label {
+    color: #263d58;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.stackly-insurance-auth-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 56px;
+    background: #f7f9fc;
+    border: 1px solid #dce5ef;
+    border-radius: 8px;
+    transition: all 0.35s ease;
+}
+
+.stackly-insurance-auth-input > i:first-child {
+    flex-shrink: 0;
+    width: 48px;
+    color: #8092a7;
+    text-align: center;
+    font-size: 17px;
+    transition: color 0.3s ease;
+}
+
+.stackly-insurance-auth-input input {
+    width: 100%;
+    min-width: 0;
+    height: 54px;
+    padding: 0 15px 0 0;
+    color: #182c46;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.stackly-insurance-auth-input input::placeholder {
+    color: #9aa8b8;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.stackly-insurance-auth-input:focus-within {
+    background: #ffffff;
+    border-color: #1557a6;
+    box-shadow: 0 0 0 4px rgba(21, 87, 166, 0.09);
+    transform: translateY(-2px);
+}
+
+.stackly-insurance-auth-input:focus-within > i:first-child {
+    color: #1557a6;
+}
+
+
+/* =====================================================
+   PASSWORD EYE ICON
+===================================================== */
+
+.stackly-insurance-password-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    margin-right: 5px;
+    color: #8092a7;
+    background: transparent;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+
+.stackly-insurance-password-toggle:hover {
+    color: #1557a6;
+    background: #eaf2fc;
+    transform: scale(1.08);
+}
+
+
+/* =====================================================
+   CUSTOM ROLE DROPDOWN
+   ADMIN / CLIENT
+===================================================== */
+
+.stackly-insurance-role-dropdown {
+    position: relative;
+    width: 100%;
+    z-index: 5;
+}
+
+.stackly-insurance-role-dropdown.active {
+    z-index: 50;
+}
+
+.stackly-insurance-role-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 58px;
+    padding: 0 18px;
+    color: #64758a;
+    background: #f7f9fc;
+    border: 1px solid #dce5ef;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.35s ease;
+}
+
+.stackly-insurance-role-trigger:hover {
+    background: #ffffff;
+    border-color: #1557a6;
+    box-shadow: 0 5px 18px rgba(21, 87, 166, 0.08);
+    transform: translateY(-2px);
+}
+
+.stackly-insurance-role-dropdown.active
+.stackly-insurance-role-trigger {
+    background: #ffffff;
+    border-color: #1557a6;
+    box-shadow: 0 0 0 4px rgba(21, 87, 166, 0.08);
+}
+
+.stackly-insurance-role-selected {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #718096;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.stackly-insurance-role-selected i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    color: #1557a6;
+    background: #eaf2fc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.stackly-insurance-role-arrow {
+    color: #1557a6;
+    font-size: 14px;
+    transition: transform 0.35s ease;
+}
+
+.stackly-insurance-role-dropdown.active
+.stackly-insurance-role-arrow {
+    transform: rotate(180deg);
+}
+
+
+/* DROPDOWN MENU */
+
+.stackly-insurance-role-menu {
+    position: absolute;
+    top: calc(100% + 9px);
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 9px;
+    background: #ffffff;
+    border: 1px solid #dce5ef;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(24, 44, 70, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.stackly-insurance-role-dropdown.active
+.stackly-insurance-role-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+
+/* DROPDOWN OPTIONS */
+
+.stackly-insurance-role-option {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    min-height: 53px;
+    padding: 10px 15px;
+    color: #263d58;
+    background: #ffffff;
+    border: none;
+    border-radius: 7px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.stackly-insurance-role-option i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    color: #1557a6;
+    background: #edf4fc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.stackly-insurance-role-option:hover {
+    color: #1557a6;
+    background: #f0f6fd;
+    transform: translateX(5px);
+}
+
+.stackly-insurance-role-option:hover i,
+.stackly-insurance-role-option.selected i {
+    color: #ffffff;
+    background: #1557a6;
+}
+
+.stackly-insurance-role-option.selected {
+    color: #1557a6;
+    background: #edf4fc;
+}
+
+
+/* =====================================================
+   REMEMBER ME & FORGOT PASSWORD
+===================================================== */
+
+.stackly-insurance-auth-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 1px;
+}
+
+.stackly-insurance-remember {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #64758a;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.stackly-insurance-remember input {
+    width: 17px;
+    height: 17px;
+    accent-color: #1557a6;
+    cursor: pointer;
+}
+
+.stackly-insurance-forgot-link {
+    color: #1557a6;
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.stackly-insurance-forgot-link:hover {
+    color: #087f8c;
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   TERMS AND CONDITIONS
+===================================================== */
+
+.stackly-insurance-terms {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #64758a;
+    font-size: 13px;
+    line-height: 1.7;
+    cursor: pointer;
+}
+
+.stackly-insurance-terms input {
+    width: 17px;
+    height: 17px;
+    margin-top: 3px;
+    flex-shrink: 0;
+    accent-color: #1557a6;
+    cursor: pointer;
+}
+
+.stackly-insurance-terms a {
+    color: #1557a6;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.stackly-insurance-terms a:hover {
+    color: #087f8c;
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   SUBMIT BUTTON
+===================================================== */
+
+.stackly-insurance-auth-submit {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    width: 100%;
+    min-height: 59px;
+    margin-top: 3px;
+    padding: 15px 22px;
+    color: #ffffff;
+    background: linear-gradient(110deg, #1557a6, #087f8c);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 800;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.stackly-insurance-auth-submit::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -110%;
+    width: 65%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.25),
+        transparent
+    );
+    transform: skewX(-20deg);
+    transition: left 0.65s ease;
+}
+
+.stackly-insurance-auth-submit i {
+    position: relative;
+    transition: transform 0.35s ease;
+}
+
+.stackly-insurance-auth-submit:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(21, 87, 166, 0.24);
+}
+
+.stackly-insurance-auth-submit:hover::before {
+    left: 140%;
+}
+
+.stackly-insurance-auth-submit:hover i {
+    transform: translateX(6px);
+}
+
+.stackly-insurance-auth-submit:active {
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   FORM VALIDATION MESSAGES
+===================================================== */
+
+.stackly-insurance-auth-message {
+    display: none;
+    margin-top: 0;
+    padding: 12px 14px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.stackly-insurance-auth-message.error {
+    display: block;
+    color: #bd2635;
+    background: #fff0f1;
+    border: 1px solid #ffd1d6;
+    animation: stacklyMessageIn 0.35s ease;
+}
+
+.stackly-insurance-auth-message.success {
+    display: block;
+    color: #087f5b;
+    background: #eafaf3;
+    border: 1px solid #c9f0dc;
+    animation: stacklyMessageIn 0.35s ease;
+}
+
+@keyframes stacklyMessageIn {
+    from {
+        opacity: 0;
+        transform: translateY(7px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   LOGIN / SIGNUP SWITCH
+===================================================== */
+
+.stackly-insurance-auth-switch {
+    margin-top: 5px;
+    color: #718096;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.stackly-insurance-auth-switch button {
+    margin-left: 5px;
+    padding: 3px 2px;
+    color: #1557a6;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 800;
+    transition: color 0.3s ease;
+}
+
+.stackly-insurance-auth-switch button:hover {
+    color: #087f8c;
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   COPYRIGHT
+===================================================== */
+
+.stackly-insurance-auth-copyright {
+    padding-top: 20px;
+    border-top: 1px solid #edf0f4;
+    text-align: center;
+}
+
+.stackly-insurance-auth-copyright p {
+    color: #8b99a9;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   SIGNUP PANEL SPACING
+===================================================== */
+
+.stackly-insurance-signup-panel
+.stackly-insurance-auth-heading {
+    margin-bottom: 25px;
+}
+
+.stackly-insurance-signup-panel
+.stackly-insurance-auth-form {
+    gap: 14px;
+}
+
+.stackly-insurance-signup-panel
+.stackly-insurance-auth-input {
+    min-height: 52px;
+}
+
+.stackly-insurance-signup-panel
+.stackly-insurance-auth-input input {
+    height: 50px;
+}
+
+
+/* =====================================================
+   LARGE LAPTOP
+===================================================== */
+
+@media (max-width: 1250px) {
+
+    .stackly-insurance-auth {
+        padding: 25px;
+    }
+
+    .stackly-insurance-auth-content {
+        padding: 35px 40px 25px;
+    }
+
+    .stackly-insurance-auth-visual {
+        padding: 45px 35px;
+    }
+
+    .stackly-insurance-auth-logo {
+        margin-bottom: 70px;
+    }
+
+    .stackly-insurance-auth-visual-content h1 {
+        font-size: 45px;
+    }
+
+}
+
+
+/* =====================================================
+   TABLET RESPONSIVE
+===================================================== */
+
+@media (max-width: 992px) {
+
+    .stackly-insurance-auth {
+        padding: 25px;
+    }
+
+    .stackly-insurance-auth-container {
+        grid-template-columns: 0.85fr 1.15fr;
+        min-height: 780px;
+    }
+
+    .stackly-insurance-auth-visual {
+        min-height: 780px;
+        padding: 40px 28px;
+    }
+
+    .stackly-insurance-auth-logo {
+        margin-bottom: 60px;
+    }
+
+    .stackly-insurance-auth-logo img {
+        width: 140px;
+    }
+
+    .stackly-insurance-auth-visual-content h1 {
+        font-size: 37px;
+    }
+
+    .stackly-insurance-auth-visual-content > p {
+        font-size: 15px;
+    }
+
+    .stackly-insurance-auth-benefit {
+        min-width: 0;
+        width: 100%;
+        padding: 10px 12px;
+    }
+
+    .stackly-insurance-auth-benefit span {
+        font-size: 13px;
+    }
+
+    .stackly-insurance-auth-content {
+        padding: 30px 28px 22px;
+    }
+
+    .stackly-insurance-auth-heading h2 {
+        font-size: 31px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .stackly-insurance-auth {
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .stackly-insurance-auth-container {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        min-height: auto;
+        border-radius: 18px;
+    }
+
+    .stackly-insurance-auth-visual {
+        min-height: 360px;
+        padding: 30px 28px;
+    }
+
+    .stackly-insurance-auth-logo {
+        margin-bottom: 35px;
+    }
+
+    .stackly-insurance-auth-logo img {
+        width: 135px;
+    }
+
+    .stackly-insurance-auth-eyebrow {
+        font-size: 11px;
+    }
+
+    .stackly-insurance-auth-visual-content h1 {
+        max-width: 480px;
+        font-size: 37px;
+    }
+
+    .stackly-insurance-auth-visual-content > p {
+        max-width: 500px;
+        font-size: 15px;
+    }
+
+    .stackly-insurance-auth-benefits {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .stackly-insurance-auth-benefit {
+        width: auto;
+        min-width: 0;
+        padding: 9px 12px;
+    }
+
+    .stackly-insurance-auth-benefit i {
+        width: 31px;
+        height: 31px;
+        font-size: 14px;
+    }
+
+    .stackly-insurance-auth-benefit span {
+        font-size: 12px;
+    }
+
+    .stackly-insurance-auth-visual-footer {
+        margin-top: 25px;
+    }
+
+    .stackly-insurance-auth-content {
+        padding: 25px 35px 22px;
+    }
+
+    .stackly-insurance-auth-form-wrapper {
+        margin: 35px auto;
+    }
+
+    .stackly-insurance-auth-heading h2 {
+        font-size: 34px;
+    }
+
+    .stackly-insurance-auth-group > label {
+        font-size: 15px;
+    }
+
+    .stackly-insurance-auth-input input {
+        font-size: 15px;
+    }
+
+    .stackly-insurance-role-selected {
+        font-size: 16px;
+    }
+
+    .stackly-insurance-role-option {
+        font-size: 17px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .stackly-insurance-auth {
+        padding: 12px;
+    }
+
+    .stackly-insurance-auth-container {
+        border-radius: 14px;
+    }
+
+    .stackly-insurance-auth-visual {
+        min-height: 320px;
+        padding: 25px 20px;
+    }
+
+    .stackly-insurance-auth-logo {
+        margin-bottom: 30px;
+    }
+
+    .stackly-insurance-auth-logo img {
+        width: 120px;
+    }
+
+    .stackly-insurance-auth-eyebrow {
+        font-size: 10px;
+        letter-spacing: 1.3px;
+    }
+
+    .stackly-insurance-auth-visual-content h1 {
+        font-size: 31px;
+        letter-spacing: -0.8px;
+    }
+
+    .stackly-insurance-auth-visual-content > p {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .stackly-insurance-auth-benefits {
+        flex-direction: column;
+    }
+
+    .stackly-insurance-auth-benefit {
+        width: 100%;
+    }
+
+    .stackly-insurance-auth-content {
+        padding: 22px 20px 18px;
+    }
+
+    .stackly-insurance-auth-back {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+    .stackly-insurance-auth-form-wrapper {
+        margin: 28px auto;
+    }
+
+    .stackly-insurance-auth-heading {
+        margin-bottom: 25px;
+    }
+
+    .stackly-insurance-auth-heading h2 {
+        font-size: 29px;
+    }
+
+    .stackly-insurance-auth-heading p {
+        font-size: 14px;
+    }
+
+    .stackly-insurance-auth-form {
+        gap: 16px;
+    }
+
+    .stackly-insurance-auth-input {
+        min-height: 53px;
+    }
+
+    .stackly-insurance-auth-input input {
+        height: 51px;
+        font-size: 14px;
+    }
+
+    .stackly-insurance-auth-input input::placeholder {
+        font-size: 13px;
+    }
+
+    .stackly-insurance-auth-options {
+        align-items: flex-start;
+    }
+
+    .stackly-insurance-remember,
+    .stackly-insurance-forgot-link {
+        font-size: 12px;
+    }
+
+    .stackly-insurance-role-trigger {
+        min-height: 55px;
+        padding: 0 13px;
+    }
+
+    .stackly-insurance-role-selected {
+        font-size: 15px;
+    }
+
+    .stackly-insurance-role-option {
+        min-height: 52px;
+        font-size: 16px;
+    }
+
+    .stackly-insurance-auth-submit {
+        min-height: 55px;
+        font-size: 15px;
+    }
+
+    .stackly-insurance-auth-switch {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .stackly-insurance-auth-switch button {
+        font-size: 14px;
+    }
+
+    .stackly-insurance-auth-copyright p {
+        font-size: 11px;
+    }
+
+}
+
+
+/* =====================================================
+   EXTRA SMALL DEVICES
+===================================================== */
+
+@media (max-width: 360px) {
+
+    .stackly-insurance-auth {
+        padding: 8px;
+    }
+
+    .stackly-insurance-auth-visual {
+        padding: 22px 17px;
+    }
+
+    .stackly-insurance-auth-visual-content h1 {
+        font-size: 27px;
+    }
+
+    .stackly-insurance-auth-content {
+        padding: 20px 15px;
+    }
+
+    .stackly-insurance-auth-heading h2 {
+        font-size: 26px;
+    }
+
+    .stackly-insurance-auth-options {
+        gap: 10px;
+    }
+
+    .stackly-insurance-role-selected {
+        font-size: 14px;
+    }
+
+    .stackly-insurance-role-option {
+        font-size: 15px;
+    }
+
+}
+
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+.stackly-insurance-auth button:focus-visible,
+.stackly-insurance-auth a:focus-visible,
+.stackly-insurance-auth input:focus-visible {
+    outline: 3px solid #e9b75a;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .stackly-insurance-auth *,
+    .stackly-insurance-auth *::before,
+    .stackly-insurance-auth *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}
+
+
+.stackly-insurance-auth-message {
+    display: none;
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.stackly-insurance-auth-message.is-error {
+    color: #d93838;
+}
+
+.stackly-insurance-auth-message.is-success {
+    color: #168451;
+}
+
+.stackly-insurance-auth-group.has-error input {
+    border-color: #d93838;
+}

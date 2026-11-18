@@ -1,0 +1,1152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly | Client Dashboard</title>
+
+    <meta name="description"
+        content="Manage your Stackly Insurance policies, track claims, view payments, and access personalized insurance support from your client dashboard.">
+
+    <meta name="theme-color" content="#1557A6">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="Stackly-logo-Blue.webp" type="image/webp">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS ANIMATION -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- CLIENT DASHBOARD CSS -->
+    <link rel="stylesheet" href="client.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         STACKLY INSURANCE CLIENT DASHBOARD
+         MAIN WRAPPER
+    ====================================================== -->
+
+    <div class="stackly-insurance-client-dashboard">
+
+
+        <!-- =================================================
+             MOBILE SIDEBAR OVERLAY
+        ================================================== -->
+
+        <div class="stackly-insurance-client-overlay"
+            id="stacklyInsuranceClientOverlay">
+        </div>
+
+
+        <!-- =================================================
+             CLIENT SIDEBAR
+        ================================================== -->
+
+        <aside class="stackly-insurance-client-sidebar"
+            id="stacklyInsuranceClientSidebar">
+
+
+            <!-- SIDEBAR BRAND -->
+            <div class="stackly-insurance-client-brand">
+
+                <a href="client.html"
+                    class="stackly-insurance-client-logo">
+
+                    <img src="Stackly-logo-Blue.webp"
+                        alt="Stackly Insurance Logo">
+
+                </a>
+ 
+
+                <!-- MOBILE EXIT BUTTON -->
+                <button type="button"
+                    class="stackly-insurance-client-close"
+                    id="stacklyInsuranceClientClose"
+                    aria-label="Close navigation menu">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- SIDEBAR PROFILE -->
+            <div class="stackly-insurance-client-sidebar-profile">
+
+                <div class="stackly-insurance-client-avatar"
+                    id="stacklyInsuranceClientAvatar">
+
+                    C
+
+                </div>
+
+
+                <div class="stackly-insurance-client-sidebar-user">
+
+                    <h3 id="stacklyInsuranceClientName">
+                        Client
+                    </h3>
+
+                    <span>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Verified Customer
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIDEBAR NAVIGATION -->
+            <nav class="stackly-insurance-client-navigation"
+                aria-label="Client dashboard navigation">
+
+
+                <!-- OVERVIEW -->
+                <div class="stackly-insurance-client-nav-group">
+
+                    <span class="stackly-insurance-client-nav-heading">
+                        OVERVIEW
+                    </span>
+
+
+                    <a href="client.html"
+                        class="stackly-insurance-client-nav-link active"
+                        aria-current="page">
+
+                        <i class="fa-solid fa-house-chimney"></i>
+
+                        <span>Dashboard</span>
+
+                    </a>
+
+                </div>
+
+
+                <!-- INSURANCE MANAGEMENT -->
+                <div class="stackly-insurance-client-nav-group">
+
+                    <span class="stackly-insurance-client-nav-heading">
+                        MY INSURANCE
+                    </span>
+
+
+                    <a href="client-policies.html"
+                        class="stackly-insurance-client-nav-link">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <span>My Policies</span>
+
+                        <span class="stackly-insurance-client-nav-count">
+                            03
+                        </span>
+
+                    </a>
+
+
+                    <a href="client-claims.html"
+                        class="stackly-insurance-client-nav-link">
+
+                        <i class="fa-solid fa-file-circle-check"></i>
+
+                        <span>My Claims</span>
+
+                        <span class="stackly-insurance-client-nav-count">
+                            02
+                        </span>
+
+                    </a>
+
+
+                    <a href="client-payments.html"
+                        class="stackly-insurance-client-nav-link">
+
+                        <i class="fa-solid fa-wallet"></i>
+
+                        <span>Payments</span>
+
+                    </a>
+ 
+                </div>
+
+
+                <!-- SERVICES -->
+                <div class="stackly-insurance-client-nav-group">
+
+                    <span class="stackly-insurance-client-nav-heading">
+                        SERVICES
+                    </span>
+
+
+                    <a href="client-plans.html"
+                        class="stackly-insurance-client-nav-link">
+
+                        <i class="fa-solid fa-layer-group"></i>
+
+                        <span>Explore Plans</span>
+
+                    </a>
+
+
+                    <a href="client-renewals.html"
+                        class="stackly-insurance-client-nav-link">
+
+                        <i class="fa-solid fa-arrows-rotate"></i>
+
+                        <span>Policy Renewal</span>
+
+                    </a>
+
+
+                </div>
+
+
+                <!-- ACCOUNT -->
+                <div class="stackly-insurance-client-nav-group">
+
+                    <span class="stackly-insurance-client-nav-heading">
+                        ACCOUNT
+                    </span>
+
+
+                    <a href="client-profile.html"
+                        class="stackly-insurance-client-nav-link">
+
+                        <i class="fa-solid fa-user-gear"></i>
+
+                        <span>My Profile</span>
+
+                    </a>
+
+
+                </div>
+
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM SUPPORT -->
+            <div class="stackly-insurance-client-sidebar-bottom">
+
+
+                <div class="stackly-insurance-client-help-card">
+
+                    <div class="stackly-insurance-client-help-icon">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                    </div>
+
+
+                    <h4>Need Assistance?</h4>
+
+                    <p>
+                        Our insurance experts are here to help you.
+                    </p>
+
+
+                    <a href="404-client.html">
+
+                        Contact Support
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <!-- LOGOUT -->
+                <a href="index.html"
+                    class="stackly-insurance-client-logout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </a>
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- =================================================
+             MAIN CONTENT AREA
+        ================================================== -->
+
+        <main class="stackly-insurance-client-main">
+
+
+            <!-- =================================================
+                 TOP HEADER
+            ================================================== -->
+
+            <header class="stackly-insurance-client-header">
+
+
+                <!-- HEADER LEFT -->
+                <div class="stackly-insurance-client-header-left">
+
+
+                    <!-- MOBILE HAMBURGER -->
+                    <button type="button"
+                        class="stackly-insurance-client-menu-toggle"
+                        id="stacklyInsuranceClientMenuToggle"
+                        aria-label="Open navigation menu"
+                        aria-controls="stacklyInsuranceClientSidebar"
+                        aria-expanded="false">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+
+                    <div class="stackly-insurance-client-header-title">
+
+                        <span>CLIENT PORTAL</span>
+
+                        <h1>Client Dashboard</h1>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HEADER RIGHT -->
+                <div class="stackly-insurance-client-header-right">
+
+
+                    <!-- NOTIFICATION -->
+                    <a href="404-client.html"
+                        class="stackly-insurance-client-notification"
+                        aria-label="Notifications">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span></span>
+
+                    </a>
+
+
+                    <!-- HEADER DIVIDER -->
+                    <div class="stackly-insurance-client-header-divider">
+                    </div>
+
+
+                    <!-- CLIENT EMAIL -->
+                    <div class="stackly-insurance-client-header-account">
+
+                        <div class="stackly-insurance-client-header-avatar"
+                            id="stacklyInsuranceClientHeaderAvatar">
+
+                            C
+
+                        </div>
+
+
+                        <div class="stackly-insurance-client-header-account-info">
+
+                            <span>MY ACCOUNT</span>
+
+                            <p id="stacklyInsuranceClientEmail">
+                                client@example.com
+                            </p>
+
+                        </div>
+
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+
+                </div>
+
+            </header>
+
+            <div class="stackly-insurance-client-content">
+
+        <!-- =========================================
+             01. POLICY HERO SECTION
+        ========================================== -->
+
+        <section class="stackly-insurance-policies-hero"
+            data-aos="fade-up"
+            data-aos-duration="900">
+
+            <div class="stackly-insurance-policies-hero-content">
+
+                <div class="stackly-insurance-policies-hero-label">
+                    <span></span>
+                    YOUR PROTECTION, ALL IN ONE PLACE
+                </div>
+
+                <h2>
+                    Your Policies.
+                    <span>Your Peace of Mind.</span>
+                </h2>
+
+                <p>
+                    Stay in control of your protection. Review your
+                    insurance coverage, monitor policy status, and
+                    keep your important documents within reach.
+                </p>
+
+                <div class="stackly-insurance-policies-hero-actions">
+
+                    <a href="404-client.html"
+                        class="stackly-insurance-policies-primary-btn">
+
+                        <i class="fa-solid fa-plus"></i>
+                        Explore More Plans
+
+                    </a>
+
+                    <a href="404-client.html"
+                        class="stackly-insurance-policies-secondary-btn">
+
+                        View My Policies
+                        <i class="fa-solid fa-arrow-down"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="stackly-insurance-policies-hero-visual"
+                data-aos="zoom-in"
+                data-aos-delay="200">
+
+                <div class="stackly-insurance-policies-hero-circle">
+
+                    <div class="stackly-insurance-policies-shield">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <span>
+                            PROTECTED
+                        </span>
+
+                    </div>
+
+                    <div class="stackly-insurance-policies-floating-icon icon-one">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+
+                    <div class="stackly-insurance-policies-floating-icon icon-two">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+
+                    <div class="stackly-insurance-policies-floating-icon icon-three">
+                        <i class="fa-solid fa-car"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="stackly-insurance-policies-hero-decoration"></div>
+
+        </section>
+
+
+        <!-- =========================================
+             02. POLICY OVERVIEW
+        ========================================== -->
+
+        <section class="stackly-insurance-policy-overview">
+
+            <div class="stackly-insurance-policy-section-heading"
+                data-aos="fade-up">
+
+                <div>
+                    <span>POLICY OVERVIEW</span>
+                    <h2>Your Protection at a Glance</h2>
+                    <p>A quick summary of your insurance portfolio.</p>
+                </div>
+
+                <div class="stackly-insurance-policy-overview-date">
+                    <i class="fa-regular fa-calendar"></i>
+                    November 2026
+                </div>
+
+            </div>
+
+
+            <div class="stackly-insurance-policy-stats">
+
+                <article class="stackly-insurance-policy-stat-card"
+                    data-aos="fade-up"
+                    data-aos-delay="100">
+
+                    <div class="stackly-insurance-policy-stat-top">
+
+                        <div class="stackly-insurance-policy-stat-icon blue">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+
+                        <span class="stackly-insurance-policy-stat-status">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            Active
+                        </span>
+
+                    </div>
+
+                    <h3>03</h3>
+                    <p>Total Policies</p>
+
+                    <div class="stackly-insurance-policy-stat-bottom">
+                        Across your insurance portfolio
+                    </div>
+
+                </article>
+
+
+                <article class="stackly-insurance-policy-stat-card"
+                    data-aos="fade-up"
+                    data-aos-delay="200">
+
+                    <div class="stackly-insurance-policy-stat-top">
+
+                        <div class="stackly-insurance-policy-stat-icon green">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+
+                        <span class="stackly-insurance-policy-stat-status green-text">
+                            In Force
+                        </span>
+
+                    </div>
+
+                    <h3>03</h3>
+                    <p>Active Policies</p>
+
+                    <div class="stackly-insurance-policy-stat-bottom">
+                        Your coverage is currently active
+                    </div>
+
+                </article>
+
+
+                <article class="stackly-insurance-policy-stat-card"
+                    data-aos="fade-up"
+                    data-aos-delay="300">
+
+                    <div class="stackly-insurance-policy-stat-top">
+
+                        <div class="stackly-insurance-policy-stat-icon orange">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+
+                        <span class="stackly-insurance-policy-stat-status orange-text">
+                            Upcoming
+                        </span>
+
+                    </div>
+
+                    <h3>01</h3>
+                    <p>Upcoming Renewal</p>
+
+                    <div class="stackly-insurance-policy-stat-bottom">
+                        Keep your protection uninterrupted
+                    </div>
+
+                </article>
+
+
+                <article class="stackly-insurance-policy-stat-card"
+                    data-aos="fade-up"
+                    data-aos-delay="400">
+
+                    <div class="stackly-insurance-policy-stat-top">
+
+                        <div class="stackly-insurance-policy-stat-icon purple">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                        </div>
+
+                        <span class="stackly-insurance-policy-stat-status purple-text">
+                            Combined
+                        </span>
+
+                    </div>
+
+                    <h3>₹25.5L</h3>
+                    <p>Total Coverage</p>
+
+                    <div class="stackly-insurance-policy-stat-bottom">
+                        Combined insured amount
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             03. MY POLICY COLLECTION
+        ========================================== -->
+
+        <section class="stackly-insurance-policy-list-section"
+            id="stacklyInsurancePolicyList">
+
+            <div class="stackly-insurance-policy-section-heading"
+                data-aos="fade-up">
+
+                <div>
+                    <span>YOUR INSURANCE COLLECTION</span>
+                    <h2>All Your Policies</h2>
+                    <p>Manage your coverage and policy information.</p>
+                </div>
+
+                <a href="404-client.html"
+                    class="stackly-insurance-policy-download-all">
+
+                    <i class="fa-solid fa-folder-open"></i>
+                    Policy Documents
+
+                </a>
+
+            </div>
+
+
+            <div class="stackly-insurance-policy-cards">
+
+
+                <!-- HEALTH POLICY -->
+                <article class="stackly-insurance-policy-card"
+                    data-aos="fade-up"
+                    data-aos-delay="100">
+
+                    <div class="stackly-insurance-policy-card-top">
+
+                        <div class="stackly-insurance-policy-type">
+
+                            <div class="stackly-insurance-policy-type-icon health">
+                                <i class="fa-solid fa-heart-pulse"></i>
+                            </div>
+
+                            <div>
+                                <span>HEALTH INSURANCE</span>
+                                <h3>Health Secure Plus</h3>
+                            </div>
+
+                        </div>
+
+                        <span class="stackly-insurance-policy-badge active">
+                            <i class="fa-solid fa-circle"></i>
+                            Active
+                        </span>
+
+                    </div>
+
+
+                    <div class="stackly-insurance-policy-number">
+                        <span>POLICY NUMBER</span>
+                        <strong>STK-HLT-2026-00124</strong>
+                        <i class="fa-regular fa-copy"></i>
+                    </div>
+
+
+                    <div class="stackly-insurance-policy-coverage">
+
+                        <div>
+                            <span>SUM INSURED</span>
+                            <h4>₹10,00,000</h4>
+                        </div>
+
+                        <div>
+                            <span>ANNUAL PREMIUM</span>
+                            <h4>₹12,500</h4>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-insurance-policy-progress">
+
+                        <div class="stackly-insurance-policy-progress-info">
+                            <span>Policy Period</span>
+                            <strong>75% completed</strong>
+                        </div>
+
+                        <div class="stackly-insurance-policy-progress-track">
+                            <span style="width:75%"></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-insurance-policy-dates">
+
+                        <div>
+                            <span>START DATE</span>
+                            <strong>15 Feb 2026</strong>
+                        </div>
+
+                        <div>
+                            <span>EXPIRY DATE</span>
+                            <strong>14 Feb 2027</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-insurance-policy-card-footer">
+
+                        <a href="404-client.html"
+                            class="stackly-insurance-policy-details-btn">
+
+                            View Details
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                        <a href="404-client.html"
+                            class="stackly-insurance-policy-document-btn"
+                            aria-label="Download health policy document">
+
+                            <i class="fa-solid fa-file-pdf"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- LIFE POLICY -->
+                <article class="stackly-insurance-policy-card"
+                    data-aos="fade-up"
+                    data-aos-delay="200">
+
+                    <div class="stackly-insurance-policy-card-top">
+
+                        <div class="stackly-insurance-policy-type">
+
+                            <div class="stackly-insurance-policy-type-icon life">
+                                <i class="fa-solid fa-user-shield"></i>
+                            </div>
+
+                            <div>
+                                <span>LIFE INSURANCE</span>
+                                <h3>Life Protection Elite</h3>
+                            </div>
+
+                        </div>
+
+                        <span class="stackly-insurance-policy-badge active">
+                            <i class="fa-solid fa-circle"></i>
+                            Active
+                        </span>
+
+                    </div>
+
+
+                    <div class="stackly-insurance-policy-number">
+                        <span>POLICY NUMBER</span>
+                        <strong>STK-LIF-2026-00318</strong>
+                        <i class="fa-regular fa-copy"></i>
+                    </div>
+
+
+                    <div class="stackly-insurance-policy-coverage">
+
+                        <div>
+                            <span>SUM INSURED</span>
+                            <h4>₹15,00,000</h4>
+                        </div>
+
+                        <div>
+                            <span>ANNUAL PREMIUM</span>
+                            <h4>₹18,000</h4>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-insurance-policy-progress">
+
+                        <div class="stackly-insurance-policy-progress-info">
+                            <span>Policy Period</span>
+                            <strong>42% completed</strong>
+                        </div>
+
+                        <div class="stackly-insurance-policy-progress-track">
+                            <span style="width:42%"></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-insurance-policy-dates">
+
+                        <div>
+                            <span>START DATE</span>
+                            <strong>10 Jul 2026</strong>
+                        </div>
+
+                        <div>
+                            <span>EXPIRY DATE</span>
+                            <strong>09 Jul 2027</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-insurance-policy-card-footer">
+
+                        <a href="404-client.html"
+                            class="stackly-insurance-policy-details-btn">
+
+                            View Details
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                        <a href="404-client.html"
+                            class="stackly-insurance-policy-document-btn"
+                            aria-label="Download life policy document">
+
+                            <i class="fa-solid fa-file-pdf"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MOTOR POLICY -->
+                <article class="stackly-insurance-policy-card"
+                    data-aos="fade-up"
+                    data-aos-delay="300">
+
+                    <div class="stackly-insurance-policy-card-top">
+
+                        <div class="stackly-insurance-policy-type">
+
+                            <div class="stackly-insurance-policy-type-icon motor">
+                                <i class="fa-solid fa-car-side"></i>
+                            </div>
+
+                            <div>
+                                <span>MOTOR INSURANCE</span>
+                                <h3>Drive Safe Premium</h3>
+                            </div>
+
+                        </div>
+
+                        <span class="stackly-insurance-policy-badge active">
+                            <i class="fa-solid fa-circle"></i>
+                            Active
+                        </span>
+
+                    </div>
+
+
+                    <div class="stackly-insurance-policy-number">
+                        <span>POLICY NUMBER</span>
+                        <strong>STK-MTR-2026-00567</strong>
+                        <i class="fa-regular fa-copy"></i>
+                    </div>
+
+
+                    <div class="stackly-insurance-policy-coverage">
+
+                        <div>
+                            <span>SUM INSURED</span>
+                            <h4>₹50,000</h4>
+                        </div>
+
+                        <div>
+                            <span>ANNUAL PREMIUM</span>
+                            <h4>₹8,500</h4>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-insurance-policy-progress">
+
+                        <div class="stackly-insurance-policy-progress-info">
+                            <span>Policy Period</span>
+                            <strong>88% completed</strong>
+                        </div>
+
+                        <div class="stackly-insurance-policy-progress-track">
+                            <span style="width:88%"></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-insurance-policy-dates">
+
+                        <div>
+                            <span>START DATE</span>
+                            <strong>01 Dec 2025</strong>
+                        </div>
+
+                        <div>
+                            <span>EXPIRY DATE</span>
+                            <strong>30 Nov 2026</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-insurance-policy-card-footer">
+
+                        <a href="404-client.html"
+                            class="stackly-insurance-policy-details-btn">
+
+                            View Details
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                        <a href="404-client.html"
+                            class="stackly-insurance-policy-document-btn"
+                            aria-label="Download motor policy document">
+
+                            <i class="fa-solid fa-file-pdf"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             04. UPCOMING RENEWAL BANNER
+        ========================================== -->
+
+        <section class="stackly-insurance-policy-renewal"
+            data-aos="fade-up"
+            data-aos-duration="1000">
+
+            <div class="stackly-insurance-policy-renewal-icon">
+                <i class="fa-solid fa-bell"></i>
+            </div>
+
+            <div class="stackly-insurance-policy-renewal-content">
+
+                <span>IMPORTANT REMINDER</span>
+
+                <h2>Your Motor Policy Renewal Is Coming Up</h2>
+
+                <p>
+                    Your Drive Safe Premium policy is scheduled to expire
+                    on 30 November 2026. Renew early to help maintain
+                    continuous protection.
+                </p>
+
+            </div>
+
+            <div class="stackly-insurance-policy-renewal-action">
+
+                <div>
+                    <span>RENEWAL DATE</span>
+                    <strong>30 Nov 2026</strong>
+                </div>
+
+                <a href="404-client.html">
+                    Renew Policy
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             05. POLICY BENEFITS
+        ========================================== -->
+
+        <section class="stackly-insurance-policy-benefits">
+
+            <div class="stackly-insurance-policy-section-heading"
+                data-aos="fade-up">
+
+                <div>
+                    <span>YOUR STACKLY ADVANTAGE</span>
+                    <h2>More Than Just Insurance</h2>
+                    <p>Enjoy a smoother experience with your policy benefits.</p>
+                </div>
+
+            </div>
+
+
+            <div class="stackly-insurance-policy-benefit-grid">
+
+                <article class="stackly-insurance-policy-benefit-card"
+                    data-aos="fade-up"
+                    data-aos-delay="100">
+
+                    <div class="stackly-insurance-policy-benefit-icon">
+                        <i class="fa-solid fa-file-shield"></i>
+                    </div>
+
+                    <h3>Secure Documents</h3>
+
+                    <p>
+                        Keep your policy information organized 
+                        and accessible whenever you need it.
+                    </p>
+
+                </article>
+
+
+                <article class="stackly-insurance-policy-benefit-card"
+                    data-aos="fade-up"
+                    data-aos-delay="200">
+
+                    <div class="stackly-insurance-policy-benefit-icon">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </div>
+
+                    <h3>Timely Reminders</h3>
+
+                    <p>
+                        Stay informed about upcoming renewals and
+                        important policy milestones.
+                    </p>
+
+                </article>
+
+
+                <article class="stackly-insurance-policy-benefit-card"
+                    data-aos="fade-up"
+                    data-aos-delay="300">
+
+                    <div class="stackly-insurance-policy-benefit-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+
+                    <h3>Expert Assistance</h3>
+
+                    <p>
+                        Get help with your policy questions through
+                        dedicated insurance support.
+                    </p>
+
+                </article>
+
+
+                <article class="stackly-insurance-policy-benefit-card"
+                    data-aos="fade-up"
+                    data-aos-delay="400">
+
+                    <div class="stackly-insurance-policy-benefit-icon">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                    </div>
+
+                    <h3>Reliable Protection</h3>
+
+                    <p>
+                        Manage your coverage with confidence and
+                        keep your future protected.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             06. BOTTOM SUPPORT CTA
+        ========================================== -->
+
+        <section class="stackly-insurance-policy-support"
+            data-aos="zoom-in"
+            data-aos-duration="900">
+
+            <div class="stackly-insurance-policy-support-icon">
+                <i class="fa-solid fa-comments"></i>
+            </div>
+
+            <div class="stackly-insurance-policy-support-content">
+
+                <span>WE ARE HERE FOR YOU</span>
+
+                <h2>Need Help Understanding Your Coverage?</h2>
+
+                <p>
+                    Our insurance specialists can help you understand
+                    policy benefits, coverage limits, and renewal options.
+                </p>
+
+            </div>
+
+            <a href="404-client.html">
+                Talk to an Expert
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </section>
+
+</div>            
+
+        </main>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         AOS JAVASCRIPT
+    ====================================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+    <!-- =====================================================
+         CLIENT DASHBOARD JAVASCRIPT
+    ====================================================== -->
+
+    <script src="client.js" defer></script>
+
+
+</body>
+
+</html>
